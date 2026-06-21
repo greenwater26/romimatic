@@ -20,18 +20,20 @@
     }
     .coffee-deco .bean {
       position: absolute;
-      fill: #6F4E37;
+      /* chicco verticale: width piccola, height grande */
+      height: auto;
     }
-    .bean.b1  { width: 90px;  top:  8%; left:  4%;  opacity:.60; transform: rotate(-22deg); }
-    .bean.b2  { width: 55px;  top: 15%; right: 7%;  opacity:.60; transform: rotate(18deg); }
-    .bean.b3  { width: 130px; top: 55%; left:  2%;  opacity:.60; transform: rotate(10deg); }
-    .bean.b4  { width: 45px;  top: 72%; left: 20%;  opacity:.60; transform: rotate(-35deg); }
-    .bean.b5  { width: 70px;  top: 30%; right: 3%;  opacity:.60; transform: rotate(-12deg); }
-    .bean.b6  { width: 100px; top: 68%; right: 9%;  opacity:.60; transform: rotate(25deg); }
-    .bean.b7  { width: 40px;  top: 85%; left: 45%;  opacity:.60; transform: rotate(5deg); }
-    .bean.b8  { width: 60px;  top:  3%; left: 55%;  opacity:.60; transform: rotate(-40deg); }
-    .bean.b9  { width: 80px;  top: 45%; left: 38%;  opacity:.60; transform: rotate(30deg); }
-    .bean.b10 { width: 35px;  top: 90%; right:25%;  opacity:.60; transform: rotate(-8deg); }
+    /* Tutti a 75% — solo sui bordi, mai sopra il testo centrale */
+    .bean.b1  { width: 52px;  top:  3%; left:  1%;  opacity:.75; transform: rotate(-15deg); }
+    .bean.b2  { width: 44px;  top:  2%; right: 2%;  opacity:.75; transform: rotate(20deg); }
+    .bean.b3  { width: 66px;  top: 28%; left:  0%;  opacity:.75; transform: rotate(8deg); }
+    .bean.b4  { width: 48px;  top: 58%; left:  2%;  opacity:.75; transform: rotate(-30deg); }
+    .bean.b5  { width: 58px;  top: 78%; left:  4%;  opacity:.75; transform: rotate(12deg); }
+    .bean.b6  { width: 60px;  top: 10%; right: 1%;  opacity:.75; transform: rotate(-18deg); }
+    .bean.b7  { width: 50px;  top: 42%; right: 2%;  opacity:.75; transform: rotate(25deg); }
+    .bean.b8  { width: 70px;  top: 68%; right: 1%;  opacity:.75; transform: rotate(-8deg); }
+    .bean.b9  { width: 38px;  top: 88%; left:  8%;  opacity:.75; transform: rotate(35deg); }
+    .bean.b10 { width: 42px;  top: 86%; right: 6%;  opacity:.75; transform: rotate(-20deg); }
 
     /* Sezione caffè con decoro laterale */
     .section-caffe-wrap { position: relative; overflow: hidden; }
@@ -67,13 +69,13 @@
       <!-- Forma chicco definita una volta, riusata 10 volte -->
       <svg xmlns="http://www.w3.org/2000/svg" style="position:absolute;width:0;height:0;">
         <defs>
-          <symbol id="chicco" viewBox="0 0 100 65">
-            <!-- Corpo del chicco -->
-            <ellipse cx="50" cy="32.5" rx="48" ry="30.5" fill="#6F4E37"/>
-            <!-- Fessura classica: linea curva stroke, non fill -->
-            <path d="M50 5 C45 18 55 47 50 60"
-                  stroke="#3d2b1f" stroke-width="3.5"
-                  fill="none" stroke-linecap="round" opacity=".75"/>
+          <symbol id="chicco" viewBox="0 0 60 100">
+            <!-- Corpo del chicco: più alto che largo (verticale) -->
+            <ellipse cx="30" cy="50" rx="27" ry="46" fill="#6F4E37"/>
+            <!-- Fessura verticale lungo l'asse lungo: linea curva leggermente a S -->
+            <path d="M30 6 C24 28 36 72 30 94"
+                  stroke="#3d2b1f" stroke-width="3"
+                  fill="none" stroke-linecap="round" opacity=".70"/>
           </symbol>
         </defs>
       </svg>
@@ -176,11 +178,11 @@
   <!-- SOLUZIONI CAFFÈ -->
   <section class="bg-2 section-caffe-wrap">
     <!-- Grande chicco decorativo in background -->
-    <svg class="caffe-deco-bg" viewBox="0 0 100 65" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <ellipse cx="50" cy="32.5" rx="48" ry="30.5" fill="#6F4E37"/>
-      <path d="M50 5 C45 18 55 47 50 60"
-            stroke="#3d2b1f" stroke-width="3.5"
-            fill="none" stroke-linecap="round" opacity=".75"/>
+    <svg class="caffe-deco-bg" viewBox="0 0 60 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <ellipse cx="30" cy="50" rx="27" ry="46" fill="#6F4E37"/>
+      <path d="M30 6 C24 28 36 72 30 94"
+            stroke="#3d2b1f" stroke-width="3"
+            fill="none" stroke-linecap="round" opacity=".70"/>
     </svg>
 
     <div class="section-inner" style="position:relative; z-index:1;">
