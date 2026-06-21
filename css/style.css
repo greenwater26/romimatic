@@ -4,13 +4,13 @@
 
 :root {
   --bg:        #ffffff;
-  --bg-2:      #f5f5f7;
-  --bg-3:      #e8e8ed;
+  --bg-2:      #fdf8f7;
+  --bg-3:      #f0e8e6;
   --text:      #1d1d1f;
   --text-2:    #6e6e73;
   --text-3:    #86868b;
-  --accent:    #7B4F2E;
-  --accent-2:  #c8a96e;
+  --accent:    #9b0b01;
+  --accent-2:  #6F4E37;
   --border:    #d2d2d7;
   --font:      -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
   --nav-h:     52px;
@@ -99,11 +99,21 @@ button { font-family: var(--font); }
 .nav-item:hover > .nav-link .chev { transform: rotate(180deg); }
 .nav-link.external { color: var(--accent); }
 
+/* Ponte invisibile che colma il gap tra nav-link e dropdown */
+.nav-item > .nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  right: 0;
+  height: 10px;
+}
+
 /* Level 2 dropdown */
 .dropdown {
   display: none;
   position: absolute;
-  top: calc(100% + 6px);
+  top: calc(100% + 4px);
   left: 50%;
   transform: translateX(-50%);
   background: rgba(255,255,255,0.98);
@@ -135,11 +145,19 @@ button { font-family: var(--font); }
   font-size: 10px;
   opacity: 0.5;
 }
+/* Ponte per il sottomenù di terzo livello */
+.dropdown-item > .dropdown-link::after {
+  content: '';
+  position: absolute;
+  top: 0; bottom: 0;
+  right: -8px;
+  width: 8px;
+}
 .dropdown-sub {
   display: none;
   position: absolute;
   top: -6px;
-  left: calc(100% + 4px);
+  left: calc(100% + 2px);
   background: rgba(255,255,255,0.98);
   backdrop-filter: blur(20px);
   border: 1px solid var(--border);
