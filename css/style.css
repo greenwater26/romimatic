@@ -415,6 +415,17 @@ section { padding: 96px 24px; }
   align-items: center;
   justify-content: center;
   font-size: 48px;
+  overflow: hidden;
+}
+.product-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 16px;
+}
+.product-card-img.cover img {
+  object-fit: cover;
+  padding: 0;
 }
 .product-card-body { padding: 24px; }
 .product-card-body h3 { font-size: 17px; font-weight: 600; margin-bottom: 8px; }
