@@ -54,6 +54,59 @@
     /* Stemma chicco grande nella sezione chi siamo */
     .split-img { position: relative; overflow: hidden; }
     .split-img img { width: 100%; height: 100%; object-fit: cover; }
+
+    /* ── Sezione Acqua ── */
+    .section-acqua {
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(170deg, #0b1d30 0%, #0d3352 45%, #0a4a70 100%);
+      color: #fff;
+    }
+    .section-acqua .eyebrow   { color: #7ecef4; }
+    .section-acqua .cta-banner h2 { color: #fff; }
+    .section-acqua .cta-banner p  { color: rgba(255,255,255,0.65); }
+
+    .water-bg {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+    }
+    /* Onde stratificate in fondo */
+    .water-bg .wave {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: auto;
+    }
+    /* Cerchi ondulazione in alto a sinistra */
+    .water-bg .ripples {
+      position: absolute;
+      top: -60px;
+      left: -60px;
+      width: 320px;
+      height: 320px;
+      opacity: .18;
+    }
+    /* Cerchi ondulazione in basso a destra */
+    .water-bg .ripples-2 {
+      position: absolute;
+      bottom: -80px;
+      right: -80px;
+      width: 380px;
+      height: 380px;
+      opacity: .14;
+    }
+    /* Goccia d'acqua SVG decorativa */
+    .water-bg .drop {
+      position: absolute;
+      top: 12%;
+      right: 8%;
+      width: 70px;
+      opacity: .20;
+    }
+    .section-acqua .section-inner { position: relative; z-index: 1; }
   </style>
 </head>
 <body>
@@ -251,7 +304,49 @@
   </section>
 
   <!-- CTA ACQUA -->
-  <section class="bg-dark">
+  <section class="section-acqua">
+
+    <div class="water-bg" aria-hidden="true">
+
+      <!-- Cerchi ondulazione top-left -->
+      <svg class="ripples" viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="160" cy="160" r="60"  stroke="#7ecef4" stroke-width="1.5"/>
+        <circle cx="160" cy="160" r="100" stroke="#7ecef4" stroke-width="1"/>
+        <circle cx="160" cy="160" r="140" stroke="#7ecef4" stroke-width="0.8"/>
+        <circle cx="160" cy="160" r="155" stroke="#7ecef4" stroke-width="0.5"/>
+      </svg>
+
+      <!-- Cerchi ondulazione bottom-right -->
+      <svg class="ripples-2" viewBox="0 0 380 380" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="190" cy="190" r="70"  stroke="#7ecef4" stroke-width="1.5"/>
+        <circle cx="190" cy="190" r="120" stroke="#7ecef4" stroke-width="1"/>
+        <circle cx="190" cy="190" r="165" stroke="#7ecef4" stroke-width="0.7"/>
+        <circle cx="190" cy="190" r="188" stroke="#7ecef4" stroke-width="0.4"/>
+      </svg>
+
+      <!-- Goccia d'acqua decorativa -->
+      <svg class="drop" viewBox="0 0 60 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M30 4 C30 4 6 34 6 50 C6 64 17 76 30 76 C43 76 54 64 54 50 C54 34 30 4 30 4 Z"
+              fill="#7ecef4"/>
+        <path d="M20 52 C20 46 24 40 30 38"
+              stroke="rgba(255,255,255,0.5)" stroke-width="2"
+              fill="none" stroke-linecap="round"/>
+      </svg>
+
+      <!-- Onda 1 — più in basso, più opaca -->
+      <svg class="wave" viewBox="0 0 1440 100" preserveAspectRatio="none" style="height:100px;">
+        <path d="M0,50 C240,100 480,0 720,50 C960,100 1200,10 1440,50 L1440,100 L0,100 Z"
+              fill="rgba(255,255,255,0.05)"/>
+      </svg>
+
+      <!-- Onda 2 — leggermente sfalsata -->
+      <svg class="wave" viewBox="0 0 1440 100" preserveAspectRatio="none" style="height:70px; bottom:0;">
+        <path d="M0,30 C180,80 360,0 540,40 C720,80 900,10 1080,50 C1260,90 1380,30 1440,40 L1440,100 L0,100 Z"
+              fill="rgba(126,206,244,0.07)"/>
+      </svg>
+
+    </div>
+
     <div class="section-inner">
       <div class="cta-banner">
         <span class="eyebrow">Divisione acqua</span>
