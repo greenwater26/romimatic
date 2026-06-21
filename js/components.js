@@ -158,12 +158,18 @@ function initNav() {
   const iconClose = document.getElementById('icon-close');
   if (!hamburger || !menu) return;
 
-  hamburger.addEventListener('click', () => {
+  hamburger.addEventListener('click', (e) => {
+    e.stopPropagation(); // evita che il click risalga al document e richiuda subito il menu
     const open = menu.classList.toggle('is-open');
     iconMenu.style.display  = open ? 'none'  : 'block';
     iconClose.style.display = open ? 'block' : 'none';
     hamburger.setAttribute('aria-expanded', open);
     document.body.style.overflow = open ? 'hidden' : '';
+  });
+
+  // Impedisce che i click dentro il menu lo chiudano accidentalmente
+  menu.addEventListener('click', (e) => {
+    e.stopPropagation();
   });
 
   // Mobile: toggle sub-menus on click (items with chevron)
