@@ -3,9 +3,48 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Macchine — RoMimatic</title>
-  <meta name="description" content="Macchine per caffè a capsule e cialde. Caffè d'Italia e Lavazza Firma distribuite da RoMimatic.">
+  <title>Macchine Caffè per Ufficio: Elle Mokador, Caffè d'Italia, Lavazza Firma | RoMimatic</title>
+  <meta name="description" content="Macchine caffè a capsule e cialde per uffici e ambienti professionali: Elle Mokador, Caffè d'Italia e Lavazza Firma. Comodato d'uso gratuito. Distribuite da RoMimatic a Garbagnate Milanese.">
+  <link rel="canonical" href="https://romimatic.it/caffe/macchine.html">
+  <meta property="og:title" content="Macchine Caffè per Ufficio: Elle Mokador, Caffè d'Italia, Lavazza Firma | RoMimatic">
+  <meta property="og:description" content="Macchine caffè a capsule e cialde per uffici. Elle Mokador, gamma Caffè d'Italia e Lavazza Firma Inovy. Comodato d'uso gratuito, installazione e manutenzione incluse.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://romimatic.it/caffe/macchine.html">
+  <meta property="og:image" content="https://romimatic.it/assets/sermatic/cialde/elle_sito_1100x600-px_1571396155.webp">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"ItemList","name":"Macchine Caffè RoMimatic","description":"Gamma completa di macchine caffè a capsule e cialde per uffici distribuite da RoMimatic","numberOfItems":3,"itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Elle Mokador — macchina a cialde","url":"https://romimatic.it/caffe/cialde.html"},
+    {"@type":"ListItem","position":2,"name":"Macchine Caffè d'Italia","url":"https://romimatic.it/caffe/macchine-caffe-ditalia.html"},
+    {"@type":"ListItem","position":3,"name":"Macchine Lavazza Firma — Gamma Inovy","url":"https://romimatic.it/caffe/macchine-lavazza-firma.html"}
+  ]}
+  </script>
   <link rel="stylesheet" href="/css/style.css">
+  <style>
+    .spec-table { width: 100%; border-collapse: collapse; font-size: 14px; margin-top: 16px; }
+    .spec-table td { padding: 6px 0; border-bottom: 1px solid var(--border); color: var(--text-2); }
+    .spec-table td:first-child { font-weight: 600; color: var(--text); width: 44%; }
+    .spec-table tr:last-child td { border-bottom: none; }
+
+    .machine-preview-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      margin-top: 32px;
+    }
+    @media (max-width: 640px) { .machine-preview-grid { grid-template-columns: 1fr; } }
+    .machine-preview-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--r-lg);
+      overflow: hidden;
+      transition: transform .2s, box-shadow .2s;
+    }
+    .machine-preview-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+    .machine-preview-card img { width: 100%; aspect-ratio: 4/3; object-fit: contain; display: block; background: var(--bg-2); padding: 16px; }
+    .machine-preview-card-body { padding: 16px 18px 20px; }
+    .machine-preview-card-body h3 { font-size: 17px; font-weight: 700; margin-bottom: 6px; }
+    .machine-preview-card-body p { font-size: 13px; color: var(--text-2); line-height: 1.6; margin-bottom: 12px; }
+  </style>
 </head>
 <body>
 
@@ -19,86 +58,193 @@
 
   <div class="page-hero">
     <span class="eyebrow">Caffè · Macchine</span>
-    <h1>Macchine</h1>
-    <p>Ogni macchina viene progettata per un'ottima erogazione del prodotto, che siano capsule o cialde. Made in Italy.</p>
+    <h1>Macchine per il caffè</h1>
+    <p>Ogni macchina viene progettata per un'ottima erogazione del prodotto, che siano capsule o cialde. Design italiano, tecnologia avanzata, comodato d'uso gratuito per uffici.</p>
   </div>
 
-  <section>
-    <div class="section-inner">
-      <div class="section-head centered">
-        <span class="eyebrow">Scegli il tuo sistema</span>
-        <h2>Due linee di prodotto</h2>
-        <p>Macchine a capsule e cialde per ogni contesto: dall'ufficio al ristorante.</p>
-      </div>
-      <div class="cards">
-        <div class="card">
-          <div class="card-icon">🇮🇹</div>
-          <h3>Caffè d'Italia</h3>
-          <p>Macchine professionali per il sistema Caffè d'Italia. Compatte, affidabili e facili da usare. Ideali per uffici e ambienti di lavoro.</p>
-          <a href="/caffe/macchine-caffe-ditalia.html" class="card-link">Scopri →</a>
-        </div>
-        <div class="card">
-          <div class="card-icon">☕</div>
-          <h3>Lavazza Firma</h3>
-          <p>Il sistema professionale Lavazza per spazi di lavoro moderni. Design elegante, tecnologia avanzata, qualità garantita.</p>
-          <a href="/caffe/macchine-lavazza-firma.html" class="card-link">Scopri →</a>
-        </div>
-        <div class="card">
-          <div class="card-icon">🫙</div>
-          <h3>Macchine a cialde</h3>
-          <p>La macchina Elle Mokador: compatta, ecologica, 100% italiana. Perfetta per chi preferisce le cialde in carta filtro.</p>
-          <a href="/caffe/cialde.html" class="card-link">Scopri Elle Mokador →</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="bg-2">
+  <!-- ELLE MOKADOR -->
+  <section id="elle-mokador">
     <div class="section-inner">
       <div class="split">
         <div class="split-text">
-          <span class="eyebrow">Perché sceglierci</span>
-          <h2>Macchine in comodato d'uso</h2>
-          <p>RoMimatic offre la possibilità di avere le macchine per caffè in comodato d'uso gratuito: installi la macchina senza costi, paghi solo i prodotti consumati.</p>
-          <div class="feature-list">
+          <span class="eyebrow">Macchina a cialde · Mokador</span>
+          <h2>Elle Mokador</h2>
+          <p>Elle è una macchina per caffè a cialde dalle prestazioni davvero superiori, in dimensioni così concentrate che la rendono perfetta in qualsiasi ambiente. Il design retrò ricorda le prime macchine espresso a leva, con la praticità moderna delle cialde ESE 44mm.</p>
+          <p>Semplice da usare: inserisci la cialda e attiva l'erogazione. Nient'altro. 100% Made in Italy, riscaldamento rapido, altamente affidabile e robusta.</p>
+          <div class="feature-list" style="margin-top: 20px;">
             <div class="feature-item">
-              <div class="feature-icon">✓</div>
-              <div>
-                <strong>Installazione gratuita</strong>
-                <span>La macchina arriva pronta all'uso, senza costi di installazione</span>
-              </div>
+              <div class="feature-icon">🇮🇹</div>
+              <div><strong>100% Made in Italy</strong><span>Progettata e prodotta interamente in Italia</span></div>
             </div>
             <div class="feature-item">
-              <div class="feature-icon">✓</div>
-              <div>
-                <strong>Manutenzione inclusa</strong>
-                <span>Assistenza tecnica e pulizia periodica a nostro carico</span>
-              </div>
+              <div class="feature-icon">♻️</div>
+              <div><strong>Cialde biodegradabili</strong><span>Carta filtro ecocompatibile, smaltibile nell'organico</span></div>
             </div>
             <div class="feature-item">
-              <div class="feature-icon">✓</div>
-              <div>
-                <strong>Rifornimento regolare</strong>
-                <span>Consegna dei prodotti secondo le tue esigenze</span>
-              </div>
+              <div class="feature-icon">⚡</div>
+              <div><strong>Riscaldamento rapido</strong><span>Pronta in pochi secondi, standby automatico</span></div>
             </div>
           </div>
-          <a href="/contatti.html" class="btn btn-outline" style="margin-top:24px;">Richiedi informazioni</a>
+          <table class="spec-table">
+            <tr><td>Larghezza</td><td>17,5 cm</td></tr>
+            <tr><td>Altezza</td><td>30 cm</td></tr>
+            <tr><td>Profondità</td><td>33 cm</td></tr>
+            <tr><td>Peso</td><td>4 kg</td></tr>
+            <tr><td>Alimentazione</td><td>230V – 50Hz</td></tr>
+            <tr><td>Potenza</td><td>450W</td></tr>
+            <tr><td>Compatibilità</td><td>Cialde ESE 44mm</td></tr>
+          </table>
+          <a href="/caffe/cialde.html" class="btn btn-outline" style="margin-top: 24px;">Scopri le cialde Mokador →</a>
         </div>
         <div class="split-img">
-          <span>Macchina per ufficio</span>
+          <img src="/assets/sermatic/cialde/elle_sito_1100x600-px_1571396155.webp" alt="Macchina Elle Mokador a cialde ESE 44mm" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:var(--r-lg);">
         </div>
       </div>
     </div>
   </section>
 
+  <!-- CAFFÈ D'ITALIA -->
+  <section class="bg-2" id="caffe-ditalia">
+    <div class="section-inner">
+      <div class="section-head">
+        <span class="eyebrow">Sistema a capsule</span>
+        <h2>Macchine Caffè d'Italia</h2>
+        <p>La gamma Caffè d'Italia offre macchine a capsule 100% Made in Italy per casa e ufficio. 17 bevande diverse con un unico sistema: caffè, infusi, solubili e bevande al latte.</p>
+      </div>
+      <div class="machine-preview-grid">
+        <div class="machine-preview-card">
+          <img src="/assets/sermatic/macchine-cdi/Birba-nero-principal-.webp" alt="Caffè d'Italia Birba — macchina a capsule per ufficio" loading="lazy">
+          <div class="machine-preview-card-body">
+            <h3>Birba</h3>
+            <p>17 bevande, 7 colori disponibili, smaltimento automatico capsule. Disponibile in comodato d'uso gratuito per uffici. 100% Made in Italy.</p>
+            <a href="/caffe/macchine-caffe-ditalia.html" class="card-link">Scopri tutta la gamma →</a>
+          </div>
+        </div>
+        <div class="machine-preview-card">
+          <img src="/assets/sermatic/macchine-cdi/perla.webp" alt="Caffè d'Italia Perla — macchina compatta 17 bevande" loading="lazy">
+          <div class="machine-preview-card-body">
+            <h3>Perla</h3>
+            <p>Compatta e versatile: 17 bevande, serbatoio 1L, standby automatico. Disponibile in nero, bianco e rosa. Ideale per uso domestico e scrivania.</p>
+            <a href="/caffe/macchine-caffe-ditalia.html" class="card-link">Scopri tutta la gamma →</a>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top: 28px; text-align: center;">
+        <a href="/caffe/macchine-caffe-ditalia.html" class="btn btn-outline">Vedi tutti i modelli Caffè d'Italia</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- LAVAZZA FIRMA -->
+  <section id="lavazza-firma">
+    <div class="section-inner">
+      <div class="section-head">
+        <span class="eyebrow">Sistema a capsule professionale</span>
+        <h2>Macchine Lavazza Firma</h2>
+        <p>La gamma Inovy è il sistema professionale Lavazza per spazi di lavoro moderni. Design premiato, tecnologia avanzata, comodato d'uso gratuito da sole 2 consumazioni al giorno.</p>
+      </div>
+      <div class="machine-preview-grid">
+        <div class="machine-preview-card">
+          <img src="/assets/sermatic/macchine-cdi/18000320-d-inovy_compact.webp" alt="Lavazza Firma Inovy Compact — macchina ufficio capsule" loading="lazy">
+          <div class="machine-preview-card-body">
+            <h3>Inovy Compact</h3>
+            <p>Espresso sublime e stile impeccabile in formato compatto. 3 tasti touchscreen, serbatoio 0,9L. Comodato gratuito con 4 consumazioni/giorno.</p>
+            <a href="/caffe/macchine-lavazza-firma.html" class="card-link">Scopri tutta la gamma →</a>
+          </div>
+        </div>
+        <div class="machine-preview-card">
+          <img src="/assets/sermatic/macchine-cdi/18000446-d-inovy_custom_milk.webp" alt="Lavazza Firma Inovy Custom Milk — macchina con latte per ufficio" loading="lazy">
+          <div class="machine-preview-card-body">
+            <h3>Inovy Custom Milk</h3>
+            <p>Il modello premium con sistema latte integrato. Temperatura e cremosità regolabili, 10 tasti di selezione. Per cappuccini professionali in ufficio.</p>
+            <a href="/caffe/macchine-lavazza-firma.html" class="card-link">Scopri tutta la gamma →</a>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top: 28px; text-align: center;">
+        <a href="/caffe/macchine-lavazza-firma.html" class="btn btn-outline">Vedi tutti i modelli Lavazza Firma</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMODATO D'USO -->
+  <section class="bg-2">
+    <div class="section-inner">
+      <div class="split reverse">
+        <div class="split-text">
+          <span class="eyebrow">Il nostro servizio</span>
+          <h2>Macchine in comodato d'uso gratuito</h2>
+          <p>RoMimatic offre la possibilità di installare le macchine Caffè d'Italia e Lavazza Firma in comodato d'uso gratuito per uffici, studi professionali e attività commerciali. Zero costi per la macchina: paghi solo i prodotti che consumi.</p>
+          <div class="feature-list" style="margin-top: 20px;">
+            <div class="feature-item">
+              <div class="feature-icon">🆓</div>
+              <div><strong>Installazione gratuita</strong><span>La macchina arriva pronta all'uso, senza costi</span></div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">🔧</div>
+              <div><strong>Manutenzione inclusa</strong><span>Assistenza tecnica e interventi ordinari a nostro carico</span></div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">📦</div>
+              <div><strong>Rifornimento regolare</strong><span>Consegna capsule e cialde secondo le tue esigenze</span></div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">📍</div>
+              <div><strong>Zona di servizio</strong><span>Garbagnate Milanese e provincia di Milano</span></div>
+            </div>
+          </div>
+          <a href="/contatti.html" class="btn btn-outline" style="margin-top: 24px;">Richiedi informazioni</a>
+        </div>
+        <div class="split-img">
+          <img src="/assets/sermatic/cialde/elle_img3_1.webp" alt="Macchina Elle Mokador — dettaglio design italiano" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:var(--r-lg);">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ SEO -->
+  <section id="faq">
+    <div class="section-inner">
+      <div class="section-head centered">
+        <span class="eyebrow">Domande frequenti</span>
+        <h2>Scegliere la macchina giusta: le risposte più cercate</h2>
+      </div>
+      <div style="max-width: 720px; margin: 40px auto 0; display: flex; flex-direction: column; gap: 16px;">
+        <div style="background:var(--bg-2); border-radius:var(--r); padding:22px 24px; border:1px solid var(--border);">
+          <strong style="font-size:15px; display:block; margin-bottom:8px;">Qual è la differenza tra capsule e cialde?</strong>
+          <p style="font-size:14px; color:var(--text-2); margin:0;">Le capsule sono contenitori rigidi in plastica o alluminio con caffè pressato all'interno (Caffè d'Italia, Lavazza Firma). Le cialde sono dischetti in carta filtro biodegradabile con caffè macinato (Mokador). Le cialde hanno un impatto ambientale inferiore e un'estrazione più simile al bar tradizionale; le capsule offrono maggiore comodità e varietà di bevande.</p>
+        </div>
+        <div style="background:var(--bg-2); border-radius:var(--r); padding:22px 24px; border:1px solid var(--border);">
+          <strong style="font-size:15px; display:block; margin-bottom:8px;">Come funziona il comodato d'uso gratuito?</strong>
+          <p style="font-size:14px; color:var(--text-2); margin:0;">RoMimatic installa la macchina nel tuo ufficio gratuitamente. Non paghi nulla per la macchina: l'unico costo è quello dei prodotti consumati (capsule o cialde), con rifornimento diretto. Sono richieste poche consumazioni minime al giorno a seconda del modello.</p>
+        </div>
+        <div style="background:var(--bg-2); border-radius:var(--r); padding:22px 24px; border:1px solid var(--border);">
+          <strong style="font-size:15px; display:block; margin-bottom:8px;">Quale sistema è più adatto per un ufficio piccolo?</strong>
+          <p style="font-size:14px; color:var(--text-2); margin:0;">Per uffici fino a 5 persone, la Lavazza Firma Inovy Mini (da 2 consumazioni/giorno) o la Caffè d'Italia Birba sono ideali. Entrambe compatte, silenziose e disponibili in comodato gratuito. L'Inovy Mini occupa meno di 14cm di larghezza.</p>
+        </div>
+        <div style="background:var(--bg-2); border-radius:var(--r); padding:22px 24px; border:1px solid var(--border);">
+          <strong style="font-size:15px; display:block; margin-bottom:8px;">Le capsule Caffè d'Italia e Lavazza Firma sono intercambiabili?</strong>
+          <p style="font-size:14px; color:var(--text-2); margin:0;">No. Ogni sistema utilizza capsule proprietarie: le capsule Caffè d'Italia funzionano solo con le macchine Caffè d'Italia, e le capsule Lavazza Firma solo con la gamma Inovy. Prima di scegliere il sistema è importante capire quale sia disponibile nella tua zona di servizio.</p>
+        </div>
+        <div style="background:var(--bg-2); border-radius:var(--r); padding:22px 24px; border:1px solid var(--border);">
+          <strong style="font-size:15px; display:block; margin-bottom:8px;">RoMimatic consegna le capsule direttamente in ufficio?</strong>
+          <p style="font-size:14px; color:var(--text-2); margin:0;">Sì. RoMimatic gestisce il rifornimento regolare di capsule e cialde direttamente presso la tua sede, nella zona di Garbagnate Milanese e in provincia di Milano. Puoi richiedere consegne programmate o a chiamata in base ai consumi.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
   <section>
     <div class="section-inner">
       <div class="cta-banner">
         <span class="eyebrow">Parliamoci</span>
         <h2>Qual è la macchina giusta per te?</h2>
-        <p>Contattaci e ti aiutiamo a trovare la soluzione più adatta al tuo spazio e alle tue esigenze.</p>
-        <a href="/contatti.html" class="btn btn-dark">Contattaci</a>
+        <p>Contattaci: ti aiutiamo a trovare la soluzione più adatta al tuo spazio, ai tuoi consumi e al tuo budget — senza impegno.</p>
+        <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
+          <a href="/contatti.html" class="btn btn-dark">Contattaci</a>
+          <a href="/caffe.html" class="btn btn-outline">Torna al caffè</a>
+        </div>
       </div>
     </div>
   </section>
