@@ -6,6 +6,53 @@
   <title>RoMimatic — Qualità che si assapora dal 1984</title>
   <meta name="description" content="RoMimatic distribuisce macchine per caffè, capsule, cialde e prodotti artigianali calabresi d'eccellenza dal 1984.">
   <link rel="stylesheet" href="/css/style.css">
+  <style>
+    /* ── Decorazione sfondo caffè ── */
+    .hero { position: relative; overflow: hidden; }
+    .hero-inner { position: relative; z-index: 1; }
+
+    .coffee-deco {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+    .coffee-deco .bean {
+      position: absolute;
+      fill: #6F4E37;
+    }
+    .bean.b1  { width: 90px;  top:  8%; left:  4%;  opacity:.07; transform: rotate(-22deg); }
+    .bean.b2  { width: 55px;  top: 15%; right: 7%;  opacity:.09; transform: rotate(18deg); }
+    .bean.b3  { width: 130px; top: 55%; left:  2%;  opacity:.06; transform: rotate(10deg); }
+    .bean.b4  { width: 45px;  top: 72%; left: 20%;  opacity:.08; transform: rotate(-35deg); }
+    .bean.b5  { width: 70px;  top: 30%; right: 3%;  opacity:.07; transform: rotate(-12deg); }
+    .bean.b6  { width: 100px; top: 68%; right: 9%;  opacity:.06; transform: rotate(25deg); }
+    .bean.b7  { width: 40px;  top: 85%; left: 45%;  opacity:.08; transform: rotate(5deg); }
+    .bean.b8  { width: 60px;  top:  3%; left: 55%;  opacity:.07; transform: rotate(-40deg); }
+    .bean.b9  { width: 80px;  top: 45%; left: 38%;  opacity:.04; transform: rotate(30deg); }
+    .bean.b10 { width: 35px;  top: 90%; right:25%;  opacity:.09; transform: rotate(-8deg); }
+
+    /* Sezione caffè con decoro laterale */
+    .section-caffe-wrap { position: relative; overflow: hidden; }
+    .section-caffe-wrap .caffe-deco-bg {
+      position: absolute;
+      right: -60px;
+      top: 50%;
+      transform: translateY(-50%) rotate(15deg);
+      width: 380px;
+      fill: #6F4E37;
+      opacity: .045;
+      pointer-events: none;
+    }
+    @media (max-width: 768px) {
+      .section-caffe-wrap .caffe-deco-bg { display: none; }
+    }
+
+    /* Stemma chicco grande nella sezione chi siamo */
+    .split-img { position: relative; overflow: hidden; }
+    .split-img img { width: 100%; height: 100%; object-fit: cover; }
+  </style>
 </head>
 <body>
 
@@ -13,6 +60,52 @@
 
   <!-- HERO -->
   <section class="hero">
+
+    <!-- Chicchi di caffè decorativi -->
+    <div class="coffee-deco" aria-hidden="true">
+      <!-- SVG chicco di caffè (riusato con classe) -->
+      <svg class="bean b1" viewBox="0 0 100 65" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="50" cy="32.5" rx="48" ry="30.5"/>
+        <path d="M50 4 C64 14 64 51 50 61 C36 51 36 14 50 4 Z" fill="#3d2b1f" opacity=".4"/>
+      </svg>
+      <svg class="bean b2" viewBox="0 0 100 65" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="50" cy="32.5" rx="48" ry="30.5"/>
+        <path d="M50 4 C64 14 64 51 50 61 C36 51 36 14 50 4 Z" fill="#3d2b1f" opacity=".4"/>
+      </svg>
+      <svg class="bean b3" viewBox="0 0 100 65" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="50" cy="32.5" rx="48" ry="30.5"/>
+        <path d="M50 4 C64 14 64 51 50 61 C36 51 36 14 50 4 Z" fill="#3d2b1f" opacity=".4"/>
+      </svg>
+      <svg class="bean b4" viewBox="0 0 100 65" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="50" cy="32.5" rx="48" ry="30.5"/>
+        <path d="M50 4 C64 14 64 51 50 61 C36 51 36 14 50 4 Z" fill="#3d2b1f" opacity=".4"/>
+      </svg>
+      <svg class="bean b5" viewBox="0 0 100 65" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="50" cy="32.5" rx="48" ry="30.5"/>
+        <path d="M50 4 C64 14 64 51 50 61 C36 51 36 14 50 4 Z" fill="#3d2b1f" opacity=".4"/>
+      </svg>
+      <svg class="bean b6" viewBox="0 0 100 65" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="50" cy="32.5" rx="48" ry="30.5"/>
+        <path d="M50 4 C64 14 64 51 50 61 C36 51 36 14 50 4 Z" fill="#3d2b1f" opacity=".4"/>
+      </svg>
+      <svg class="bean b7" viewBox="0 0 100 65" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="50" cy="32.5" rx="48" ry="30.5"/>
+        <path d="M50 4 C64 14 64 51 50 61 C36 51 36 14 50 4 Z" fill="#3d2b1f" opacity=".4"/>
+      </svg>
+      <svg class="bean b8" viewBox="0 0 100 65" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="50" cy="32.5" rx="48" ry="30.5"/>
+        <path d="M50 4 C64 14 64 51 50 61 C36 51 36 14 50 4 Z" fill="#3d2b1f" opacity=".4"/>
+      </svg>
+      <svg class="bean b9" viewBox="0 0 100 65" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="50" cy="32.5" rx="48" ry="30.5"/>
+        <path d="M50 4 C64 14 64 51 50 61 C36 51 36 14 50 4 Z" fill="#3d2b1f" opacity=".4"/>
+      </svg>
+      <svg class="bean b10" viewBox="0 0 100 65" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="50" cy="32.5" rx="48" ry="30.5"/>
+        <path d="M50 4 C64 14 64 51 50 61 C36 51 36 14 50 4 Z" fill="#3d2b1f" opacity=".4"/>
+      </svg>
+    </div>
+
     <div class="hero-inner">
       <span class="eyebrow">Dal 1984</span>
       <h1>La qualità<br>che si <em>assapora</em></h1>
@@ -90,15 +183,21 @@
           <a href="/chi-siamo.html" class="btn btn-outline" style="margin-top:12px;">Scopri la nostra storia</a>
         </div>
         <div class="split-img">
-          <span>Immagine aziendale</span>
+          <img src="/assets/img/romimatic_chi.webp" alt="RoMimatic — la nostra azienda" loading="lazy">
         </div>
       </div>
     </div>
   </section>
 
   <!-- SOLUZIONI CAFFÈ -->
-  <section class="bg-2">
-    <div class="section-inner">
+  <section class="bg-2 section-caffe-wrap">
+    <!-- Grande chicco decorativo in background -->
+    <svg class="caffe-deco-bg" viewBox="0 0 100 65" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <ellipse cx="50" cy="32.5" rx="48" ry="30.5"/>
+      <path d="M50 4 C64 14 64 51 50 61 C36 51 36 14 50 4 Z" fill="#3d2b1f" opacity=".5"/>
+    </svg>
+
+    <div class="section-inner" style="position:relative; z-index:1;">
       <div class="section-head">
         <span class="eyebrow">Caffè</span>
         <h2>Una soluzione per ogni esigenza</h2>
