@@ -122,7 +122,8 @@ const FOOTER_HTML = `
         <h4>Contatti</h4>
         <ul>
           <li><a href="mailto:info@romimatic.it">info@romimatic.it</a></li>
-          <li><a href="tel:+39000000000">+39 000 000 0000</a></li>
+          <li><a href="tel:+390299574852">02 9957485</a></li>
+          <li><a href="tel:+393489897098">348 9897098</a></li>
           <li><a href="/contatti.html">Scrivici</a></li>
           <li><a href="https://www.greenwateritalia.it" target="_blank" rel="noopener">Green Water Italia ↗</a></li>
         </ul>
