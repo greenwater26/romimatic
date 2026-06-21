@@ -3,6 +3,7 @@
    ===================================================== */
 
 const NAV_HTML = `
+<header role="banner">
 <nav class="navbar" id="navbar">
   <div class="nav-inner">
 
@@ -19,12 +20,12 @@ const NAV_HTML = `
         <a class="nav-link" href="/chi-siamo.html">Chi siamo</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/caffe.html">
+        <a class="nav-link" href="/caffe.html" aria-haspopup="true" aria-expanded="false">
           Caffè <span class="chev">▾</span>
         </a>
         <div class="dropdown">
           <div class="dropdown-item">
-            <a class="dropdown-link" href="/caffe/capsule.html">
+            <a class="dropdown-link" href="/caffe/capsule.html" aria-haspopup="true" aria-expanded="false">
               Capsule <span class="chev-r">›</span>
             </a>
             <div class="dropdown-sub">
@@ -37,7 +38,7 @@ const NAV_HTML = `
             <a class="dropdown-link" href="/caffe/cialde.html">Cialde</a>
           </div>
           <div class="dropdown-item">
-            <a class="dropdown-link" href="/caffe/macchine.html">
+            <a class="dropdown-link" href="/caffe/macchine.html" aria-haspopup="true" aria-expanded="false">
               Macchine <span class="chev-r">›</span>
             </a>
             <div class="dropdown-sub">
@@ -80,6 +81,7 @@ const NAV_HTML = `
 
   </div>
 </nav>
+</header>
 `;
 
 const FOOTER_HTML = `
@@ -93,8 +95,8 @@ const FOOTER_HTML = `
         </a>
         <p>Dal 1984 portiamo qualità e gusto nelle aziende e nelle case. Distributori automatici, caffè di eccellenza e prodotti artigianali calabresi.</p>
         <div class="footer-social">
-          <a href="https://www.facebook.com" target="_blank" rel="noopener" title="Facebook">f</a>
-          <a href="https://www.linkedin.com" target="_blank" rel="noopener" title="LinkedIn">in</a>
+          <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Seguici su Facebook"><span aria-hidden="true">f</span></a>
+          <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="Seguici su LinkedIn"><span aria-hidden="true">in</span></a>
         </div>
       </div>
 
@@ -122,10 +124,11 @@ const FOOTER_HTML = `
         <h4>Contatti</h4>
         <ul>
           <li><a href="mailto:info@romimatic.it">info@romimatic.it</a></li>
-          <li><a href="tel:+390299574852">02 9957485</a></li>
+          <li><a href="tel:+390299574852">02 99574852</a></li>
           <li><a href="tel:+393489897098">348 9897098</a></li>
           <li><a href="/contatti.html">Scrivici</a></li>
-          <li><a href="https://www.greenwateritalia.it" target="_blank" rel="noopener">Green Water Italia ↗</a></li>
+          <li style="font-size:13px; color:var(--text-3); line-height:1.5; margin-top:6px;">Via Marconi 7<br>20024 Garbagnate Milanese (MI)</li>
+          <li><a href="https://www.greenwateritalia.it" target="_blank" rel="noopener noreferrer">Green Water Italia ↗</a></li>
         </ul>
       </div>
 
@@ -143,7 +146,16 @@ const FOOTER_HTML = `
 
 function injectComponents() {
   const navEl = document.getElementById('nav-root');
-  if (navEl) navEl.innerHTML = NAV_HTML;
+  if (navEl) {
+    // Skip-to-content link (accessibilità tastiera)
+    const skipLink = document.createElement('a');
+    skipLink.href = '#main-content';
+    skipLink.className = 'skip-link';
+    skipLink.textContent = 'Salta al contenuto principale';
+    navEl.parentNode.insertBefore(skipLink, navEl);
+
+    navEl.innerHTML = NAV_HTML;
+  }
 
   const footerEl = document.getElementById('footer-root');
   if (footerEl) footerEl.innerHTML = FOOTER_HTML;
@@ -200,6 +212,18 @@ function initNav() {
       iconClose.style.display = 'none';
       hamburger.setAttribute('aria-expanded', 'false');
       document.body.style.overflow = '';
+    }
+  });
+
+  // Escape key: chiude il menu mobile
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && menu.classList.contains('is-open')) {
+      menu.classList.remove('is-open');
+      iconMenu.style.display  = 'block';
+      iconClose.style.display = 'none';
+      hamburger.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+      hamburger.focus();
     }
   });
 }

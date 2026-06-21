@@ -3,8 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RoMimatic — Qualità che si assapora dal 1984</title>
-  <meta name="description" content="RoMimatic distribuisce macchine per caffè, capsule, cialde e prodotti artigianali calabresi d'eccellenza dal 1984.">
+  <title>RoMimatic — Macchine Caffè, Capsule e Prodotti Calabresi | Garbagnate Milanese</title>
+  <meta name="description" content="RoMimatic a Garbagnate Milanese (MI): distributore ufficiale di macchine caffè, capsule e cialde dal 1984. Caffè d'Italia, Lavazza Firma, Mokador e prodotti artigianali calabresi.">
+  <link rel="canonical" href="https://romimatic.it/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://romimatic.it/">
+  <meta property="og:title" content="RoMimatic — Macchine Caffè, Capsule e Prodotti Calabresi">
+  <meta property="og:description" content="Distributore ufficiale di macchine caffè, capsule e cialde dal 1984 a Garbagnate Milanese. Caffè d'Italia, Lavazza Firma, Mokador e prodotti artigianali calabresi.">
+  <meta property="og:image" content="https://romimatic.it/assets/img/romimatic_chi.webp">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:site_name" content="RoMimatic">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="stylesheet" href="/css/style.css">
   <style>
     /* ── Decorazione sfondo caffè ── */
@@ -114,10 +123,59 @@
   <meta name="theme-color" content="#ffffff">
   <script src="/js/components.js" defer></script>
   <script src="/js/main.js" defer></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "RoMimatic",
+    "description": "Dal 1984 distributore ufficiale di macchine caffè, capsule, cialde e prodotti artigianali calabresi d'eccellenza. Distributori automatici per uffici, hotel, ristoranti e bar.",
+    "url": "https://romimatic.it",
+    "telephone": ["+390299574852", "+393489897098"],
+    "email": "info@romimatic.it",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Via Marconi 7",
+      "postalCode": "20024",
+      "addressLocality": "Garbagnate Milanese",
+      "addressRegion": "MI",
+      "addressCountry": "IT"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 45.5670,
+      "longitude": 9.0670
+    },
+    "openingHoursSpecification": [{
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+      "opens": "09:00",
+      "closes": "18:00"
+    }],
+    "areaServed": [{
+      "@type": "City",
+      "name": "Garbagnate Milanese"
+    },{
+      "@type": "AdministrativeArea",
+      "name": "Provincia di Milano"
+    }],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Prodotti e servizi RoMimatic",
+      "itemListElement": [
+        {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Capsule Caffè d'Italia"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Cialde Mokador ESE"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Comodato d'uso macchine caffè"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Distributori automatici HO.RE.CA"}}
+      ]
+    }
+  }
+  </script>
 </head>
 <body>
 
   <div id="nav-root"></div>
+
+  <main id="main-content">
 
   <!-- HERO -->
   <section class="hero">
@@ -172,22 +230,22 @@
       </div>
       <div class="cards">
         <div class="card">
-          <div class="card-icon">☕</div>
+          <div class="card-icon" aria-hidden="true">☕</div>
           <h3>Caffè</h3>
           <p>Capsule, cialde, macchine professionali e soluzioni HO.RE.CA. I migliori marchi italiani: Caffè d'Italia, Lavazza Firma, Mokador.</p>
           <a href="/caffe.html" class="card-link">Esplora →</a>
         </div>
         <div class="card">
-          <div class="card-icon">🍊</div>
+          <div class="card-icon" aria-hidden="true">🍊</div>
           <h3>Prodotti d'eccellenza</h3>
           <p>Succhi d'agrumi, oli extravergine, marmellate artigianali, birre e liquori. Il meglio del patrimonio agroalimentare calabrese.</p>
           <a href="/prodotti-eccellenza.html" class="card-link">Scopri →</a>
         </div>
         <div class="card">
-          <div class="card-icon">💧</div>
+          <div class="card-icon" aria-hidden="true">💧</div>
           <h3>Acqua</h3>
           <p>Green Water Italia, la divisione acqua di RoMimatic. Soluzioni di erogazione d'acqua innovative per uffici e ambienti professionali.</p>
-          <a href="https://www.greenwateritalia.it" target="_blank" rel="noopener" class="card-link">Visita il sito →</a>
+          <a href="https://www.greenwateritalia.it" target="_blank" rel="noopener noreferrer" class="card-link">Visita il sito →</a>
         </div>
       </div>
     </div>
@@ -358,7 +416,7 @@
         <span class="eyebrow">Divisione acqua</span>
         <h2>Green Water Italia</h2>
         <p>La nostra divisione dedicata all'acqua. Soluzioni innovative per l'erogazione di acqua purificata in uffici e ambienti professionali.</p>
-        <a href="https://www.greenwateritalia.it" target="_blank" rel="noopener" class="btn btn-accent">Visita greenwateritalia.it ↗</a>
+        <a href="https://www.greenwateritalia.it" target="_blank" rel="noopener noreferrer" class="btn btn-accent">Visita greenwateritalia.it ↗</a>
       </div>
     </div>
   </section>
@@ -374,6 +432,8 @@
       </div>
     </div>
   </section>
+
+  </main>
 
   <div id="footer-root"></div>
 

@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 /* Fade-in on scroll — salta gli elementi già visibili per evitare CLS */
 function initScrollAnimations() {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   const elements = document.querySelectorAll('.card, .product-card, .blog-card, .split-img, .split-text, .feature-item');
   if (!elements.length) return;
 
