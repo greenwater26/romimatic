@@ -108,6 +108,12 @@
     }
     .section-acqua .section-inner { position: relative; z-index: 1; }
   </style>
+  <link rel="icon" href="/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preload" as="image" href="/assets/img/logo-s.webp">
+  <meta name="theme-color" content="#ffffff">
+  <script src="/js/components.js" defer></script>
+  <script src="/js/main.js" defer></script>
 </head>
 <body>
 
@@ -222,7 +228,7 @@
           <a href="/chi-siamo.html" class="btn btn-outline" style="margin-top:12px;">Scopri la nostra storia</a>
         </div>
         <div class="split-img">
-          <img src="/assets/img/romimatic_chi.webp" alt="RoMimatic — la nostra azienda" loading="lazy">
+          <img src="/assets/img/romimatic_chi.webp" alt="RoMimatic — la nostra azienda" fetchpriority="high">
         </div>
       </div>
     </div>
@@ -371,7 +377,5 @@
 
   <div id="footer-root"></div>
 
-  <script src="/js/components.js"></script>
-  <script src="/js/main.js"></script>
 </body>
 </html>

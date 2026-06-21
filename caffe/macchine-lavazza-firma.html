@@ -60,6 +60,12 @@
     .spec-table td:first-child { font-weight: 600; color: var(--text); width: 46%; }
     .spec-table tr:last-child td { border-bottom: none; }
   </style>
+  <link rel="icon" href="/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preload" as="image" href="/assets/img/logo-s.webp">
+  <meta name="theme-color" content="#ffffff">
+  <script src="/js/components.js" defer></script>
+  <script src="/js/main.js" defer></script>
 </head>
 <body>
 
@@ -108,7 +114,7 @@
           </div>
         </div>
         <div class="split-img">
-          <img src="/assets/sermatic/macchine-cdi/18000319-d-inovy.webp" alt="Lavazza Firma Inovy — macchina per ufficio" loading="lazy" style="width:100%;height:100%;object-fit:contain;border-radius:var(--r-lg);background:var(--bg-2);padding:24px;">
+          <img src="/assets/sermatic/macchine-cdi/18000319-d-inovy.webp" alt="Lavazza Firma Inovy — macchina per ufficio" fetchpriority="high" style="width:100%;height:100%;object-fit:contain;border-radius:var(--r-lg);background:var(--bg-2);padding:24px;">
         </div>
       </div>
     </div>
@@ -345,7 +351,5 @@
   </section>
 
   <div id="footer-root"></div>
-  <script src="/js/components.js"></script>
-  <script src="/js/main.js"></script>
 </body>
 </html>

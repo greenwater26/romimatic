@@ -6,6 +6,12 @@
   <title>Chi siamo — RoMimatic</title>
   <meta name="description" content="Dal 1984 distribuiamo caffè e prodotti d'eccellenza. Scopri la storia e i valori di RoMimatic.">
   <link rel="stylesheet" href="/css/style.css">
+  <link rel="icon" href="/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preload" as="image" href="/assets/img/logo-s.webp">
+  <meta name="theme-color" content="#ffffff">
+  <script src="/js/components.js" defer></script>
+  <script src="/js/main.js" defer></script>
 </head>
 <body>
 
@@ -28,7 +34,7 @@
           <p>Oggi distribuiamo marchi prestigiosi come <strong>Mokador</strong>, <strong>Caffitaly</strong>, <strong>Covim</strong>, <strong>Caffè d'Italia</strong> e <strong>Lavazza Firma</strong>, interpretando ogni pausa come un momento speciale da valorizzare.</p>
         </div>
         <div class="split-img">
-          <img src="/assets/img/chi-siamo-bg.webp" alt="RoMimatic — sede e team" loading="lazy" style="width:100%; height:100%; object-fit:cover; border-radius:var(--r-lg);">
+          <img src="/assets/img/chi-siamo-bg.webp" alt="RoMimatic — sede e team" fetchpriority="high" style="width:100%; height:100%; object-fit:cover; border-radius:var(--r-lg);">
         </div>
       </div>
     </div>
@@ -113,7 +119,5 @@
   </section>
 
   <div id="footer-root"></div>
-  <script src="/js/components.js"></script>
-  <script src="/js/main.js"></script>
 </body>
 </html>

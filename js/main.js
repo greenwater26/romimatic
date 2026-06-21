@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initContactForm();
 });
 
-/* Fade-in on scroll */
+/* Fade-in on scroll — salta gli elementi già visibili per evitare CLS */
 function initScrollAnimations() {
   const elements = document.querySelectorAll('.card, .product-card, .blog-card, .split-img, .split-text, .feature-item');
   if (!elements.length) return;
@@ -20,12 +20,16 @@ function initScrollAnimations() {
         observer.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  }, { threshold: 0.1, rootMargin: '0px 0px -32px 0px' });
 
   elements.forEach(el => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight && rect.bottom > 0) {
+      return; // già nel viewport: nessuna animazione, niente CLS
+    }
     el.style.opacity = '0';
     el.style.transform = 'translateY(20px)';
-    el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+    el.style.transition = 'opacity 0.45s ease, transform 0.45s ease';
     observer.observe(el);
   });
 }

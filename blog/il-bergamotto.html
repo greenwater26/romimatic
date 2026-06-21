@@ -25,6 +25,12 @@
     .highlight-box { background: var(--bg-3); border-left: 4px solid var(--accent); border-radius: 8px; padding: 20px 24px; margin: 32px 0; }
     .highlight-box p { margin: 0; font-size: 15px; color: var(--text-2); }
   </style>
+  <link rel="icon" href="/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preload" as="image" href="/assets/img/logo-s.webp">
+  <meta name="theme-color" content="#ffffff">
+  <script src="/js/components.js" defer></script>
+  <script src="/js/main.js" defer></script>
 </head>
 <body>
   <div id="nav-root"></div>
@@ -37,7 +43,7 @@
         <h1 style="font-size:clamp(28px,4vw,44px); font-weight:700; letter-spacing:-0.02em; line-height:1.1; margin-bottom:16px;">Il Bergamotto — il tesoro di Calabria</h1>
         <div class="article-meta">Redazione RoMimatic · 1 Luglio 2020</div>
 
-        <img src="/assets/news/bergamotto-calabria.webp" alt="Il bergamotto: tesoro di Calabria — combatte il colesterolo cattivo" class="article-img" onerror="this.style.display='none'">
+        <img src="/assets/news/bergamotto-calabria.webp" alt="Il bergamotto: tesoro di Calabria — combatte il colesterolo cattivo" class="article-img" fetchpriority="high" onerror="this.style.display='none'">
 
         <div class="highlight-box">
           <p>Nella provincia di Reggio Calabria lo chiamano <strong>"oro verde"</strong>: in effetti il bergamotto vale oro grazie alle sue potenzialità d'uso, in particolare per le sue proprietà curative — tra cui la capacità di <strong>ridurre il colesterolo LDL (cattivo)</strong> e i trigliceridi nel sangue.</p>
@@ -77,7 +83,5 @@
   </section>
 
   <div id="footer-root"></div>
-  <script src="/js/components.js"></script>
-  <script src="/js/main.js"></script>
 </body>
 </html>

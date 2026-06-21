@@ -45,6 +45,12 @@
     .machine-preview-card-body h3 { font-size: 17px; font-weight: 700; margin-bottom: 6px; }
     .machine-preview-card-body p { font-size: 13px; color: var(--text-2); line-height: 1.6; margin-bottom: 12px; }
   </style>
+  <link rel="icon" href="/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preload" as="image" href="/assets/img/logo-s.webp">
+  <meta name="theme-color" content="#ffffff">
+  <script src="/js/components.js" defer></script>
+  <script src="/js/main.js" defer></script>
 </head>
 <body>
 
@@ -97,7 +103,7 @@
           <a href="/caffe/cialde.html" class="btn btn-outline" style="margin-top: 24px;">Scopri le cialde Mokador →</a>
         </div>
         <div class="split-img">
-          <img src="/assets/sermatic/cialde/elle_sito_1100x600-px_1571396155.webp" alt="Macchina Elle Mokador a cialde ESE 44mm" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:var(--r-lg);">
+          <img src="/assets/sermatic/cialde/elle_sito_1100x600-px_1571396155.webp" alt="Macchina Elle Mokador a cialde ESE 44mm" fetchpriority="high" style="width:100%;height:100%;object-fit:cover;border-radius:var(--r-lg);">
         </div>
       </div>
     </div>
@@ -250,7 +256,5 @@
   </section>
 
   <div id="footer-root"></div>
-  <script src="/js/components.js"></script>
-  <script src="/js/main.js"></script>
 </body>
 </html>
