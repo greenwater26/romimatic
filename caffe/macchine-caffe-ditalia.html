@@ -3,9 +3,65 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Macchine Caffè d'Italia — RoMimatic</title>
-  <meta name="description" content="Macchine Caffè d'Italia per uffici e ambienti professionali. Distribuite da RoMimatic.">
+  <title>Macchine Caffè d'Italia: Perla, Birba, Pepita, Duo, Magica | RoMimatic</title>
+  <meta name="description" content="Macchine Caffè d'Italia a capsule: Perla, Birba, Magica, Pepita, Duo e Duo Vap. 17 bevande, design italiano, comodato gratuito per uffici. Distribuite da RoMimatic a Garbagnate Milanese.">
+  <link rel="canonical" href="https://romimatic.it/caffe/macchine-caffe-ditalia.html">
+  <meta property="og:title" content="Macchine Caffè d'Italia: Perla, Birba, Pepita, Duo, Magica | RoMimatic">
+  <meta property="og:description" content="Macchine Caffè d'Italia a capsule per casa e ufficio. 17 bevande, design 100% Made in Italy, comodato gratuito. Distribuite da RoMimatic.">
+  <meta property="og:type" content="product">
+  <meta property="og:url" content="https://romimatic.it/caffe/macchine-caffe-ditalia.html">
+  <meta property="og:image" content="https://romimatic.it/assets/sermatic/macchine-cdi/perla.webp">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"ItemList","name":"Macchine Caffè d'Italia","description":"Gamma completa di macchine a capsule Caffè d'Italia distribuite da RoMimatic","numberOfItems":7,"itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Caffè d'Italia Perla","description":"Macchina compatta con 17 bevande, serbatoio 1L, disponibile in nero, bianco o rosa"},
+    {"@type":"ListItem","position":2,"name":"Caffè d'Italia Birba","description":"17 bevande, 100% Made in Italy, 7 colori, ideale per uffici in comodato d'uso"},
+    {"@type":"ListItem","position":3,"name":"Caffè d'Italia Magica","description":"Design ispirato alla capsula, con pannello porta scorrevole e illuminazione vano tazza"},
+    {"@type":"ListItem","position":4,"name":"Caffè d'Italia Mago","description":"Schiumalatte abbinabile a Magica per cappuccini e cioccolata calda"},
+    {"@type":"ListItem","position":5,"name":"Caffè d'Italia Pepita","description":"Mini macchina compatta, 1100W, 19 bar, per espresso e infusi"},
+    {"@type":"ListItem","position":6,"name":"Caffè d'Italia Duo","description":"Macchina per grandi ambienti, 2200W, serbatoio 3L, 19 bar"},
+    {"@type":"ListItem","position":7,"name":"Caffè d'Italia Duo Vap","description":"Come Duo con cannuccia vapore integrata per cappuccini, 2300W, serbatoio 3L"}
+  ]}
+  </script>
   <link rel="stylesheet" href="/css/style.css">
+  <style>
+    .machine-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 28px;
+    }
+    .machine-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--r-lg);
+      overflow: hidden;
+      transition: transform .2s, box-shadow .2s;
+    }
+    .machine-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+    .machine-card-img {
+      background: var(--bg-2);
+      aspect-ratio: 4/3;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .machine-card-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .machine-card-body { padding: 20px 22px 24px; }
+    .machine-card-body h3 { font-size: 20px; font-weight: 700; margin-bottom: 8px; letter-spacing: -0.01em; }
+    .machine-card-body .tagline { font-size: 13px; font-weight: 600; color: var(--accent); text-transform: uppercase; letter-spacing: .06em; margin-bottom: 10px; display: block; }
+    .machine-card-body p { font-size: 14px; color: var(--text-2); line-height: 1.65; margin-bottom: 14px; }
+    .spec-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    .spec-table td { padding: 5px 0; border-bottom: 1px solid var(--border); color: var(--text-2); vertical-align: top; }
+    .spec-table td:first-child { font-weight: 600; color: var(--text); width: 44%; }
+    .spec-table tr:last-child td { border-bottom: none; }
+    .badge-comodato {
+      display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: .06em;
+      text-transform: uppercase; padding: 4px 10px; border-radius: 100px;
+      background: #e8f5e9; color: #2e7d32; margin-bottom: 10px;
+    }
+    .duo-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+    @media (max-width: 640px) { .duo-pair { grid-template-columns: 1fr; } }
+  </style>
 </head>
 <body>
 
@@ -21,16 +77,211 @@
   <div class="page-hero">
     <span class="eyebrow">Macchine · Caffè d'Italia</span>
     <h1>Macchine Caffè d'Italia</h1>
-    <p>Macchine a capsule professionali per uffici e spazi di lavoro. Affidabili, compatte, facili da usare.</p>
+    <p>Un capolavoro di design e funzionalità: 17 bevande diverse con la semplicità di un'unica macchina. Design moderno, riscaldamento rapido, 100% Made in Italy.</p>
     <img src="/assets/sermatic/loghi/logo-profumo-home-ok.webp" alt="Caffè d'Italia" style="height:52px; width:auto; margin:24px auto 0; display:block;" loading="lazy">
   </div>
 
-  <section>
+  <!-- INTRO -->
+  <section class="bg-2">
+    <div class="section-inner">
+      <div class="split">
+        <div class="split-text">
+          <span class="eyebrow">Il sistema Caffè d'Italia</span>
+          <h2>17 bevande, una sola macchina</h2>
+          <p>Le macchine Caffè d'Italia a capsule combinano design italiano e tecnologia avanzata per offrire un'esperienza di degustazione completa: caffè, infusi, solubili e bevande al latte, tutti dalla stessa macchina.</p>
+          <p>Le capsule Caffè d'Italia sono compatibili esclusivamente con le macchine del sistema, garantendo la massima qualità e freschezza di ogni bevanda.</p>
+          <div class="feature-list" style="margin-top: 20px;">
+            <div class="feature-item">
+              <div class="feature-icon">🇮🇹</div>
+              <div><strong>100% Made in Italy</strong><span>Design e produzione interamente italiani</span></div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">☕</div>
+              <div><strong>17 bevande disponibili</strong><span>Caffè, infusi, solubili e bevande al latte</span></div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">⚡</div>
+              <div><strong>Riscaldamento rapido</strong><span>Pronta in pochi secondi, standby automatico</span></div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">🏢</div>
+              <div><strong>Comodato d'uso gratuito</strong><span>Per uffici: la macchina è gratuita, paghi solo i prodotti</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="split-img">
+          <img src="/assets/sermatic/macchine-cdi/duo-vap.webp" alt="Macchina Caffè d'Italia Duo Vap" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:var(--r-lg);">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODOTTI -->
+  <section id="prodotti">
     <div class="section-inner">
       <div class="section-head centered">
-        <span class="eyebrow">La gamma Inovy</span>
-        <h2>Macchine per ogni spazio</h2>
-        <p>Dalla piccola scrivania all'ufficio condiviso: una soluzione per ogni dimensione.</p>
+        <span class="eyebrow">La gamma Caffè d'Italia</span>
+        <h2>Quale macchina fa per te?</h2>
+        <p>Dal modello compatto per uso domestico alla macchina professionale per uffici e grandi ambienti: una soluzione per ogni esigenza.</p>
+      </div>
+
+      <div class="machine-grid">
+
+        <!-- PERLA -->
+        <div class="machine-card">
+          <div class="machine-card-img">
+            <img src="/assets/sermatic/macchine-cdi/perla.webp" alt="Macchina Caffè d'Italia Perla" loading="lazy">
+          </div>
+          <div class="machine-card-body">
+            <span class="tagline">Uso domestico</span>
+            <h3>Perla</h3>
+            <p>Compatta e versatile, la Perla è la scelta ideale per chi vuole 17 bevande di qualità in poco spazio. Tasto caffè corto e lungo con regolazione della dose, standby automatico per il risparmio energetico.</p>
+            <table class="spec-table">
+              <tr><td>Bevande</td><td>17</td></tr>
+              <tr><td>Serbatoio</td><td>1 litro</td></tr>
+              <tr><td>Dimensioni</td><td>107 × 242 × 360 mm</td></tr>
+              <tr><td>Colori</td><td>Nero, Bianco, Rosa</td></tr>
+              <tr><td>Standby</td><td>Automatico</td></tr>
+            </table>
+          </div>
+        </div>
+
+        <!-- BIRBA -->
+        <div class="machine-card">
+          <div class="machine-card-img">
+            <img src="/assets/sermatic/macchine-cdi/Birba-nero-principal-.webp" alt="Macchina Caffè d'Italia Birba" loading="lazy">
+          </div>
+          <div class="machine-card-body">
+            <span class="badge-comodato">✓ Comodato d'uso</span>
+            <span class="tagline">Uffici · Casa</span>
+            <h3>Birba</h3>
+            <p>La Birba è disponibile in comodato d'uso gratuito per uffici con almeno 4 consumazioni giornaliere. Sette colori disponibili, smaltimento automatico delle capsule usate, 100% Made in Italy.</p>
+            <table class="spec-table">
+              <tr><td>Bevande</td><td>17</td></tr>
+              <tr><td>Serbatoio</td><td>1 litro</td></tr>
+              <tr><td>Potenza</td><td>400W</td></tr>
+              <tr><td>Colori</td><td>7 colori disponibili</td></tr>
+              <tr><td>Made in Italy</td><td>100%</td></tr>
+              <tr><td>Capsule</td><td>Smaltimento automatico</td></tr>
+            </table>
+          </div>
+        </div>
+
+        <!-- PEPITA -->
+        <div class="machine-card">
+          <div class="machine-card-img">
+            <img src="/assets/sermatic/macchine-cdi/pepita-quad.webp" alt="Macchina Caffè d'Italia Pepita" loading="lazy">
+          </div>
+          <div class="machine-card-body">
+            <span class="tagline">Mini · Compatta</span>
+            <h3>Pepita</h3>
+            <p>Mini nel design, maxi nel gusto. La Pepita è la macchina più compatta della gamma: perfetta per piccoli spazi, prepara espresso corto e lungo, solubili e infusi da foglie selezionate.</p>
+            <table class="spec-table">
+              <tr><td>Potenza</td><td>1100W</td></tr>
+              <tr><td>Pressione</td><td>19 bar</td></tr>
+              <tr><td>Tensione</td><td>220/240V – 50/60Hz</td></tr>
+              <tr><td>Bevande</td><td>Espresso, solubili, infusi</td></tr>
+            </table>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- MAGICA + MAGO -->
+      <div style="margin-top: 28px;" class="duo-pair">
+
+        <div class="machine-card">
+          <div class="machine-card-img">
+            <img src="/assets/sermatic/macchine-cdi/MeM-blu-aperta-exec-scaled.webp" alt="Macchina Caffè d'Italia Magica" loading="lazy">
+          </div>
+          <div class="machine-card-body">
+            <span class="tagline">Design · Casa</span>
+            <h3>Magica</h3>
+            <p>Design elegante ispirato alla forma della capsula. La Magica si abbina al Mago per preparare cappuccini e bevande al latte in un tocco. Porta scorrevole rimovibile, illuminazione interna del vano tazza, due volumi programmabili.</p>
+            <table class="spec-table">
+              <tr><td>Volumi</td><td>2 programmabili</td></tr>
+              <tr><td>Supporto tazza</td><td>Regolabile (espresso / mug)</td></tr>
+              <tr><td>Illuminazione</td><td>Vano tazza illuminato</td></tr>
+              <tr><td>Standby</td><td>Automatico dopo 10 min</td></tr>
+              <tr><td>Accessorio</td><td>Compatibile con Mago</td></tr>
+            </table>
+          </div>
+        </div>
+
+        <div class="machine-card">
+          <div class="machine-card-img">
+            <img src="/assets/sermatic/macchine-cdi/mago.webp" alt="Schiumalatte Caffè d'Italia Mago" loading="lazy">
+          </div>
+          <div class="machine-card-body">
+            <span class="tagline">Accessorio · Latte</span>
+            <h3>Mago</h3>
+            <p>Lo schiumalatte da abbinare alla Magica — o da usare da solo. Crea una schiuma di latte densa e vellutata per cappuccini perfetti e prepara la cioccolata calda con cacao. Un segnale audio avvisa quando è pronto.</p>
+            <table class="spec-table">
+              <tr><td>Funzioni</td><td>Schiuma latte, cioccolata calda</td></tr>
+              <tr><td>Segnale</td><td>Audio al termine</td></tr>
+              <tr><td>Uso</td><td>Autonomo o abbinato a Magica</td></tr>
+            </table>
+          </div>
+        </div>
+
+
+      </div>
+
+      <!-- DUO + DUO VAP -->
+      <div style="margin-top: 28px;" class="duo-pair">
+
+        <div class="machine-card">
+          <div class="machine-card-img">
+            <img src="/assets/sermatic/macchine-cdi/duo.webp" alt="Macchina Caffè d'Italia Duo" loading="lazy">
+          </div>
+          <div class="machine-card-body">
+            <span class="badge-comodato">✓ Comodato d'uso</span>
+            <span class="tagline">Uffici · Grandi ambienti</span>
+            <h3>Duo</h3>
+            <p>Tecnologia e raffinatezza in una macchina pensata per ambienti con molti utenti. Serbatoio da 3 litri, vassoio capsule capiente, 19 bar di pressione per un espresso sempre perfetto.</p>
+            <table class="spec-table">
+              <tr><td>Potenza</td><td>2200W</td></tr>
+              <tr><td>Serbatoio</td><td>3 litri</td></tr>
+              <tr><td>Pressione</td><td>19 bar</td></tr>
+              <tr><td>Dimensioni</td><td>32,2 × 32,2 × 32,2 cm</td></tr>
+              <tr><td>Peso</td><td>7,5 kg</td></tr>
+              <tr><td>Colore</td><td>Nero</td></tr>
+            </table>
+          </div>
+        </div>
+
+        <div class="machine-card">
+          <div class="machine-card-img">
+            <img src="/assets/sermatic/macchine-cdi/duo-vap.webp" alt="Macchina Caffè d'Italia Duo Vap" loading="lazy">
+          </div>
+          <div class="machine-card-body">
+            <span class="badge-comodato">✓ Comodato d'uso</span>
+            <span class="tagline">Uffici · Con vapore</span>
+            <h3>Duo Vap</h3>
+            <p>Come il Duo, con in più la cannuccia vapore per cappuccini e la funzione acqua calda. La scelta ideale per chi vuole offrire ai collaboratori la piena esperienza del bar direttamente in ufficio.</p>
+            <table class="spec-table">
+              <tr><td>Potenza</td><td>2300W</td></tr>
+              <tr><td>Serbatoio</td><td>3 litri</td></tr>
+              <tr><td>Pressione</td><td>19 bar</td></tr>
+              <tr><td>Vapore</td><td>Cannuccia inclusa</td></tr>
+              <tr><td>Acqua calda</td><td>Sì</td></tr>
+              <tr><td>Dimensioni</td><td>32,2 × 32,2 × 32,2 cm</td></tr>
+              <tr><td>Peso</td><td>8,5 kg</td></tr>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- GAMMA INOVY (professionale) -->
+  <section class="bg-2" id="inovy">
+    <div class="section-inner">
+      <div class="section-head centered">
+        <span class="eyebrow">Linea professionale</span>
+        <h2>Gamma Inovy — per l'ufficio</h2>
+        <p>La linea Inovy è pensata per ambienti lavorativi strutturati: dalle scrivanie individuali agli open space con decine di utenti.</p>
       </div>
       <div class="products">
         <div class="product-card">
@@ -39,12 +290,7 @@
           </div>
           <div class="product-card-body">
             <h3>Inovy Compact</h3>
-            <p>La soluzione ideale per scrivanie e piccoli uffici. Compatta, silenziosa e veloce. Compatibile con tutte le capsule Caffè d'Italia.</p>
-            <table class="specs" style="margin-top:16px;">
-              <tr><td>Dimensioni</td><td>Compatta, per uso individuale</td></tr>
-              <tr><td>Compatibilità</td><td>Capsule Caffè d'Italia</td></tr>
-              <tr><td>Beverages</td><td>17 bevande</td></tr>
-            </table>
+            <p>La soluzione ideale per scrivanie e piccoli uffici. Compatta, silenziosa, veloce. 17 bevande disponibili.</p>
           </div>
         </div>
         <div class="product-card">
@@ -52,13 +298,8 @@
             <img src="/assets/sermatic/macchine-cdi/18000319-d-inovy.webp" alt="Inovy Office Caffè d'Italia" loading="lazy">
           </div>
           <div class="product-card-body">
-            <h3>Inovy Office</h3>
-            <p>Pensata per uffici con più utenti. Capacità aumentata, erogazione rapida e touchscreen intuitivo.</p>
-            <table class="specs" style="margin-top:16px;">
-              <tr><td>Utilizzo</td><td>Uffici fino a 20 persone</td></tr>
-              <tr><td>Compatibilità</td><td>Capsule Caffè d'Italia</td></tr>
-              <tr><td>Beverages</td><td>17 bevande</td></tr>
-            </table>
+            <h3>Inovy</h3>
+            <p>Uffici fino a 20 persone. Capacità aumentata, erogazione rapida, touchscreen intuitivo.</p>
           </div>
         </div>
         <div class="product-card">
@@ -67,118 +308,56 @@
           </div>
           <div class="product-card-body">
             <h3>Inovy Custom Milk</h3>
-            <p>La soluzione premium con sistema latte integrato. Cappuccini e bevande con latte fresco in un solo tocco.</p>
-            <table class="specs" style="margin-top:16px;">
-              <tr><td>Sistema latte</td><td>Integrato, latte fresco</td></tr>
-              <tr><td>Compatibilità</td><td>Capsule Caffè d'Italia</td></tr>
-              <tr><td>Beverages</td><td>17 bevande</td></tr>
-            </table>
+            <p>Sistema latte integrato per cappuccini con latte fresco in un solo tocco. La versione premium della linea Inovy.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <hr class="divider">
-
-  <!-- GAMMA COMPLETA -->
-  <section class="bg-2">
+  <!-- FAQ SEO -->
+  <section id="faq">
     <div class="section-inner">
       <div class="section-head centered">
-        <span class="eyebrow">Gamma completa</span>
-        <h2>Tutte le macchine disponibili</h2>
-        <p>Orchestra, Swing, Maestro, Opera, Brio, Vivace, Concerto: una gamma per ogni esigenza.</p>
+        <span class="eyebrow">Domande frequenti</span>
+        <h2>Tutto quello che devi sapere sulle macchine Caffè d'Italia</h2>
       </div>
-      <div class="products">
-        <div class="product-card">
-          <div class="product-card-img">
-            <img src="/assets/sermatic/macchine-cdi/Orchestra-Touch-Hero.webp" alt="Orchestra Touch Caffè d'Italia" loading="lazy">
-          </div>
-          <div class="product-card-body">
-            <h3>Orchestra Touch</h3>
-            <p>Design elegante con touchscreen a colori. La macchina di punta per uffici rappresentativi.</p>
-          </div>
+      <div style="max-width:720px; margin:40px auto 0; display:flex; flex-direction:column; gap:16px;">
+        <div style="background:var(--bg-2); border-radius:var(--r); padding:22px 24px; border:1px solid var(--border);">
+          <strong style="font-size:15px; display:block; margin-bottom:8px;">Le capsule Caffè d'Italia sono compatibili con altre macchine?</strong>
+          <p style="font-size:14px; color:var(--text-2); margin:0;">No. Le capsule Caffè d'Italia utilizzano un sistema proprietario e sono compatibili esclusivamente con le macchine Caffè d'Italia. Questo permette di garantire la qualità ottimale di ogni bevanda.</p>
         </div>
-        <div class="product-card">
-          <div class="product-card-img">
-            <img src="/assets/sermatic/macchine-cdi/Swing-Header.webp" alt="Swing Caffè d'Italia" loading="lazy">
-          </div>
-          <div class="product-card-body">
-            <h3>Swing</h3>
-            <p>Forma inconfondibile, prestazioni eccellenti. Ideale per sale riunioni e reception.</p>
-          </div>
+        <div style="background:var(--bg-2); border-radius:var(--r); padding:22px 24px; border:1px solid var(--border);">
+          <strong style="font-size:15px; display:block; margin-bottom:8px;">Come funziona il comodato d'uso gratuito per gli uffici?</strong>
+          <p style="font-size:14px; color:var(--text-2); margin:0;">RoMimatic installa la macchina nel tuo ufficio gratuitamente (modelli Birba, Duo, Duo Vap). Paghi solo le capsule consumate, senza costi fissi per la macchina. È richiesto un minimo di 4 consumazioni al giorno. Contattaci per richiedere un sopralluogo senza impegno.</p>
         </div>
-        <div class="product-card">
-          <div class="product-card-img">
-            <img src="/assets/sermatic/macchine-cdi/maestro_touch_1028x1192.webp" alt="Maestro Touch Caffè d'Italia" loading="lazy">
-          </div>
-          <div class="product-card-body">
-            <h3>Maestro Touch</h3>
-            <p>Interfaccia touch intuitiva, design professionale. Perfetta per open space e uffici condivisi.</p>
-          </div>
+        <div style="background:var(--bg-2); border-radius:var(--r); padding:22px 24px; border:1px solid var(--border);">
+          <strong style="font-size:15px; display:block; margin-bottom:8px;">Quante bevande si possono preparare con una macchina Caffè d'Italia?</strong>
+          <p style="font-size:14px; color:var(--text-2); margin:0;">Tutte le macchine Caffè d'Italia permettono di preparare 17 bevande diverse: caffè espresso, caffè lungo, caffè d'orzo, tè, camomilla, ginseng, cioccolata, latte macchiato e molte altre.</p>
         </div>
-        <div class="product-card">
-          <div class="product-card-img">
-            <img src="/assets/sermatic/macchine-cdi/Opera-touch2018_2463_0049.webp" alt="Opera Touch Caffè d'Italia" loading="lazy">
-          </div>
-          <div class="product-card-body">
-            <h3>Opera Touch</h3>
-            <p>Eleganza e funzionalità in un corpo compatto. La scelta ideale per studi e piccoli team.</p>
-          </div>
+        <div style="background:var(--bg-2); border-radius:var(--r); padding:22px 24px; border:1px solid var(--border);">
+          <strong style="font-size:15px; display:block; margin-bottom:8px;">Quale modello scegliere per un ufficio con 10-20 persone?</strong>
+          <p style="font-size:14px; color:var(--text-2); margin:0;">Per uffici fino a 20 persone consigliamo la Birba o la Inovy, disponibili in comodato gratuito. Per ambienti più grandi o con esigenze di cappuccino, il Duo Vap con serbatoio da 3 litri è la scelta ideale.</p>
         </div>
-        <div class="product-card">
-          <div class="product-card-img">
-            <img src="/assets/sermatic/macchine-cdi/Brio-Touch-Header.webp" alt="Brio Touch Caffè d'Italia" loading="lazy">
-          </div>
-          <div class="product-card-body">
-            <h3>Brio Touch</h3>
-            <p>Compatta e veloce, con display touch di ultima generazione. Ideale per ogni scrivania.</p>
-          </div>
+        <div style="background:var(--bg-2); border-radius:var(--r); padding:22px 24px; border:1px solid var(--border);">
+          <strong style="font-size:15px; display:block; margin-bottom:8px;">RoMimatic effettua la manutenzione delle macchine?</strong>
+          <p style="font-size:14px; color:var(--text-2); margin:0;">Sì. RoMimatic segue i clienti con un servizio di assistenza tecnica dedicato. Per le macchine in comodato d'uso, la manutenzione ordinaria è inclusa nel servizio.</p>
         </div>
-        <div class="product-card">
-          <div class="product-card-img">
-            <img src="/assets/sermatic/macchine-cdi/vivace-header.webp" alt="Vivace Caffè d'Italia" loading="lazy">
-          </div>
-          <div class="product-card-body">
-            <h3>Vivace</h3>
-            <p>Vivace nel nome e nelle prestazioni. Una macchina agile e affidabile per ogni ufficio.</p>
-          </div>
-        </div>
-        <div class="product-card">
-          <div class="product-card-img">
-            <img src="/assets/sermatic/macchine-cdi/Concerto-touch2018_2463_002.webp" alt="Concerto Touch Caffè d'Italia" loading="lazy">
-          </div>
-          <div class="product-card-body">
-            <h3>Concerto Touch</h3>
-            <p>La macchina professionale per grandi uffici. Erogazione continua e design premium.</p>
-          </div>
-        </div>
-        <div class="product-card">
-          <div class="product-card-img">
-            <img src="/assets/sermatic/macchine-cdi/Birba-nero-principal-.webp" alt="Birba Caffè d'Italia" loading="lazy">
-          </div>
-          <div class="product-card-body">
-            <h3>Birba</h3>
-            <p>Piccola ma potente. La soluzione entry-level di Caffè d'Italia, compatta e affidabile.</p>
-          </div>
-        </div>
-      </div>
-
-      <div style="margin-top: 48px; padding: 32px; background: var(--bg); border-radius: var(--r-lg);">
-        <p style="font-size:14px; color:var(--text-2); text-align:center;">
-          La gamma è in continuo aggiornamento. Contattaci per conoscere tutti i modelli disponibili, le specifiche tecniche complete e le condizioni di comodato d'uso.
-        </p>
       </div>
     </div>
   </section>
 
+  <!-- CTA -->
   <section class="bg-dark">
     <div class="section-inner">
       <div class="cta-banner">
         <span class="eyebrow">Comodato d'uso gratuito</span>
         <h2>La macchina nel tuo ufficio, senza costi</h2>
-        <p>Installa una macchina Caffè d'Italia in comodato d'uso gratuito. Paghi solo i prodotti che consumi.</p>
-        <a href="/contatti.html" class="btn btn-accent">Richiedi informazioni</a>
+        <p>Installa una macchina Caffè d'Italia in comodato d'uso gratuito. Paghi solo i prodotti che consumi. Contattaci per un preventivo su misura.</p>
+        <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
+          <a href="/contatti.html" class="btn btn-accent">Richiedi informazioni</a>
+          <a href="/caffe/capsule-caffe-ditalia.html" class="btn btn-outline" style="color:#fff; border-color:rgba(255,255,255,.4);">Vedi le capsule</a>
+        </div>
       </div>
     </div>
   </section>
