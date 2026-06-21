@@ -368,7 +368,32 @@ section { padding: 96px 24px; }
   background: var(--bg-2);
   padding: 80px 24px 64px;
   text-align: center;
+  position: relative;
+  overflow: hidden;
 }
+.page-hero .eyebrow,
+.page-hero h1,
+.page-hero p { position: relative; z-index: 1; }
+
+/* Chicchi di caffè decorativi nelle pagine caffè */
+.coffee-deco {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+.coffee-deco .bean { position: absolute; height: auto; }
+.bean.b1  { width: 52px;  top:  3%; left:  1%;  opacity:.65; transform: rotate(-15deg); }
+.bean.b2  { width: 44px;  top:  2%; right: 2%;  opacity:.65; transform: rotate(20deg); }
+.bean.b3  { width: 66px;  top: 28%; left:  0%;  opacity:.65; transform: rotate(8deg); }
+.bean.b4  { width: 48px;  top: 58%; left:  2%;  opacity:.65; transform: rotate(-30deg); }
+.bean.b5  { width: 58px;  top: 78%; left:  4%;  opacity:.65; transform: rotate(12deg); }
+.bean.b6  { width: 60px;  top: 10%; right: 1%;  opacity:.65; transform: rotate(-18deg); }
+.bean.b7  { width: 50px;  top: 42%; right: 2%;  opacity:.65; transform: rotate(25deg); }
+.bean.b8  { width: 70px;  top: 68%; right: 1%;  opacity:.65; transform: rotate(-8deg); }
+.bean.b9  { width: 38px;  top: 88%; left:  8%;  opacity:.65; transform: rotate(35deg); }
+.bean.b10 { width: 42px;  top: 86%; right: 6%;  opacity:.65; transform: rotate(-20deg); }
 .page-hero h1 {
   font-size: clamp(32px, 5vw, 60px);
   font-weight: 700;

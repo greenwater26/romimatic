@@ -217,4 +217,39 @@ function highlightActiveLink() {
   });
 }
 
+function injectCoffeeDeco() {
+  const path = window.location.pathname;
+  const isCaffePage = path === '/caffe.html' || path.startsWith('/caffe/');
+  if (!isCaffePage) return;
+
+  const hero = document.querySelector('.page-hero');
+  if (!hero) return;
+
+  const deco = document.createElement('div');
+  deco.className = 'coffee-deco';
+  deco.setAttribute('aria-hidden', 'true');
+  deco.innerHTML = `
+    <svg xmlns="http://www.w3.org/2000/svg" style="position:absolute;width:0;height:0;">
+      <defs>
+        <symbol id="chicco-ph" viewBox="0 0 60 100">
+          <ellipse cx="30" cy="50" rx="27" ry="46" fill="#6F4E37"/>
+          <path d="M30 6 C24 28 36 72 30 94" stroke="#3d2b1f" stroke-width="3" fill="none" stroke-linecap="round" opacity=".70"/>
+        </symbol>
+      </defs>
+    </svg>
+    <svg class="bean b1"><use href="#chicco-ph"/></svg>
+    <svg class="bean b2"><use href="#chicco-ph"/></svg>
+    <svg class="bean b3"><use href="#chicco-ph"/></svg>
+    <svg class="bean b4"><use href="#chicco-ph"/></svg>
+    <svg class="bean b5"><use href="#chicco-ph"/></svg>
+    <svg class="bean b6"><use href="#chicco-ph"/></svg>
+    <svg class="bean b7"><use href="#chicco-ph"/></svg>
+    <svg class="bean b8"><use href="#chicco-ph"/></svg>
+    <svg class="bean b9"><use href="#chicco-ph"/></svg>
+    <svg class="bean b10"><use href="#chicco-ph"/></svg>
+  `;
+  hero.insertBefore(deco, hero.firstChild);
+}
+
 document.addEventListener('DOMContentLoaded', injectComponents);
+document.addEventListener('DOMContentLoaded', injectCoffeeDeco);
