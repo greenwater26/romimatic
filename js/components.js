@@ -7,7 +7,7 @@ const NAV_HTML = `
   <div class="nav-inner">
 
     <a href="/" class="nav-logo" id="nav-logo-link">
-      <img src="/assets/img/logo-s.png" alt="RoMimatic" id="nav-logo-img" style="height:44px; width:auto;">
+      <img src="/assets/img/logo-s.webp" alt="RoMimatic" id="nav-logo-img" style="height:44px; width:auto;">
       <span class="nav-logo-text" id="nav-logo-text" style="display:none;">RoMimatic</span>
     </a>
 
@@ -89,7 +89,7 @@ const FOOTER_HTML = `
 
       <div class="footer-brand">
         <a href="/" class="nav-logo" style="margin-bottom:0;">
-          <img src="/assets/img/logo-s.png" alt="RoMimatic" style="height:48px; width:auto;">
+          <img src="/assets/img/logo-s.webp" alt="RoMimatic" style="height:48px; width:auto;">
         </a>
         <p>Dal 1984 portiamo qualità e gusto nelle aziende e nelle case. Distributori automatici, caffè di eccellenza e prodotti artigianali calabresi.</p>
         <div class="footer-social">
