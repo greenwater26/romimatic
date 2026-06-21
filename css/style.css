@@ -401,6 +401,15 @@ section { padding: 96px 24px; }
 
 /* ── Product cards ── */
 .products { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 24px; }
+.products-5col { grid-template-columns: repeat(5, 1fr); }
+.products-3col { grid-template-columns: repeat(3, 1fr); }
+/* 7 items: 4+3 con ultima riga centrata */
+.products.products-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.products.products-flex .product-card { flex: 0 0 calc(25% - 18px); min-width: 0; }
 .product-card {
   background: var(--bg);
   border: 1px solid var(--border);
@@ -630,6 +639,8 @@ footer {
   .page-hero { padding: 60px 20px 48px; }
   .cards, .products, .blog-grid { grid-template-columns: 1fr; }
   .cards-4 { grid-template-columns: repeat(2, 1fr); }
+  .products-5col, .products-3col { grid-template-columns: repeat(2, 1fr); }
+  .products.products-flex .product-card { flex: 0 0 calc(50% - 12px); }
   .form-grid { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; gap: 28px; }
   .footer-bottom { flex-direction: column; gap: 10px; text-align: center; }
