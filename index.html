@@ -22,16 +22,16 @@
       position: absolute;
       fill: #6F4E37;
     }
-    .bean.b1  { width: 90px;  top:  8%; left:  4%;  opacity:.22; transform: rotate(-22deg); }
-    .bean.b2  { width: 55px;  top: 15%; right: 7%;  opacity:.18; transform: rotate(18deg); }
-    .bean.b3  { width: 130px; top: 55%; left:  2%;  opacity:.16; transform: rotate(10deg); }
-    .bean.b4  { width: 45px;  top: 72%; left: 20%;  opacity:.20; transform: rotate(-35deg); }
-    .bean.b5  { width: 70px;  top: 30%; right: 3%;  opacity:.18; transform: rotate(-12deg); }
-    .bean.b6  { width: 100px; top: 68%; right: 9%;  opacity:.15; transform: rotate(25deg); }
-    .bean.b7  { width: 40px;  top: 85%; left: 45%;  opacity:.20; transform: rotate(5deg); }
-    .bean.b8  { width: 60px;  top:  3%; left: 55%;  opacity:.18; transform: rotate(-40deg); }
-    .bean.b9  { width: 80px;  top: 45%; left: 38%;  opacity:.12; transform: rotate(30deg); }
-    .bean.b10 { width: 35px;  top: 90%; right:25%;  opacity:.22; transform: rotate(-8deg); }
+    .bean.b1  { width: 90px;  top:  8%; left:  4%;  opacity:.42; transform: rotate(-22deg); }
+    .bean.b2  { width: 55px;  top: 15%; right: 7%;  opacity:.38; transform: rotate(18deg); }
+    .bean.b3  { width: 130px; top: 55%; left:  2%;  opacity:.35; transform: rotate(10deg); }
+    .bean.b4  { width: 45px;  top: 72%; left: 20%;  opacity:.40; transform: rotate(-35deg); }
+    .bean.b5  { width: 70px;  top: 30%; right: 3%;  opacity:.38; transform: rotate(-12deg); }
+    .bean.b6  { width: 100px; top: 68%; right: 9%;  opacity:.33; transform: rotate(25deg); }
+    .bean.b7  { width: 40px;  top: 85%; left: 45%;  opacity:.42; transform: rotate(5deg); }
+    .bean.b8  { width: 60px;  top:  3%; left: 55%;  opacity:.38; transform: rotate(-40deg); }
+    .bean.b9  { width: 80px;  top: 45%; left: 38%;  opacity:.28; transform: rotate(30deg); }
+    .bean.b10 { width: 35px;  top: 90%; right:25%;  opacity:.45; transform: rotate(-8deg); }
 
     /* Sezione caffè con decoro laterale */
     .section-caffe-wrap { position: relative; overflow: hidden; }
@@ -63,47 +63,31 @@
 
     <!-- Chicchi di caffè decorativi -->
     <div class="coffee-deco" aria-hidden="true">
-      <!-- SVG chicco di caffè (riusato con classe) -->
-      <svg class="bean b1" viewBox="0 0 100 65" xmlns="http://www.w3.org/2000/svg">
-        <ellipse cx="50" cy="32.5" rx="48" ry="30.5"/>
-        <path d="M50 4 C64 14 64 51 50 61 C36 51 36 14 50 4 Z" fill="#3d2b1f" opacity=".4"/>
+
+      <!-- Forma chicco definita una volta, riusata 10 volte -->
+      <svg xmlns="http://www.w3.org/2000/svg" style="position:absolute;width:0;height:0;">
+        <defs>
+          <symbol id="chicco" viewBox="0 0 100 65">
+            <!-- Corpo del chicco -->
+            <ellipse cx="50" cy="32.5" rx="48" ry="30.5" fill="#6F4E37"/>
+            <!-- Fessura classica: linea curva stroke, non fill -->
+            <path d="M50 5 C55 18 45 47 50 60"
+                  stroke="#3d2b1f" stroke-width="3.5"
+                  fill="none" stroke-linecap="round" opacity=".75"/>
+          </symbol>
+        </defs>
       </svg>
-      <svg class="bean b2" viewBox="0 0 100 65" xmlns="http://www.w3.org/2000/svg">
-        <ellipse cx="50" cy="32.5" rx="48" ry="30.5"/>
-        <path d="M50 4 C64 14 64 51 50 61 C36 51 36 14 50 4 Z" fill="#3d2b1f" opacity=".4"/>
-      </svg>
-      <svg class="bean b3" viewBox="0 0 100 65" xmlns="http://www.w3.org/2000/svg">
-        <ellipse cx="50" cy="32.5" rx="48" ry="30.5"/>
-        <path d="M50 4 C64 14 64 51 50 61 C36 51 36 14 50 4 Z" fill="#3d2b1f" opacity=".4"/>
-      </svg>
-      <svg class="bean b4" viewBox="0 0 100 65" xmlns="http://www.w3.org/2000/svg">
-        <ellipse cx="50" cy="32.5" rx="48" ry="30.5"/>
-        <path d="M50 4 C64 14 64 51 50 61 C36 51 36 14 50 4 Z" fill="#3d2b1f" opacity=".4"/>
-      </svg>
-      <svg class="bean b5" viewBox="0 0 100 65" xmlns="http://www.w3.org/2000/svg">
-        <ellipse cx="50" cy="32.5" rx="48" ry="30.5"/>
-        <path d="M50 4 C64 14 64 51 50 61 C36 51 36 14 50 4 Z" fill="#3d2b1f" opacity=".4"/>
-      </svg>
-      <svg class="bean b6" viewBox="0 0 100 65" xmlns="http://www.w3.org/2000/svg">
-        <ellipse cx="50" cy="32.5" rx="48" ry="30.5"/>
-        <path d="M50 4 C64 14 64 51 50 61 C36 51 36 14 50 4 Z" fill="#3d2b1f" opacity=".4"/>
-      </svg>
-      <svg class="bean b7" viewBox="0 0 100 65" xmlns="http://www.w3.org/2000/svg">
-        <ellipse cx="50" cy="32.5" rx="48" ry="30.5"/>
-        <path d="M50 4 C64 14 64 51 50 61 C36 51 36 14 50 4 Z" fill="#3d2b1f" opacity=".4"/>
-      </svg>
-      <svg class="bean b8" viewBox="0 0 100 65" xmlns="http://www.w3.org/2000/svg">
-        <ellipse cx="50" cy="32.5" rx="48" ry="30.5"/>
-        <path d="M50 4 C64 14 64 51 50 61 C36 51 36 14 50 4 Z" fill="#3d2b1f" opacity=".4"/>
-      </svg>
-      <svg class="bean b9" viewBox="0 0 100 65" xmlns="http://www.w3.org/2000/svg">
-        <ellipse cx="50" cy="32.5" rx="48" ry="30.5"/>
-        <path d="M50 4 C64 14 64 51 50 61 C36 51 36 14 50 4 Z" fill="#3d2b1f" opacity=".4"/>
-      </svg>
-      <svg class="bean b10" viewBox="0 0 100 65" xmlns="http://www.w3.org/2000/svg">
-        <ellipse cx="50" cy="32.5" rx="48" ry="30.5"/>
-        <path d="M50 4 C64 14 64 51 50 61 C36 51 36 14 50 4 Z" fill="#3d2b1f" opacity=".4"/>
-      </svg>
+
+      <svg class="bean b1"><use href="#chicco"/></svg>
+      <svg class="bean b2"><use href="#chicco"/></svg>
+      <svg class="bean b3"><use href="#chicco"/></svg>
+      <svg class="bean b4"><use href="#chicco"/></svg>
+      <svg class="bean b5"><use href="#chicco"/></svg>
+      <svg class="bean b6"><use href="#chicco"/></svg>
+      <svg class="bean b7"><use href="#chicco"/></svg>
+      <svg class="bean b8"><use href="#chicco"/></svg>
+      <svg class="bean b9"><use href="#chicco"/></svg>
+      <svg class="bean b10"><use href="#chicco"/></svg>
     </div>
 
     <div class="hero-inner">
@@ -193,8 +177,10 @@
   <section class="bg-2 section-caffe-wrap">
     <!-- Grande chicco decorativo in background -->
     <svg class="caffe-deco-bg" viewBox="0 0 100 65" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <ellipse cx="50" cy="32.5" rx="48" ry="30.5"/>
-      <path d="M50 4 C64 14 64 51 50 61 C36 51 36 14 50 4 Z" fill="#3d2b1f" opacity=".5"/>
+      <ellipse cx="50" cy="32.5" rx="48" ry="30.5" fill="#6F4E37"/>
+      <path d="M50 5 C55 18 45 47 50 60"
+            stroke="#3d2b1f" stroke-width="3.5"
+            fill="none" stroke-linecap="round" opacity=".75"/>
     </svg>
 
     <div class="section-inner" style="position:relative; z-index:1;">
