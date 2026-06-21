@@ -264,6 +264,7 @@ section { padding: 96px 24px; }
 
 /* ── Cards grid ── */
 .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 20px; }
+.cards-4 { grid-template-columns: repeat(4, 1fr); }
 .card {
   background: var(--bg-2);
   border-radius: var(--r-lg);
@@ -628,6 +629,7 @@ footer {
   .hero { padding: 60px 20px; }
   .page-hero { padding: 60px 20px 48px; }
   .cards, .products, .blog-grid { grid-template-columns: 1fr; }
+  .cards-4 { grid-template-columns: repeat(2, 1fr); }
   .form-grid { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; gap: 28px; }
   .footer-bottom { flex-direction: column; gap: 10px; text-align: center; }
