@@ -31,6 +31,7 @@ const NAV_HTML = `
             <div class="dropdown-sub">
               <a class="dropdown-link" href="/caffe/capsule-caffe-ditalia.html">Caffè d'Italia</a>
               <a class="dropdown-link" href="/caffe/capsule-lavazza-firma.html">Lavazza Firma</a>
+              <a class="dropdown-link" href="/caffe/capsule-mokador.html">Mokador</a>
             </div>
           </div>
           <div class="dropdown-item">

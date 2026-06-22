@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Capsule Mokador: 14 Bevande a Capsule 100% Made in Italy | RoMimatic</title>
+  <meta name="description" content="Capsule Mokador: 6 miscele di caffè e 8 specialità (infusi, tisane, ginseng, orzo, gianduia) 100% Made in Italy. Sistema brevettato, macchina in comodato gratuito. Distribuite da RoMimatic a Garbagnate Milanese.">
+  <link rel="canonical" href="https://romimatic.it/caffe/capsule-mokador.html">
+  <meta property="og:title" content="Capsule Mokador: 14 Bevande 100% Made in Italy | RoMimatic">
+  <meta property="og:description" content="Aroma Top, Crema, 100% Arabica Bio, Più Crema, Big Cup, Decaffeinato + 8 specialità. Macchina in comodato gratuito. RoMimatic distributore a Garbagnate Milanese.">
+  <meta property="og:type" content="product">
+  <meta property="og:url" content="https://romimatic.it/caffe/capsule-mokador.html">
+  <meta property="og:image" content="https://romimatic.it/assets/sermatic/capsule-mokador/mokador-capsula-aroma-top.png">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:site_name" content="RoMimatic">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"ItemList","name":"Capsule Mokador — Gamma completa","description":"14 capsule Mokador distribuite da RoMimatic: 6 caffè e 8 specialità 100% Made in Italy","numberOfItems":14,"itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Aroma Top","description":"Miscela arabica e robusta con crema nocciola — note di albicocca secca e cioccolato fondente"},
+    {"@type":"ListItem","position":2,"name":"Crema","description":"Blend corposo dal gusto strutturato — note di anacardi e caramello"},
+    {"@type":"ListItem","position":3,"name":"100% Arabica Bio","description":"100% arabica certificata biologica, delicata con crema perfetta — note di vaniglia e pesca"},
+    {"@type":"ListItem","position":4,"name":"Più Crema","description":"Miscela intensa a base robusta — note di caramello e cioccolato fondente"},
+    {"@type":"ListItem","position":5,"name":"Big Cup","description":"Caffè lungo, morbido e aromatico arabica-robusta — note di cacao e fiori"},
+    {"@type":"ListItem","position":6,"name":"Decaffeinato","description":"Decaffeinazione tradizionale, residuo caffeina <0,1% — note di noci e marzapane"},
+    {"@type":"ListItem","position":7,"name":"Orzo","description":"Alternativa leggera e cremosa al caffè"},
+    {"@type":"ListItem","position":8,"name":"Frutti di Bosco","description":"Tisana ai frutti di bosco con rosa canina e sambuco"},
+    {"@type":"ListItem","position":9,"name":"Tè al Limone","description":"Tè Ceylon con note di limone"},
+    {"@type":"ListItem","position":10,"name":"Gianduia","description":"Caffè con miscela nocciola-cioccolato"},
+    {"@type":"ListItem","position":11,"name":"Ginseng","description":"Bevanda al ginseng energizzante"},
+    {"@type":"ListItem","position":12,"name":"Mou","description":"Bevanda aromatizzata al caramello"},
+    {"@type":"ListItem","position":13,"name":"Camomilla","description":"Infuso alla camomilla"},
+    {"@type":"ListItem","position":14,"name":"Bevanda Bianca","description":"Bevanda a base latte per cappuccino"}
+  ]}
+  </script>
+  <link rel="stylesheet" href="/css/style.css">
+  <style>
+    /* Griglia capsule centrata */
+    .capsule-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      justify-content: center;
+      margin-top: 12px;
+    }
+    .capsule-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--r-lg);
+      overflow: hidden;
+      flex: 0 0 calc(33.333% - 16px);
+      min-width: 240px;
+      display: flex;
+      flex-direction: column;
+      transition: transform .2s, box-shadow .2s;
+    }
+    .capsule-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+    .capsule-card-img {
+      background: var(--bg-2);
+      aspect-ratio: 1;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .capsule-card-img img { width: 100%; height: 100%; object-fit: contain; padding: 24px; display: block; }
+    .capsule-card-body { padding: 20px 22px 24px; flex: 1; display: flex; flex-direction: column; }
+    .capsule-card-body h3 { font-size: 18px; font-weight: 700; margin-bottom: 6px; letter-spacing: -0.01em; }
+    .capsule-card-body .cap-tag {
+      font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em;
+      color: var(--accent); margin-bottom: 10px; display: block;
+    }
+    .capsule-card-body p { font-size: 13px; color: var(--text-2); line-height: 1.6; margin-bottom: 12px; flex: 1; }
+
+    /* Barra intensità */
+    .intensity-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+    .intensity-row .i-label { font-size: 11px; font-weight: 600; color: var(--text-3); text-transform: uppercase; letter-spacing: .06em; width: 60px; flex-shrink: 0; }
+    .bar-track { flex: 1; height: 6px; background: var(--bg-3); border-radius: 3px; overflow: hidden; }
+    .bar-fill { height: 100%; background: var(--accent); border-radius: 3px; }
+    .i-val { font-size: 12px; font-weight: 700; color: var(--accent); width: 28px; text-align: right; flex-shrink: 0; }
+
+    /* Note sensoriali */
+    .sensory-note {
+      font-size: 12px;
+      color: var(--text-3);
+      font-style: italic;
+      margin-top: 4px;
+      padding-top: 10px;
+      border-top: 1px solid var(--border);
+    }
+    .sensory-note::before { content: "✦ "; color: var(--accent); font-style: normal; }
+
+    /* Badge */
+    .badge-bio {
+      display: inline-flex; align-items: center; gap: 5px;
+      font-size: 11px; font-weight: 700; letter-spacing: .05em;
+      text-transform: uppercase; padding: 3px 9px; border-radius: 100px;
+      background: #e8f5e9; color: #2e7d32; margin-bottom: 8px;
+    }
+    .badge-deca {
+      display: inline-flex; align-items: center; gap: 5px;
+      font-size: 11px; font-weight: 700; letter-spacing: .05em;
+      text-transform: uppercase; padding: 3px 9px; border-radius: 100px;
+      background: #e3f2fd; color: #1565c0; margin-bottom: 8px;
+    }
+
+    /* Ideal time pill */
+    .ideal-time {
+      display: inline-block;
+      font-size: 11px; font-weight: 600; color: var(--text-3);
+      background: var(--bg-2); border: 1px solid var(--border);
+      border-radius: 100px; padding: 3px 10px; margin-bottom: 10px;
+    }
+
+    /* Griglia bevande (2 colonne più larghezza) */
+    .bev-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 12px;
+    }
+    .bev-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--r-lg);
+      overflow: hidden;
+      flex: 0 0 calc(25% - 15px);
+      min-width: 180px;
+      text-align: center;
+      transition: transform .15s, box-shadow .15s;
+    }
+    .bev-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
+    .bev-card img { width: 100%; aspect-ratio: 1; object-fit: contain; display: block; background: var(--bg-2); padding: 20px; }
+    .bev-card-body { padding: 12px 12px 16px; }
+    .bev-card-body h4 { font-size: 14px; font-weight: 700; margin-bottom: 4px; }
+    .bev-card-body p { font-size: 12px; color: var(--text-2); line-height: 1.5; }
+
+    /* Stats strip */
+    .stats-strip {
+      display: flex;
+      justify-content: center;
+      gap: 0;
+      border: 1px solid var(--border);
+      border-radius: var(--r-lg);
+      overflow: hidden;
+      margin: 40px 0 0;
+    }
+    .stat-item {
+      flex: 1;
+      text-align: center;
+      padding: 20px 12px;
+      border-right: 1px solid var(--border);
+    }
+    .stat-item:last-child { border-right: none; }
+    .stat-num { display: block; font-size: 30px; font-weight: 700; color: var(--accent); line-height: 1; margin-bottom: 5px; }
+    .stat-lbl { display: block; font-size: 11px; color: var(--text-3); text-transform: uppercase; letter-spacing: .06em; }
+
+    .mokador-logo { height: 40px; width: auto; display: block; }
+
+    @media (max-width: 860px) {
+      .capsule-card { flex: 0 0 calc(50% - 12px); }
+      .bev-card { flex: 0 0 calc(50% - 10px); }
+    }
+    @media (max-width: 540px) {
+      .capsule-card { flex: 0 0 100%; min-width: 0; }
+      .bev-card { flex: 0 0 calc(50% - 10px); min-width: 0; }
+      .stats-strip { flex-wrap: wrap; }
+      .stat-item { flex: 0 0 50%; border-bottom: 1px solid var(--border); }
+    }
+  </style>
+  <link rel="icon" href="/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preload" as="image" href="/assets/img/logo-s.webp">
+  <meta name="theme-color" content="#ffffff">
+  <script src="/js/components.js" defer></script>
+  <script src="/js/main.js" defer></script>
+</head>
+<body>
+
+  <div id="nav-root"></div>
+
+  <main id="main-content">
+
+  <div class="breadcrumb">
+    <a href="/">Home</a><span>›</span>
+    <a href="/caffe.html">Caffè</a><span>›</span>
+    <a href="/caffe/capsule.html">Capsule</a><span>›</span>
+    <span>Mokador</span>
+  </div>
+
+  <div class="page-hero">
+    <span class="eyebrow">Capsule · Mokador</span>
+    <h1>Capsule Mokador: 14 bevande 100% Made in Italy</h1>
+    <p>Sei miscele di caffè selezionate e otto specialità — infusi, tisane, bevande al latte e solubili — in un unico sistema a capsule progettato e prodotto interamente in Italia.</p>
+  </div>
+
+  <!-- INTRO + STATS -->
+  <section id="intro">
+    <div class="section-inner">
+      <div class="split">
+        <div class="split-text">
+          <img src="/assets/sermatic/loghi/logo-mokador-large_1200x.webp" alt="Mokador" class="mokador-logo" style="margin-bottom: 20px;">
+          <h2>Un sistema italiano, una qualità superiore</h2>
+          <p>Mokador è un'azienda italiana con sede a Faenza (RA) e oltre 40 anni di storia nel settore caffè. Le sue capsule sono progettate per macchine con sistema di infusione brevettato: ogni capsula garantisce la stessa qualità in tazza, dall'espresso classico al tè freddo.</p>
+          <p>Tutte le miscele di caffè sono selezionate tra i migliori lotti di arabica e robusta, con profili sensoriali distinti per ogni momento della giornata. La gamma include anche un'arabica 100% biologica certificata.</p>
+          <div class="feature-list" style="margin-top: 20px;">
+            <div class="feature-item">
+              <div class="feature-icon">🇮🇹</div>
+              <div><strong>100% Made in Italy</strong><span>Progettate, prodotte e confezionate interamente in Italia</span></div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">🔬</div>
+              <div><strong>Sistema brevettato</strong><span>Infusione ottimizzata per ogni tipo di bevanda</span></div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">🌿</div>
+              <div><strong>Linea Bio certificata</strong><span>100% Arabica Bio con certificazione IT BIO 014</span></div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">☕</div>
+              <div><strong>14 bevande in un solo sistema</strong><span>Caffè, infusi, tisane, solubili e bevanda al latte</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="split-img">
+          <img src="/assets/sermatic/macchine-mokador/dado-optima.jpg" alt="Macchina a capsule Mokador Dado Optima con capsule" fetchpriority="high" style="width:100%;height:100%;object-fit:contain;background:var(--bg-2);border-radius:var(--r-lg);padding:20px;">
+        </div>
+      </div>
+
+      <div class="stats-strip">
+        <div class="stat-item">
+          <span class="stat-num">14</span>
+          <span class="stat-lbl">Bevande totali</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">6</span>
+          <span class="stat-lbl">Miscele caffè</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">8</span>
+          <span class="stat-lbl">Specialità</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">40+</span>
+          <span class="stat-lbl">Anni di storia</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">1</span>
+          <span class="stat-lbl">Bio certificata</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CAFFÈ -->
+  <section class="bg-2" id="caffe">
+    <div class="section-inner">
+      <div class="section-head centered">
+        <span class="eyebrow">Le miscele</span>
+        <h2>6 caffè, un profilo sensoriale distinto</h2>
+        <p>Da una classica miscela arabica-robusta a un delicato 100% arabica biologico: ogni caffè Mokador è pensato per un preciso momento della giornata e per un profilo gustativo unico.</p>
+      </div>
+
+      <div class="capsule-grid">
+
+        <!-- AROMA TOP -->
+        <div class="capsule-card">
+          <div class="capsule-card-img">
+            <img src="/assets/sermatic/capsule-mokador/mokador-capsula-aroma-top.png" alt="Capsule Mokador Aroma Top — miscela arabica robusta" fetchpriority="high">
+          </div>
+          <div class="capsule-card-body">
+            <span class="cap-tag">Espresso classico</span>
+            <h3>Aroma Top</h3>
+            <span class="ideal-time">☀️ Ideale a pranzo</span>
+            <div class="intensity-row">
+              <span class="i-label">Intensità</span>
+              <div class="bar-track"><div class="bar-fill" style="width:60%;"></div></div>
+              <span class="i-val">3/5</span>
+            </div>
+            <p>Miscela bilanciata di arabica e robusta con crema nocciola densa e persistente. Un espresso dal carattere classico, riconoscibile fin dal primo sorso.</p>
+            <div class="sensory-note">Albicocche secche e cioccolato fondente</div>
+          </div>
+        </div>
+
+        <!-- CREMA -->
+        <div class="capsule-card">
+          <div class="capsule-card-img">
+            <img src="/assets/sermatic/capsule-mokador/mokador-CREMA_CAPSULA-.png" alt="Capsule Mokador Crema — blend corposo" loading="lazy">
+          </div>
+          <div class="capsule-card-body">
+            <span class="cap-tag">Espresso intenso</span>
+            <h3>Crema</h3>
+            <span class="ideal-time">🌅 Ideale a colazione</span>
+            <div class="intensity-row">
+              <span class="i-label">Intensità</span>
+              <div class="bar-track"><div class="bar-fill" style="width:80%;"></div></div>
+              <span class="i-val">4/5</span>
+            </div>
+            <p>Blend corposo e strutturato, con aroma tostato pronunciato. Una tazza piena, avvolgente, perfetta per iniziare la giornata con energia.</p>
+            <div class="sensory-note">Anacardi e caramello</div>
+          </div>
+        </div>
+
+        <!-- 100% ARABICA BIO -->
+        <div class="capsule-card">
+          <div class="capsule-card-img">
+            <img src="/assets/sermatic/capsule-mokador/mokador-CAPSULA-100-ARABICA-BIO-.png" alt="Capsule Mokador 100% Arabica Bio — certificata biologica" loading="lazy">
+          </div>
+          <div class="capsule-card-body">
+            <span class="cap-tag">100% Arabica</span>
+            <h3>100% Arabica Bio</h3>
+            <span class="ideal-time">☕ Ideale al break</span>
+            <div style="margin-bottom: 4px;"><span class="badge-bio">🌿 Certificato Bio</span></div>
+            <div class="intensity-row">
+              <span class="i-label">Intensità</span>
+              <div class="bar-track"><div class="bar-fill" style="width:40%;"></div></div>
+              <span class="i-val">2/5</span>
+            </div>
+            <p>Arabica 100% certificata biologica (IT BIO 014). Delicata, con crema perfetta e bassa acidità — la scelta per chi ama un caffè puro, leggero e sostenibile.</p>
+            <div class="sensory-note">Vaniglia e pesca</div>
+          </div>
+        </div>
+
+        <!-- PIÙ CREMA -->
+        <div class="capsule-card">
+          <div class="capsule-card-img">
+            <img src="/assets/sermatic/capsule-mokador/mokador-PIU-CREMA_CAPSULA-.png" alt="Capsule Mokador Più Crema — miscela intensa robusta" loading="lazy">
+          </div>
+          <div class="capsule-card-body">
+            <span class="cap-tag">Espresso forte</span>
+            <h3>Più Crema</h3>
+            <span class="ideal-time">🌅 Ideale a colazione</span>
+            <div class="intensity-row">
+              <span class="i-label">Intensità</span>
+              <div class="bar-track"><div class="bar-fill" style="width:100%;"></div></div>
+              <span class="i-val">5/5</span>
+            </div>
+            <p>La miscela più intensa della gamma. A base robusta, con un aroma tostato deciso e una crema compatta. Per chi non vuole compromessi sulla carica del mattino.</p>
+            <div class="sensory-note">Caramello e cioccolato fondente</div>
+          </div>
+        </div>
+
+        <!-- BIG CUP -->
+        <div class="capsule-card">
+          <div class="capsule-card-img">
+            <img src="/assets/sermatic/capsule-mokador/mokador-BIG-CUP_CAPSULA-.png" alt="Capsule Mokador Big Cup — caffè lungo morbido" loading="lazy">
+          </div>
+          <div class="capsule-card-body">
+            <span class="cap-tag">Caffè lungo</span>
+            <h3>Big Cup</h3>
+            <span class="ideal-time">🌅 Colazione / Break</span>
+            <div class="intensity-row">
+              <span class="i-label">Intensità</span>
+              <div class="bar-track"><div class="bar-fill" style="width:40%;"></div></div>
+              <span class="i-val">2/5</span>
+            </div>
+            <p>Per chi preferisce un caffè più lungo e morbido. Miscela arabica-robusta bilanciata per un erogato generoso, aromatico e privo di amarezza eccessiva.</p>
+            <div class="sensory-note">Cacao e fiori</div>
+          </div>
+        </div>
+
+        <!-- DECAFFEINATO -->
+        <div class="capsule-card">
+          <div class="capsule-card-img">
+            <img src="/assets/sermatic/capsule-mokador/mokador-DECAFFEINATO_CAPSULA-.png" alt="Capsule Mokador Decaffeinato — residuo caffeina inferiore a 0,1%" loading="lazy">
+          </div>
+          <div class="capsule-card-body">
+            <span class="cap-tag">Decaffeinato</span>
+            <h3>Decaffeinato</h3>
+            <span class="ideal-time">🌙 Ideale a cena</span>
+            <div style="margin-bottom: 4px;"><span class="badge-deca">☁️ &lt;0,1% caffeina</span></div>
+            <div class="intensity-row">
+              <span class="i-label">Intensità</span>
+              <div class="bar-track"><div class="bar-fill" style="width:60%;"></div></div>
+              <span class="i-val">3/5</span>
+            </div>
+            <p>Decaffeinazione con metodo tradizionale: residuo di caffeina inferiore allo 0,1%. Stesso gusto rotondo del caffè classico, senza nessun pensiero.</p>
+            <div class="sensory-note">Noci e marzapane</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SPECIALITÀ E BEVANDE -->
+  <section id="specialita">
+    <div class="section-inner">
+      <div class="section-head centered">
+        <span class="eyebrow">Per ogni gusto</span>
+        <h2>8 specialità: infusi, tisane e bevande</h2>
+        <p>Non solo caffè. Il sistema Mokador copre ogni momento della giornata: una tisana rilassante, un tè rinfrescante, la calda dolcezza del gianduia o la grinta del ginseng.</p>
+      </div>
+
+      <div class="bev-grid">
+
+        <div class="bev-card">
+          <img src="/assets/sermatic/capsule-mokador/mokador-ORZO_CAPSULA.png" alt="Capsule Mokador Orzo" loading="lazy">
+          <div class="bev-card-body">
+            <h4>Orzo</h4>
+            <p>Alternativa leggera e cremosa al caffè, senza caffeina</p>
+          </div>
+        </div>
+
+        <div class="bev-card">
+          <img src="/assets/sermatic/capsule-mokador/mokador-GINSENG_CAPSULA-.png" alt="Capsule Mokador Ginseng" loading="lazy">
+          <div class="bev-card-body">
+            <h4>Ginseng</h4>
+            <p>Bevanda energizzante al ginseng, tonificante e aromatica</p>
+          </div>
+        </div>
+
+        <div class="bev-card">
+          <img src="/assets/sermatic/capsule-mokador/mokador-GIANDUIA_CAPSULA.png" alt="Capsule Mokador Gianduia" loading="lazy">
+          <div class="bev-card-body">
+            <h4>Gianduia</h4>
+            <p>Caffè con miscela nocciola e cioccolato — un dolce abbraccio in tazza</p>
+          </div>
+        </div>
+
+        <div class="bev-card">
+          <img src="/assets/sermatic/capsule-mokador/mokador-MOU_CAPSULA.png" alt="Capsule Mokador Mou" loading="lazy">
+          <div class="bev-card-body">
+            <h4>Mou</h4>
+            <p>Bevanda al caramello, morbida e avvolgente</p>
+          </div>
+        </div>
+
+        <div class="bev-card">
+          <img src="/assets/sermatic/capsule-mokador/mokador-TE-AL-LIMONE_CAPSULA.png" alt="Capsule Mokador Tè al Limone" loading="lazy">
+          <div class="bev-card-body">
+            <h4>Tè al Limone</h4>
+            <p>Tè Ceylon con note di limone, rinfrescante e delicato</p>
+          </div>
+        </div>
+
+        <div class="bev-card">
+          <img src="/assets/sermatic/capsule-mokador/mokador-FRUTTI-DI-BOSCO_CAPSULA.png" alt="Capsule Mokador Frutti di Bosco" loading="lazy">
+          <div class="bev-card-body">
+            <h4>Frutti di Bosco</h4>
+            <p>Tisana ai frutti di bosco con rosa canina e sambuco</p>
+          </div>
+        </div>
+
+        <div class="bev-card">
+          <img src="/assets/sermatic/capsule-mokador/mokador-capsula-camomilla2.png" alt="Capsule Mokador Camomilla" loading="lazy">
+          <div class="bev-card-body">
+            <h4>Camomilla</h4>
+            <p>Infuso alla camomilla, rilassante e delicato</p>
+          </div>
+        </div>
+
+        <div class="bev-card">
+          <img src="/assets/sermatic/capsule-mokador/mokador-BEVANDA-BIANCA_CAPSULA.png" alt="Capsule Mokador Bevanda Bianca" loading="lazy">
+          <div class="bev-card-body">
+            <h4>Bevanda Bianca</h4>
+            <p>A base latte, ideale come cappuccino o lattemacchiato</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- MACCHINE COMPATIBILI -->
+  <section class="bg-2" id="macchine">
+    <div class="section-inner">
+      <div class="split reverse">
+        <div class="split-text">
+          <span class="eyebrow">Le macchine compatibili</span>
+          <h2>Dado Optima e Tata: le macchine per le capsule Mokador</h2>
+          <p>Le capsule Mokador sono compatibili con le macchine Dado Optima e Tata — entrambe 100% Made in Italy, compatte e silenziose. Disponibili in comodato d'uso gratuito per uffici, studi professionali e attività commerciali.</p>
+          <div class="feature-list" style="margin-top: 20px;">
+            <div class="feature-item">
+              <div class="feature-icon">🆓</div>
+              <div><strong>Comodato d'uso gratuito</strong><span>Installi la macchina senza alcun costo — paghi solo i prodotti consumati</span></div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">🔧</div>
+              <div><strong>Manutenzione inclusa</strong><span>Assistenza tecnica e interventi a nostro carico</span></div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">📦</div>
+              <div><strong>Rifornimento diretto</strong><span>Consegna capsule in ufficio, con cadenza concordata</span></div>
+            </div>
+          </div>
+          <a href="/caffe/macchine-mokador.html" class="btn btn-outline" style="margin-top: 24px;">Scopri Dado Optima e Tata →</a>
+        </div>
+        <div class="split-img">
+          <img src="/assets/sermatic/macchine-mokador/tata.jpg" alt="Macchina Mokador Tata a capsule per ufficio" loading="lazy" style="width:100%;height:100%;object-fit:contain;background:var(--bg);border-radius:var(--r-lg);padding:20px;">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="section-inner">
+      <div class="section-head centered">
+        <span class="eyebrow">Domande frequenti</span>
+        <h2>Tutto sulle capsule Mokador</h2>
+      </div>
+      <div style="max-width: 720px; margin: 40px auto 0; display: flex; flex-direction: column; gap: 16px;">
+
+        <div style="background: var(--bg-2); border-radius: var(--r); padding: 22px 24px; border: 1px solid var(--border);">
+          <strong style="font-size: 15px; display: block; margin-bottom: 8px;">Le capsule Mokador sono compatibili con qualsiasi macchina?</strong>
+          <p style="font-size: 14px; color: var(--text-2); margin: 0;">No. Le capsule Mokador funzionano esclusivamente con le macchine del sistema Mokador: Dado Optima e Tata. Non sono compatibili con macchine Nespresso, Lavazza Firma o altri sistemi proprietari. RoMimatic fornisce sia le capsule che la macchina compatibile.</p>
+        </div>
+
+        <div style="background: var(--bg-2); border-radius: var(--r); padding: 22px 24px; border: 1px solid var(--border);">
+          <strong style="font-size: 15px; display: block; margin-bottom: 8px;">Quante capsule ci sono nella gamma Mokador?</strong>
+          <p style="font-size: 14px; color: var(--text-2); margin: 0;">La gamma comprende 14 referenze: 6 miscele di caffè (Aroma Top, Crema, 100% Arabica Bio, Più Crema, Big Cup, Decaffeinato) e 8 specialità (Orzo, Ginseng, Gianduia, Mou, Tè al Limone, Frutti di Bosco, Camomilla, Bevanda Bianca). Tutte compatibili con Dado Optima e Tata.</p>
+        </div>
+
+        <div style="background: var(--bg-2); border-radius: var(--r); padding: 22px 24px; border: 1px solid var(--border);">
+          <strong style="font-size: 15px; display: block; margin-bottom: 8px;">La capsule 100% Arabica Bio è davvero biologica?</strong>
+          <p style="font-size: 14px; color: var(--text-2); margin: 0;">Sì. La capsula 100% Arabica Bio è certificata biologica con codice IT BIO 014. Contiene caffè arabica al 100% proveniente da coltivazioni biologiche certificate, senza impiego di pesticidi di sintesi.</p>
+        </div>
+
+        <div style="background: var(--bg-2); border-radius: var(--r); padding: 22px 24px; border: 1px solid var(--border);">
+          <strong style="font-size: 15px; display: block; margin-bottom: 8px;">RoMimatic consegna le capsule Mokador direttamente in ufficio?</strong>
+          <p style="font-size: 14px; color: var(--text-2); margin: 0;">Sì. RoMimatic gestisce la fornitura e il rifornimento delle capsule Mokador direttamente presso la tua sede. Serviamo uffici e attività nella Città Metropolitana di Milano, nelle province di Monza e Brianza, Varese, Como e Lecco. La consegna avviene con cadenza programmata o su chiamata.</p>
+        </div>
+
+        <div style="background: var(--bg-2); border-radius: var(--r); padding: 22px 24px; border: 1px solid var(--border);">
+          <strong style="font-size: 15px; display: block; margin-bottom: 8px;">Qual è la capsule Mokador più adatta per un ufficio?</strong>
+          <p style="font-size: 14px; color: var(--text-2); margin: 0;">Dipende dai gusti. Per un espresso classico bilanciato: Aroma Top. Per chi vuole più carica: Crema o Più Crema. Per chi preferisce un caffè delicato: 100% Arabica Bio. Per un lungo da tazza grande: Big Cup. Spesso gli uffici scelgono 2–3 referenze per soddisfare tutti i colleghi.</p>
+        </div>
+
+        <div style="background: var(--bg-2); border-radius: var(--r); padding: 22px 24px; border: 1px solid var(--border);">
+          <strong style="font-size: 15px; display: block; margin-bottom: 8px;">Come funziona il comodato d'uso gratuito per la macchina?</strong>
+          <p style="font-size: 14px; color: var(--text-2); margin: 0;">RoMimatic installa la macchina Mokador (Dado Optima o Tata) nel tuo ufficio senza costo di acquisto o noleggio. Paghi solo le capsule che consumi, con rifornimento diretto. Il servizio di assistenza tecnica è incluso nel contratto di fornitura.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section>
+    <div class="section-inner">
+      <div class="cta-banner">
+        <span class="eyebrow">Inizia oggi</span>
+        <h2>Porta le capsule Mokador nel tuo ufficio</h2>
+        <p>Contattaci per ricevere informazioni su prezzi, quantità minime e comodato gratuito. Ti rispondiamo entro 24 ore.</p>
+        <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+          <a href="/contatti.html" class="btn btn-dark">Richiedi informazioni</a>
+          <a href="/caffe/capsule.html" class="btn btn-outline">Tutti i sistemi a capsule</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <div id="footer-root"></div>
+</body>
+</html>
