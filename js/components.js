@@ -93,6 +93,16 @@ const FOOTER_HTML = `
           <img src="/assets/img/logo-s.webp" alt="RoMimatic" style="height:48px; width:auto;">
         </a>
         <p>Dal 1984 portiamo qualità e gusto nelle aziende e nelle case. Distributori automatici, caffè di eccellenza e prodotti artigianali calabresi.</p>
+        <div class="footer-zone">
+          <strong>Zone servite</strong>
+          <ul>
+            <li>Milano e hinterland</li>
+            <li>Monza e Brianza</li>
+            <li>Varese e provincia</li>
+            <li>Como e provincia</li>
+            <li>Lecco e provincia</li>
+          </ul>
+        </div>
         <div class="footer-social">
           <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Seguici su Facebook"><span aria-hidden="true">f</span></a>
           <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="Seguici su LinkedIn"><span aria-hidden="true">in</span></a>
