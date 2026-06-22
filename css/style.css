@@ -689,6 +689,9 @@ footer {
 }
 
 @media (max-width: 640px) {
+  /* Nasconde chicchi decorativi su mobile: occupano spazio testo su schermi stretti */
+  .coffee-deco { display: none; }
+
   section { padding: 60px 20px; }
   .hero { padding: 60px 20px; }
   .page-hero { padding: 60px 20px 48px; }
