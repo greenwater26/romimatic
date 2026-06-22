@@ -3,18 +3,214 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Capsule Caffè: Caffè d'Italia e Lavazza Firma | RoMimatic Garbagnate Milanese</title>
-  <meta name="description" content="Capsule caffè, infusi e solubili: Caffè d'Italia (17 bevande) e Lavazza Firma. Distributore ufficiale a Garbagnate Milanese (MI).">
+  <title>Capsule Caffè per Uffici: Caffè d'Italia e Lavazza Firma | RoMimatic Garbagnate Milanese</title>
+  <meta name="description" content="Capsule caffè per uffici: 17 bevande Caffè d'Italia e 9 miscele Lavazza Firma. Macchina in comodato gratuito. RoMimatic distributore ufficiale a Garbagnate Milanese (MI).">
   <link rel="canonical" href="https://romimatic.it/caffe/capsule.html">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://romimatic.it/caffe/capsule.html">
-  <meta property="og:title" content="Capsule Caffè — Caffè d'Italia e Lavazza Firma | RoMimatic">
-  <meta property="og:description" content="Capsule caffè per ogni sistema: Caffè d'Italia 17 bevande e Lavazza Firma. Distributore ufficiale a Garbagnate Milanese.">
-  <meta property="og:image" content="https://romimatic.it/assets/img/logo-s.webp">
+  <meta property="og:title" content="Capsule Caffè per Uffici: Caffè d'Italia e Lavazza Firma | RoMimatic">
+  <meta property="og:description" content="17 bevande Caffè d'Italia + 9 miscele Lavazza Firma. Macchina in comodato gratuito. Distributore ufficiale a Garbagnate Milanese (MI).">
+  <meta property="og:image" content="https://romimatic.it/assets/sermatic/capsule-cdi/4-caps-1ape-1chiu-scaled.webp">
   <meta property="og:locale" content="it_IT">
   <meta property="og:site_name" content="RoMimatic">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="stylesheet" href="/css/style.css">
+  <style>
+    /* Griglia sistemi — 2 card affiancate */
+    .sistema-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+      margin-top: 48px;
+    }
+    .sistema-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--r-lg);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: box-shadow 0.2s;
+    }
+    .sistema-card:hover { box-shadow: var(--shadow-lg); }
+    .sistema-card-img {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      display: block;
+    }
+    .sistema-card-body {
+      padding: 32px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .sistema-card-logo {
+      height: 40px;
+      width: auto;
+      margin-bottom: 20px;
+      object-fit: contain;
+      object-position: left;
+    }
+    .sistema-card-body h3 {
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .sistema-card-body > p {
+      font-size: 15px;
+      color: var(--text-2);
+      line-height: 1.65;
+      margin-bottom: 24px;
+    }
+    .sistema-stats {
+      display: flex;
+      gap: 0;
+      border: 1px solid var(--border);
+      border-radius: var(--r);
+      overflow: hidden;
+      margin-bottom: 24px;
+    }
+    .sistema-stat {
+      flex: 1;
+      text-align: center;
+      padding: 14px 8px;
+      border-right: 1px solid var(--border);
+    }
+    .sistema-stat:last-child { border-right: none; }
+    .sistema-stat .s-num {
+      display: block;
+      font-size: 26px;
+      font-weight: 700;
+      color: var(--accent);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .sistema-stat .s-lbl {
+      display: block;
+      font-size: 11px;
+      color: var(--text-3);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .sistema-feat {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .sistema-feat li {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      font-size: 14px;
+      color: var(--text-2);
+    }
+    .sistema-feat li::before {
+      content: "✓";
+      color: var(--accent);
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .sistema-card-body .btn { align-self: flex-start; margin-top: auto; }
+
+    /* Sezione vantaggi capsule */
+    .vantaggi-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 48px;
+    }
+    .vantaggio-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--r);
+      padding: 24px 20px;
+      text-align: center;
+    }
+    .vantaggio-card .v-icon { font-size: 30px; margin-bottom: 12px; }
+    .vantaggio-card h3 { font-size: 15px; font-weight: 600; margin-bottom: 8px; }
+    .vantaggio-card p { font-size: 13px; color: var(--text-2); line-height: 1.55; }
+
+    /* Step comodato */
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      margin-top: 48px;
+      position: relative;
+    }
+    .steps::before {
+      content: "";
+      position: absolute;
+      top: 28px;
+      left: calc(12.5% + 14px);
+      right: calc(12.5% + 14px);
+      height: 2px;
+      background: var(--border);
+      z-index: 0;
+    }
+    .step {
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+    .step-num {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: var(--accent);
+      color: #fff;
+      font-size: 20px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 16px;
+    }
+    .step h3 { font-size: 14px; font-weight: 600; margin-bottom: 6px; }
+    .step p { font-size: 13px; color: var(--text-2); line-height: 1.5; }
+
+    /* Tabella confronto */
+    .table-scroll {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      border-radius: var(--r);
+      border: 1px solid var(--border);
+    }
+    .compare-table { width: 100%; border-collapse: collapse; font-size: 14px; min-width: 560px; }
+    .compare-table th, .compare-table td { border-bottom: 1px solid var(--border); border-right: 1px solid var(--border); padding: 12px 16px; text-align: left; }
+    .compare-table th:last-child, .compare-table td:last-child { border-right: none; }
+    .compare-table thead tr { border-bottom: 2px solid var(--border); }
+    .compare-table th { background: var(--bg-2); font-weight: 600; color: var(--text); font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; white-space: nowrap; }
+    .compare-table td { color: var(--text-2); }
+    .compare-table tr:last-child td { border-bottom: none; }
+    .compare-table .col-head { font-weight: 700; color: var(--text); font-size: 14px; }
+    .compare-table .yes { color: #2e7d32; font-weight: 600; }
+    .compare-table .num { color: var(--accent); font-weight: 700; }
+
+    /* FAQ */
+    .faq-list { display: flex; flex-direction: column; }
+    .faq-item { border-bottom: 1px solid var(--border); padding: 24px 0; }
+    .faq-item:first-child { border-top: 1px solid var(--border); }
+    .faq-item h3 { font-size: 16px; font-weight: 600; margin-bottom: 10px; color: var(--text); }
+    .faq-item p { font-size: 15px; color: var(--text-2); line-height: 1.65; }
+
+    @media (max-width: 860px) {
+      .sistema-grid { grid-template-columns: 1fr; }
+      .vantaggi-grid { grid-template-columns: repeat(2, 1fr); }
+      .steps { grid-template-columns: repeat(2, 1fr); }
+      .steps::before { display: none; }
+    }
+    @media (max-width: 540px) {
+      .vantaggi-grid { grid-template-columns: 1fr; }
+      .steps { grid-template-columns: 1fr; }
+      .sistema-card-body { padding: 24px; }
+    }
+  </style>
   <link rel="icon" href="/favicon.png" type="image/png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="preload" as="image" href="/assets/img/logo-s.webp">
@@ -34,43 +230,343 @@
     <span>Capsule</span>
   </div>
 
+  <!-- HERO -->
   <div class="page-hero">
     <span class="eyebrow">Caffè · Capsule</span>
-    <h1>Capsule</h1>
-    <p>Un'ampia gamma di capsule per ogni sistema e ogni gusto. Caffè, infusi e bevande solubili.</p>
+    <h1>Capsule Caffè per Uffici e Aziende</h1>
+    <p>Preparazione rapida, aroma preservato, 26 bevande totali.<br>Distributori ufficiali Caffè d'Italia e Lavazza Firma a Garbagnate Milanese.</p>
   </div>
 
+  <!-- COSA SONO LE CAPSULE -->
   <section>
     <div class="section-inner">
-      <div class="section-head centered">
-        <span class="eyebrow">Scegli il tuo sistema</span>
-        <h2>Quale sistema usi?</h2>
-        <p>Distribuiamo capsule per i sistemi professionali Caffè d'Italia e Lavazza Firma.</p>
-      </div>
-      <div class="cards">
-        <div class="card">
-          <div class="card-icon">🇮🇹</div>
-          <h3>Caffè d'Italia</h3>
-          <p>Siamo distributori ufficiali. 17 bevande disponibili: caffè, infusi e solubili. Per uso con macchine Caffè d'Italia.</p>
-          <a href="/caffe/capsule-caffe-ditalia.html" class="card-link">Scopri la gamma →</a>
+      <div class="split">
+        <div class="split-text">
+          <span class="eyebrow">Capsule vs Cialde</span>
+          <h2>Perché le capsule sono la scelta giusta</h2>
+          <p>Le capsule monodose hanno rivoluzionato la pausa caffè negli uffici. A differenza delle cialde — dove il caffè è pressato tra fogli di carta porosa — le capsule sigillano il caffè macinato in un involucro ermetico di alluminio che preserva integro l'aroma fino al momento dell'erogazione.</p>
+          <p>Il risultato è un espresso costante, veloce e di qualità: ogni capsula garantisce la stessa resa in tazza, senza variabili legate all'operatore. Perfetto in ufficio, dove la pausa caffè deve essere rapida e senza pensieri.</p>
+          <div class="feature-list">
+            <div class="feature-item">
+              <div class="feature-icon">⚡</div>
+              <div>
+                <strong>Pronto in meno di un minuto</strong>
+                <span>Nessuna macinatura, nessun dosaggio — capsula dentro, caffè fuori</span>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">🛡️</div>
+              <div>
+                <strong>Aroma preservato</strong>
+                <span>La capsula ermetica protegge il caffè da umidità, luce e ossigeno</span>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">☕</div>
+              <div>
+                <strong>26 bevande disponibili</strong>
+                <span>17 con Caffè d'Italia + 9 con Lavazza Firma — caffè, infusi, solubili</span>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="card">
-          <div class="card-icon">☕</div>
-          <h3>Lavazza Firma</h3>
-          <p>Il sistema professionale Lavazza per uffici. Design premium, qualità garantita, ampia scelta di miscele.</p>
-          <a href="/caffe/capsule-lavazza-firma.html" class="card-link">Scopri la gamma →</a>
+        <div class="split-img">
+          <img src="/assets/sermatic/capsule-cdi/4-caps-1ape-1chiu-scaled.webp" alt="Capsule caffè — gamma Caffè d'Italia e Lavazza Firma" fetchpriority="high">
         </div>
       </div>
     </div>
   </section>
 
+  <hr class="divider">
+
+  <!-- I NOSTRI SISTEMI -->
+  <section>
+    <div class="section-inner">
+      <div class="section-head centered">
+        <span class="eyebrow">2 sistemi professionali</span>
+        <h2>I sistemi che distribuiamo</h2>
+        <p>Due linee complete, ognuna con la propria macchina dedicata — disponibile in comodato d'uso gratuito.</p>
+      </div>
+
+      <div class="sistema-grid">
+
+        <!-- CAFFÈ D'ITALIA -->
+        <div class="sistema-card">
+          <img src="/assets/sermatic/capsule-cdi/4-caps-1ape-1chiu-scaled.webp" alt="Capsule Caffè d'Italia — gamma completa" class="sistema-card-img" loading="lazy">
+          <div class="sistema-card-body">
+            <img src="/assets/sermatic/loghi/caffed_italia.webp" alt="Caffè d'Italia" class="sistema-card-logo" loading="lazy">
+            <h3>Caffè d'Italia</h3>
+            <p>Il sistema più completo: un'unica macchina eroga 17 bevande diverse. Caffè, infusi in foglia vera e solubili cremosi — tutto con la stessa qualità, per ogni gusto in ufficio. RoMimatic è distributore ufficiale.</p>
+            <div class="sistema-stats">
+              <div class="sistema-stat">
+                <span class="s-num">17</span>
+                <span class="s-lbl">Bevande totali</span>
+              </div>
+              <div class="sistema-stat">
+                <span class="s-num">6</span>
+                <span class="s-lbl">Caffè</span>
+              </div>
+              <div class="sistema-stat">
+                <span class="s-num">5</span>
+                <span class="s-lbl">Infusi</span>
+              </div>
+              <div class="sistema-stat">
+                <span class="s-num">6</span>
+                <span class="s-lbl">Solubili</span>
+              </div>
+            </div>
+            <ul class="sistema-feat">
+              <li>Distributore ufficiale RoMimatic — fornitura diretta</li>
+              <li>Caffè dall'intenso napoletano al lungo leggero</li>
+              <li>Infusi con foglie vere (tè verde, camomilla, frutti di bosco…)</li>
+              <li>Solubili: ginseng, orzo bio, nocciola, cacao, latte</li>
+              <li>Macchina in comodato d'uso gratuito</li>
+            </ul>
+            <a href="/caffe/capsule-caffe-ditalia.html" class="btn btn-dark">Vedi le 17 bevande</a>
+          </div>
+        </div>
+
+        <!-- LAVAZZA FIRMA -->
+        <div class="sistema-card">
+          <img src="/assets/sermatic/capsule-lavazza/cappsule-firma_large.webp" alt="Capsule Lavazza Firma — gamma completa" class="sistema-card-img" loading="lazy">
+          <div class="sistema-card-body">
+            <img src="/assets/sermatic/loghi/Lavazza-Logo.wine_-scaled.webp" alt="Lavazza" class="sistema-card-logo" loading="lazy">
+            <h3>Lavazza Firma</h3>
+            <p>Il sistema professionale Lavazza: qualità e design premium per ambienti di lavoro esigenti. Sei miscele di caffè con scala di intensità — dalla delicata Qualità Oro all'intensa Espresso Forte — più tè, ginseng e orzo.</p>
+            <div class="sistema-stats">
+              <div class="sistema-stat">
+                <span class="s-num">9</span>
+                <span class="s-lbl">Bevande totali</span>
+              </div>
+              <div class="sistema-stat">
+                <span class="s-num">6</span>
+                <span class="s-lbl">Caffè</span>
+              </div>
+              <div class="sistema-stat">
+                <span class="s-num">3</span>
+                <span class="s-lbl">Alternative</span>
+              </div>
+              <div class="sistema-stat">
+                <span class="s-num">1895</span>
+                <span class="s-lbl">Dal</span>
+              </div>
+            </div>
+            <ul class="sistema-feat">
+              <li>Lavazza — brand italiano di fiducia dal 1895</li>
+              <li>Qualità Oro: 100% arabica, la miscela storica dal 1956</li>
+              <li>Scala intensità da 6/13 (Decaffeinato) a 10/13 (Forte)</li>
+              <li>Capsule in alluminio sigillato — aroma sempre intatto</li>
+              <li>Macchina in comodato d'uso gratuito</li>
+            </ul>
+            <a href="/caffe/capsule-lavazza-firma.html" class="btn btn-outline">Vedi le 9 bevande</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- VANTAGGI CAPSULE -->
+  <section class="bg-2">
+    <div class="section-inner">
+      <div class="section-head centered">
+        <span class="eyebrow">I vantaggi</span>
+        <h2>Perché scegliere le capsule per il tuo ufficio</h2>
+      </div>
+      <div class="vantaggi-grid">
+        <div class="vantaggio-card">
+          <div class="v-icon" aria-hidden="true">⚡</div>
+          <h3>Velocità massima</h3>
+          <p>Da capsula a tazza in meno di un minuto. Nessuna macinatura, nessun dosaggio, nessun errore umano — sempre uguale, sempre ottima.</p>
+        </div>
+        <div class="vantaggio-card">
+          <div class="v-icon" aria-hidden="true">🛡️</div>
+          <h3>Aroma intatto</h3>
+          <p>L'involucro ermetico protegge il caffè macinato da ossigeno, umidità e luce. L'aroma della prima e dell'ultima capsula della confezione è identico.</p>
+        </div>
+        <div class="vantaggio-card">
+          <div class="v-icon" aria-hidden="true">✨</div>
+          <h3>Igienico e pulito</h3>
+          <p>Monodose sigillata: nessun contatto diretto con il caffè, nessun residuo da pulire. La macchina resta sempre ordinata — ideale per uffici condivisi.</p>
+        </div>
+        <div class="vantaggio-card">
+          <div class="v-icon" aria-hidden="true">🍵</div>
+          <h3>26 bevande diverse</h3>
+          <p>Tra Caffè d'Italia e Lavazza Firma hai accesso a 26 bevande: espresso, lungo, decaffeinato, tè, infusi, ginseng, orzo, cacao, latte. Per tutti i gusti.</p>
+        </div>
+        <div class="vantaggio-card">
+          <div class="v-icon" aria-hidden="true">🎁</div>
+          <h3>Macchina in comodato</h3>
+          <p>Con la fornitura continuativa di capsule, la macchina è tua in comodato gratuito. Zero investimento iniziale, zero costi di installazione.</p>
+        </div>
+        <div class="vantaggio-card">
+          <div class="v-icon" aria-hidden="true">🚚</div>
+          <h3>Consegna diretta in azienda</h3>
+          <p>RoMimatic consegna le capsule direttamente nella tua sede a Garbagnate Milanese e in tutta la provincia di Milano, con forniture programmate.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COME FUNZIONA IL COMODATO -->
+  <section>
+    <div class="section-inner">
+      <div class="section-head centered">
+        <span class="eyebrow">Senza costi di partenza</span>
+        <h2>Come funziona il comodato d'uso gratuito</h2>
+        <p>Ottieni la macchina del caffè senza acquistarla — bastano 4 passi.</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <h3>Ci contatti</h3>
+          <p>Raccontaci la tua azienda: quante persone, dove siete, che sistema preferisci. È una consulenza gratuita.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <h3>Scegliamo insieme</h3>
+          <p>Ti proponiamo il sistema più adatto — Caffè d'Italia o Lavazza Firma — e ti mostriamo le miscele disponibili.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <h3>Installiamo la macchina</h3>
+          <p>Consegniamo e installiamo la macchina in comodato. Nessun costo di acquisto, nessun canone fisso mensile.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <h3>Forniamo le capsule</h3>
+          <p>Organizziamo le consegne periodiche delle capsule direttamente in azienda, in base al vostro consumo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONFRONTO SISTEMI -->
+  <section class="bg-2">
+    <div class="section-inner">
+      <div class="section-head centered">
+        <span class="eyebrow">Qual è meglio per te?</span>
+        <h2>Confronto: Caffè d'Italia vs Lavazza Firma</h2>
+        <p>Non sai quale sistema scegliere? Ecco le differenze principali.</p>
+      </div>
+      <div class="table-scroll">
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th>Caratteristica</th>
+              <th>Caffè d'Italia</th>
+              <th>Lavazza Firma</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="col-head">Bevande totali</td>
+              <td><span class="num">17</span></td>
+              <td><span class="num">9</span></td>
+            </tr>
+            <tr>
+              <td class="col-head">Caffè disponibili</td>
+              <td>6 (espresso, lungo, decaf, aromatizzato…)</td>
+              <td>6 (con scala intensità 6–10/13)</td>
+            </tr>
+            <tr>
+              <td class="col-head">Infusi / Alternative</td>
+              <td>5 infusi in foglia + 6 solubili</td>
+              <td>3 (tè, ginseng, orzo)</td>
+            </tr>
+            <tr>
+              <td class="col-head">Decaffeinato</td>
+              <td><span class="yes">✓ Cuore (50A/50R)</span></td>
+              <td><span class="yes">✓ Intensità 6/13</span></td>
+            </tr>
+            <tr>
+              <td class="col-head">Formato confezione caffè</td>
+              <td>50–100 capsule</td>
+              <td>24–48 capsule</td>
+            </tr>
+            <tr>
+              <td class="col-head">Materiale capsula</td>
+              <td>Plastica compostabile</td>
+              <td>Alluminio sigillato</td>
+            </tr>
+            <tr>
+              <td class="col-head">Scala intensità visiva</td>
+              <td>—</td>
+              <td><span class="yes">✓ Scala 1–13</span></td>
+            </tr>
+            <tr>
+              <td class="col-head">Brand storico</td>
+              <td>Produzione 100% italiana</td>
+              <td>Lavazza dal 1895</td>
+            </tr>
+            <tr>
+              <td class="col-head">Comodato macchina</td>
+              <td><span class="yes">✓ Gratuito</span></td>
+              <td><span class="yes">✓ Gratuito</span></td>
+            </tr>
+            <tr>
+              <td class="col-head">Distributore RoMimatic</td>
+              <td><span class="yes">✓ Ufficiale</span></td>
+              <td><span class="yes">✓ Autorizzato</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="font-size:13px; color:var(--text-3); text-align:center; margin-top:16px;">Hai dubbi su quale scegliere? <a href="/contatti.html" style="color:var(--accent);">Contattaci</a> — ti aiutiamo a trovare il sistema giusto per la tua azienda.</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section>
+    <div class="section-inner" style="max-width:800px;">
+      <div class="section-head">
+        <span class="eyebrow">Domande frequenti</span>
+        <h2>Tutto quello che vuoi sapere sulle capsule caffè</h2>
+      </div>
+      <div class="faq-list">
+
+        <div class="faq-item">
+          <h3>Qual è la differenza tra capsule e cialde?</h3>
+          <p>Le <strong>cialde</strong> contengono caffè pressato tra due fogli di carta porosa: più tradizionali, usano la pressione dell'acqua attraverso la carta per l'estrazione. Le <strong>capsule</strong> sono monodose ermetiche in alluminio o plastica: il caffè è sigillato al momento del confezionamento, così l'aroma si preserva molto meglio nel tempo. Le capsule sono anche più veloci da usare e lasciano meno pulizia da fare.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Come funziona il comodato d'uso della macchina?</h3>
+          <p>RoMimatic fornisce la macchina da caffè (Caffè d'Italia o Lavazza Firma) in comodato d'uso gratuito alle aziende che sottoscrivono un accordo di fornitura continuativa di capsule. Non è richiesto alcun acquisto o canone fisso: l'unico impegno è l'acquisto periodico delle capsule. Gestiamo noi la consegna, la manutenzione ordinaria e l'assistenza tecnica.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Quale sistema è meglio per il mio ufficio: Caffè d'Italia o Lavazza Firma?</h3>
+          <p>Dipende dalle esigenze. <strong>Caffè d'Italia</strong> è ideale se vuoi la massima varietà (17 bevande: caffè, infusi veri, solubili) e confezioni più grandi (50–100 capsule) per consumi elevati. <strong>Lavazza Firma</strong> è la scelta giusta se preferisci un brand riconoscibile, una scala di intensità visiva chiara tra le miscele, e capsule in alluminio sigillato. Entrambi i sistemi hanno la macchina in comodato gratuito. Contattaci per una consulenza personalizzata.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Le capsule Caffè d'Italia o Lavazza Firma funzionano con qualsiasi macchina?</h3>
+          <p>No: entrambi i sistemi usano capsule proprietarie compatibili solo con le rispettive macchine. Le capsule Caffè d'Italia funzionano esclusivamente con macchine Caffè d'Italia (Perla, Birba, Mago, Duo…). Le capsule Lavazza Firma funzionano solo con macchine della linea Firma. Non sono intercambiabili tra loro né compatibili con macchine di altre marche.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Con quale frequenza vengono consegnate le capsule?</h3>
+          <p>La frequenza di consegna è concordata in base al consumo stimato della tua azienda. RoMimatic organizza forniture programmate — mensili, bimestrali o su chiamata — direttamente presso la tua sede a Garbagnate Milanese o in provincia di Milano. Puoi sempre contattarci per ordinare extra o modificare la cadenza delle consegne.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
   <section class="bg-2">
     <div class="section-inner">
       <div class="cta-banner">
-        <span class="eyebrow">Hai bisogno di aiuto?</span>
-        <h2>Non sai quale sistema scegliere?</h2>
-        <p>Contattaci: ti aiutiamo a trovare la soluzione giusta per le tue esigenze.</p>
-        <a href="/contatti.html" class="btn btn-dark">Contattaci</a>
+        <span class="eyebrow">Inizia oggi</span>
+        <h2>Porta le capsule caffè nella tua azienda</h2>
+        <p>Consulenza gratuita, macchina in comodato, consegna diretta a Garbagnate Milanese e provincia di Milano. Zero costi di partenza.</p>
+        <div style="display:flex; gap:12px; justify-content:center; flex-wrap:wrap;">
+          <a href="/contatti.html" class="btn btn-dark">Richiedi preventivo gratuito</a>
+          <a href="/caffe/macchine.html" class="btn btn-outline">Vedi le macchine</a>
+        </div>
       </div>
     </div>
   </section>
