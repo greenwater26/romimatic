@@ -143,7 +143,7 @@ const FOOTER_HTML = `
 
     </div>
     <div class="footer-bottom">
-      <span>© ${new Date().getFullYear()} RoMimatic · Divisione di RoMimatic Srl · P.IVA 04456450966</span>
+      <span>© ${new Date().getFullYear()} RoMimatic di Italiano Rocco · P.IVA 04456450966</span>
       <span>
         <a href="/privacy.html">Privacy Policy</a> ·
         <a href="/cookie.html">Cookie Policy</a>
