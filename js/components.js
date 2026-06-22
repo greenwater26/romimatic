@@ -50,6 +50,9 @@ const NAV_HTML = `
           <div class="dropdown-item">
             <a class="dropdown-link" href="/caffe/horeca.html">HO.RE.CA</a>
           </div>
+          <div class="dropdown-item">
+            <a class="dropdown-link" href="/glossario-caffe.html">Glossario del caffè</a>
+          </div>
         </div>
       </li>
       <li class="nav-item">
@@ -118,6 +121,7 @@ const FOOTER_HTML = `
           <li><a href="/caffe/cialde.html">Cialde</a></li>
           <li><a href="/caffe/macchine.html">Macchine</a></li>
           <li><a href="/caffe/horeca.html">HO.RE.CA</a></li>
+          <li><a href="/glossario-caffe.html">Glossario del caffè</a></li>
         </ul>
       </div>
 

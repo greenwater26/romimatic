@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Glossario del Caffè: Tutti i Termini Spiegati | RoMimatic</title>
+  <meta name="description" content="Glossario completo del caffè: arabica, robusta, espresso, capsule, cialda ESE, tostatura, comodato d'uso e molto altro. Tutti i termini spiegati in modo semplice da RoMimatic.">
+  <link rel="canonical" href="https://romimatic.it/glossario-caffe.html">
+  <meta property="og:title" content="Glossario del Caffè: Tutti i Termini Spiegati | RoMimatic">
+  <meta property="og:description" content="Arabica, robusta, capsule, cialde ESE, tostatura, crema, comodato: il glossario completo del caffè per capire cosa stai bevendo e scegliere meglio.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://romimatic.it/glossario-caffe.html">
+  <meta property="og:image" content="https://romimatic.it/assets/sermatic/capsule-cdi/4-caps-1ape-1chiu-scaled.webp">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:site_name" content="RoMimatic">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Glossario del Caffè: Tutti i Termini Spiegati",
+    "description": "Glossario completo dei termini del mondo caffè: specie, metodi di estrazione, formati monodose, tecnologia e settore professionale.",
+    "url": "https://romimatic.it/glossario-caffe.html",
+    "publisher": {
+      "@type": "Organization",
+      "name": "RoMimatic",
+      "url": "https://romimatic.it",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Via Marconi 7",
+        "addressLocality": "Garbagnate Milanese",
+        "addressRegion": "MI",
+        "postalCode": "20024",
+        "addressCountry": "IT"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://romimatic.it/glossario-caffe.html"
+    }
+  }
+  </script>
+  <link rel="stylesheet" href="/css/style.css">
+  <style>
+    /* Lettere-ancoraggio */
+    .letter-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      justify-content: center;
+      margin-top: 32px;
+    }
+    .letter-nav a {
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+      border: 1.5px solid var(--border);
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text-2);
+      text-decoration: none;
+      transition: border-color var(--t), background var(--t), color var(--t);
+    }
+    .letter-nav a:hover,
+    .letter-nav a.active { border-color: var(--accent); background: var(--accent); color: #fff; }
+    .letter-nav a.disabled { opacity: .35; pointer-events: none; }
+
+    /* Sezione lettera */
+    .glossary-letter {
+      scroll-margin-top: 80px;
+      margin-bottom: 16px;
+    }
+    .letter-heading {
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--accent);
+      letter-spacing: -0.02em;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--accent);
+      margin-bottom: 24px;
+      display: inline-block;
+      min-width: 36px;
+    }
+
+    /* Singola voce */
+    .term-list {
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+      margin-bottom: 56px;
+    }
+    .term-entry {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+    .term-name {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: -0.01em;
+      line-height: 1.3;
+    }
+    .term-name .term-en {
+      display: block;
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--text-3);
+      font-style: italic;
+      margin-top: 2px;
+    }
+    .term-tag {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .07em;
+      padding: 2px 8px;
+      border-radius: 20px;
+      margin-top: 6px;
+    }
+    .tag-specie { background: #fff3e0; color: #e65100; }
+    .tag-metodo { background: #e3f2fd; color: #1565c0; }
+    .tag-formato { background: #f3e5f5; color: #6a1b9a; }
+    .tag-bevanda { background: #e8f5e9; color: #2e7d32; }
+    .tag-tecnica { background: #fce4ec; color: #c62828; }
+    .tag-settore { background: var(--bg-3); color: var(--text-2); }
+
+    .term-def {
+      font-size: 15px;
+      color: var(--text-2);
+      line-height: 1.7;
+    }
+    .term-def strong { color: var(--text); }
+    .term-def a { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
+    .term-tip {
+      margin-top: 8px;
+      font-size: 13px;
+      color: var(--text-3);
+      padding-left: 12px;
+      border-left: 3px solid var(--accent);
+      line-height: 1.6;
+    }
+
+    @media (max-width: 640px) {
+      .term-entry {
+        grid-template-columns: 1fr;
+        gap: 6px;
+      }
+    }
+  </style>
+  <link rel="icon" href="/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preload" as="image" href="/assets/img/logo-s.webp">
+  <meta name="theme-color" content="#ffffff">
+  <script src="/js/components.js" defer></script>
+  <script src="/js/main.js" defer></script>
+</head>
+<body>
+
+  <div id="nav-root"></div>
+
+  <main id="main-content">
+
+  <div class="breadcrumb">
+    <a href="/">Home</a><span>›</span>
+    <span>Glossario del caffè</span>
+  </div>
+
+  <div class="page-hero">
+    <span class="eyebrow">Caffè · Terminologia</span>
+    <h1>Glossario del Caffè</h1>
+    <p>Arabica o robusta? Capsule o cialde? Comodato o acquisto? Qui trovi tutti i termini del mondo caffè spiegati in modo semplice — dalle specie botaniche ai formati monodose, dalla tostatura al comodato d'uso.</p>
+    <nav class="letter-nav" aria-label="Navigazione per lettera">
+      <a href="#A">A</a>
+      <a href="#B">B</a>
+      <a href="#C">C</a>
+      <a href="#D">D</a>
+      <a href="#E">E</a>
+      <a href="#G">G</a>
+      <a href="#H">H</a>
+      <a href="#I">I</a>
+      <a href="#L">L</a>
+      <a href="#M">M</a>
+      <a href="#O">O</a>
+      <a href="#P">P</a>
+      <a href="#R">R</a>
+      <a href="#S">S</a>
+      <a href="#T">T</a>
+    </nav>
+  </div>
+
+  <section>
+    <div class="section-inner" style="max-width: 960px;">
+
+      <!-- A -->
+      <div class="glossary-letter" id="A">
+        <div class="letter-heading">A</div>
+        <div class="term-list">
+
+          <div class="term-entry">
+            <div>
+              <div class="term-name">Arabica<span class="term-en">Coffea arabica</span></div>
+              <span class="term-tag tag-specie">Specie botanica</span>
+            </div>
+            <div>
+              <p class="term-def">La specie di caffè più diffusa al mondo (circa il 60–70% della produzione globale). I chicchi arabica crescono in quota (900–2.000 m slm), hanno un profilo aromatico <strong>dolce, complesso e poco amaro</strong>, con note che spaziano dal floreale al fruttato. La caffeina è inferiore rispetto alla robusta (circa 1,2–1,5%).</p>
+              <p class="term-tip">Le miscele 100% arabica tendono ad avere meno crema ma più complessità aromatica. La <a href="/caffe/capsule-mokador.html">capsula 100% Arabica Bio di Mokador</a> è un esempio di monospecie arabica certificata biologica.</p>
+            </div>
+          </div>
+
+          <div class="term-entry">
+            <div>
+              <div class="term-name">Americano<span class="term-en">Caffè americano</span></div>
+              <span class="term-tag tag-bevanda">Bevanda</span>
+            </div>
+            <div>
+              <p class="term-def">Espresso allungato con acqua calda, solitamente in proporzione 1:3 o 1:4. Rispetto al lungo (estratto con più acqua attraverso il caffè), l'americano mantiene separati l'estrazione e la diluizione, con un risultato più pulito e meno amaro. Popolare nei paesi anglofoni.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- B -->
+      <div class="glossary-letter" id="B">
+        <div class="letter-heading">B</div>
+        <div class="term-list">
+
+          <div class="term-entry">
+            <div>
+              <div class="term-name">Bar<span class="term-en">Pressione</span></div>
+              <span class="term-tag tag-tecnica">Tecnica</span>
+            </div>
+            <div>
+              <p class="term-def">Unità di misura della pressione dell'acqua nelle macchine espresso. Lo standard per un espresso di qualità è <strong>9 bar</strong>: una pressione inferiore genera una crema sottile e un'estrazione incompleta; pressioni eccessive producono sapori sgradevoli. Le macchine professionali mantengono la pressione costante durante tutta l'erogazione.</p>
+            </div>
+          </div>
+
+          <div class="term-entry">
+            <div>
+              <div class="term-name">Big Cup</div>
+              <span class="term-tag tag-bevanda">Bevanda</span>
+            </div>
+            <div>
+              <p class="term-def">Formato di caffè lungo in tazza grande (200–250 ml), tipico della tradizione nordeuropea e americana. In capsule, come nella <a href="/caffe/capsule-mokador.html">gamma Mokador</a>, il Big Cup è una miscela arabica-robusta calibrata per una resa abbondante, morbida e aromatica senza eccesso di amaro.</p>
+            </div>
+          </div>
+
+          <div class="term-entry">
+            <div>
+              <div class="term-name">Blend<span class="term-en">Miscela</span></div>
+              <span class="term-tag tag-tecnica">Tecnica</span>
+            </div>
+            <div>
+              <p class="term-def">Combinazione di caffè provenienti da origini diverse o di specie diverse (arabica + robusta) per creare un profilo gustativo equilibrato e riproducibile nel tempo. La maggior parte degli espresso bar e delle capsule commerciali utilizza blend, che garantiscono <strong>consistenza, crema abbondante e costo ottimizzato</strong>. Opposto di monorigine.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- C -->
+      <div class="glossary-letter" id="C">
+        <div class="letter-heading">C</div>
+        <div class="term-list">
+
+          <div class="term-entry">
+            <div>
+              <div class="term-name">Caffeina</div>
+              <span class="term-tag tag-tecnica">Componente</span>
+            </div>
+            <div>
+              <p class="term-def">Alcaloide presente nei chicchi di caffè con effetto stimolante sul sistema nervoso centrale. Un espresso contiene mediamente <strong>60–80 mg di caffeina</strong>; un lungo o un americano ne contiene di meno per ml ma spesso simile in totale. La robusta ha circa il doppio di caffeina rispetto all'arabica. La quantità estratta dipende da temperatura, tempo e finezza della macinatura.</p>
+            </div>
+          </div>
+
+          <div class="term-entry">
+            <div>
+              <div class="term-name">Capsula</div>
+              <span class="term-tag tag-formato">Formato monodose</span>
+            </div>
+            <div>
+              <p class="term-def">Contenitore monodose ermetico — in plastica, alluminio o materiale compostabile — che racchiude la dose esatta di caffè macinato. Il sigillo ermetico protegge dall'ossidazione, preservando aroma e freschezza per mesi. Le capsule sono <strong>compatibili solo con le macchine del proprio sistema</strong> (non intercambiabili tra brand diversi).</p>
+              <p class="term-tip">RoMimatic distribuisce tre sistemi a capsule: <a href="/caffe/capsule-caffe-ditalia.html">Caffè d'Italia</a> (17 bevande), <a href="/caffe/capsule-lavazza-firma.html">Lavazza Firma</a> (9 bevande) e <a href="/caffe/capsule-mokador.html">Mokador</a> (14 bevande).</p>
+            </div>
+          </div>
+
+          <div class="term-entry">
+            <div>
+              <div class="term-name">Cialda ESE<span class="term-en">Easy Serving Espresso</span></div>
+              <span class="term-tag tag-formato">Formato monodose</span>
+            </div>
+            <div>
+              <p class="term-def">Dischetto di caffè macinato e pressato tra due fogli di carta filtro, diametro standardizzato <strong>44 mm</strong>. Il formato ESE è uno standard universale aperto, compatibile con la maggior parte delle macchine a cialde. L'estrazione è simile a quella di un bar: l'acqua filtra lentamente attraverso il caffè, producendo una crema densa e un espresso corposo. Le cialde sono <strong>biodegradabili e smaltibili nell'organico</strong>.</p>
+              <p class="term-tip">RoMimatic distribuisce le <a href="/caffe/cialde.html">cialde Mokador ESE 44mm</a> per la macchina Elle, disponibile in comodato gratuito.</p>
+            </div>
+          </div>
+
+          <div class="term-entry">
+            <div>
+              <div class="term-name">Comodato d'uso</div>
+              <span class="term-tag tag-settore">Settore</span>
+            </div>
+            <div>
+              <p class="term-def">Contratto con cui il distributore installa la macchina del caffè presso il cliente <strong>senza alcun costo di acquisto o noleggio</strong>. Il cliente paga solo i prodotti consumati (capsule o cialde) con forniture periodiche. In caso di malfunzionamento, la manutenzione è a carico del distributore. Il comodato si chiude restituendo la macchina al termine della collaborazione.</p>
+              <p class="term-tip">RoMimatic offre il comodato gratuito per tutti i sistemi che distribuisce: <a href="/caffe/macchine-caffe-ditalia.html">macchine Caffè d'Italia</a>, <a href="/caffe/macchine-lavazza-firma.html">Lavazza Firma</a> e <a href="/caffe/macchine-mokador.html">Mokador</a>.</p>
+            </div>
+          </div>
+
+          <div class="term-entry">
+            <div>
+              <div class="term-name">Crema (espresso)</div>
+              <span class="term-tag tag-tecnica">Tecnica</span>
+            </div>
+            <div>
+              <p class="term-def">Strato schiumoso color nocciola che si forma sulla superficie dell'espresso durante l'erogazione. È composta da <strong>olio, anidride carbonica e acqua</strong> emulsionati ad alta pressione. Una crema persistente, compatta e di colore uniforme è indice di caffè fresco, buona macinatura e corretta pressione. Tende a sparire rapidamente in tazze fredde.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- D -->
+      <div class="glossary-letter" id="D">
+        <div class="letter-heading">D</div>
+        <div class="term-list">
+
+          <div class="term-entry">
+            <div>
+              <div class="term-name">Decaffeinato<span class="term-en">Decaf</span></div>
+              <span class="term-tag tag-bevanda">Bevanda</span>
+            </div>
+            <div>
+              <p class="term-def">Caffè da cui è stata rimossa la maggior parte della caffeina prima della tostatura. Per legge UE, il residuo massimo di caffeina è <strong>0,1% in peso</strong> per il caffè tostato e 0,3% per quello solubile. I metodi principali di decaffeinizzazione sono: solventi chimici (diclorometano), CO₂ supercritica, acqua (Swiss Water Process). Il profilo aromatico rimane simile al caffè normale, ma leggermente più piatto.</p>
+            </div>
+          </div>
+
+          <div class="term-entry">
+            <div>
+              <div class="term-name">Dosaggio</div>
+              <span class="term-tag tag-tecnica">Tecnica</span>
+            </div>
+            <div>
+              <p class="term-def">La quantità di caffè macinato usata per ogni erogazione. Lo standard SCAE (Specialty Coffee Association of Europe) per l'espresso italiano è <strong>7 g ± 0,5 g</strong> per una singola tazzina (25–30 ml). Con le capsule il dosaggio è predefinito dal produttore, eliminando la variabile umana.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- E -->
+      <div class="glossary-letter" id="E">
+        <div class="letter-heading">E</div>
+        <div class="term-list">
+
+          <div class="term-entry">
+            <div>
+              <div class="term-name">Espresso</div>
+              <span class="term-tag tag-metodo">Metodo estrazione</span>
+            </div>
+            <div>
+              <p class="term-def">Il metodo di estrazione del caffè più diffuso in Italia: <strong>acqua calda (88–94°C) forzata a 9 bar attraverso caffè macinato fine e pressato</strong> in 25–30 secondi. Il risultato è una bevanda concentrata di 25–30 ml con crema densa. È alla base di tutte le varianti (ristretto, lungo, americano, cappuccino). Inventato in Italia nel 1884 da Angelo Moriondo.</p>
+            </div>
+          </div>
+
+          <div class="term-entry">
+            <div>
+              <div class="term-name">ESE<span class="term-en">Easy Serving Espresso</span></div>
+              <span class="term-tag tag-formato">Formato monodose</span>
+            </div>
+            <div>
+              <p class="term-def">Standard internazionale aperto per le cialde in carta filtro, definito da Illy nel 1991 e adottato da tutti i principali produttori. Specifica un disco di caffè macinato di <strong>44 mm di diametro, 7 g di contenuto</strong>, confezionato tra due strati di carta filtro calore-sigillata. La standardizzazione garantisce la compatibilità tra cialde di produttori diversi e macchine diverse.</p>
+            </div>
+          </div>
+
+          <div class="term-entry">
+            <div>
+              <div class="term-name">Estrazione</div>
+              <span class="term-tag tag-metodo">Metodo</span>
+            </div>
+            <div>
+              <p class="term-def">Il processo chimico attraverso cui l'acqua scioglie e trasporta in tazza i composti solubili del caffè (oli, acidi, zuccheri, caffeina, aromi). Una <strong>estrazione corretta</strong> (18–22% dei solubili del caffè) produce un sapore bilanciato. Sotto-estrazione (acqua troppo fredda, macinatura grossa, troppo veloce) dà acidità e sapore piatto; sovra-estrazione (acqua troppo calda, macinatura fine, troppo lenta) dà amaro e astringenza.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- G -->
+      <div class="glossary-letter" id="G">
+        <div class="letter-heading">G</div>
+        <div class="term-list">
+
+          <div class="term-entry">
+            <div>
+              <div class="term-name">Ginseng (caffè al)</div>
+              <span class="term-tag tag-bevanda">Bevanda</span>
+            </div>
+            <div>
+              <p class="term-def">Miscela di caffè e polvere di radice di ginseng (Panax ginseng), spesso dolcificata. Popolare nelle macchine multibevanda per uffici, ha un sapore <strong>dolce, leggermente terroso e tonificante</strong>. Il ginseng è riconosciuto per le proprietà adattogene. Disponibile come capsula nelle gamme <a href="/caffe/capsule-mokador.html">Mokador</a> e <a href="/caffe/capsule-caffe-ditalia.html">Caffè d'Italia</a>.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- H -->
+      <div class="glossary-letter" id="H">
+        <div class="letter-heading">H</div>
+        <div class="term-list">
+
+          <div class="term-entry">
+            <div>
+              <div class="term-name">HO.RE.CA<span class="term-en">Hotellerie-Restaurant-Café</span></div>
+              <span class="term-tag tag-settore">Settore</span>
+            </div>
+            <div>
+              <p class="term-def">Acronimo internazionale per il settore dell'ospitalità e della ristorazione: <strong>HOtel, REstaurant, CAtering</strong>. Nel mondo del caffè, identifica le soluzioni professionali per ambienti ad alto volume (centinaia di caffè al giorno): macchine a 1–2 gruppi, macinadosatori professionali, miscele selezionate per la ristorazione.</p>
+              <p class="term-tip">RoMimatic offre soluzioni HO.RE.CA con macchine professionali per bar, hotel e ristoranti. <a href="/caffe/horeca.html">Scopri la gamma HO.RE.CA →</a></p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- I -->
+      <div class="glossary-letter" id="I">
+        <div class="letter-heading">I</div>
+        <div class="term-list">
+
+          <div class="term-entry">
+            <div>
+              <div class="term-name">Infuso</div>
+              <span class="term-tag tag-bevanda">Bevanda</span>
+            </div>
+            <div>
+              <p class="term-def">Bevanda ottenuta per immersione o percolazione di materiali vegetali (foglie di tè, fiori, erbe, frutti) in acqua calda. A differenza del caffè, gli infusi <strong>non contengono caffeina</strong> (a eccezione del tè che contiene teina, chimicamente identica). Nelle macchine multibevanda a capsule, gli infusi sono erogati dalla stessa macchina del caffè con capsule dedicate.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- L -->
+      <div class="glossary-letter" id="L">
+        <div class="letter-heading">L</div>
+        <div class="term-list">
+
+          <div class="term-entry">
+            <div>
+              <div class="term-name">Lungo</div>
+              <span class="term-tag tag-bevanda">Bevanda</span>
+            </div>
+            <div>
+              <p class="term-def">Espresso estratto con una quantità d'acqua maggiore (50–80 ml invece dei 25–30 ml standard), ottenendo una bevanda più diluita ma con la stessa quantità di caffeina. Rispetto all'americano, il lungo viene estratto direttamente — il che può accentuare l'amaro se l'acqua attraversa il caffè per troppo tempo. Ideale per chi preferisce una tazza più grande senza perdere l'aroma.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- M -->
+      <div class="glossary-letter" id="M">
+        <div class="letter-heading">M</div>
+        <div class="term-list">
+
+          <div class="term-entry">
+            <div>
+              <div class="term-name">Macinatura<span class="term-en">Grind</span></div>
+              <span class="term-tag tag-tecnica">Tecnica</span>
+            </div>
+            <div>
+              <p class="term-def">Il processo di riduzione dei chicchi di caffè tostato in polvere. La <strong>finezza della macinatura</strong> è uno dei parametri più critici dell'estrazione: macinatura fine → estrazione più lenta, caffè più intenso; macinatura grossa → estrazione rapida, caffè più leggero. Per l'espresso si usa una macinatura fina. Con capsule e cialde la macinatura è già ottimizzata dal produttore.</p>
+            </div>
+          </div>
+
+          <div class="term-entry">
+            <div>
+              <div class="term-name">Made in Italy (caffè)</div>
+              <span class="term-tag tag-settore">Settore</span>
+            </div>
+            <div>
+              <p class="term-def">Certificazione di origine che garantisce che il prodotto sia stato <strong>progettato, prodotto e confezionato interamente in Italia</strong>. Nel settore caffè si applica sia alle macchine (es. Mokador a Faenza RA, Caffè d'Italia in Veneto) sia alle miscele torrefatte in Italia con materie prime di importazione. È un indicatore di qualità produttiva, design e know-how artigianale.</p>
+            </div>
+          </div>
+
+          <div class="term-entry">
+            <div>
+              <div class="term-name">Miscela<span class="term-en">Blend</span></div>
+              <span class="term-tag tag-tecnica">Tecnica</span>
+            </div>
+            <div>
+              <p class="term-def">Vedi <strong>Blend</strong>. In italiano si usa indifferentemente "miscela" o "blend" per indicare la combinazione studiata di caffè di origine diversa. Le miscele per espresso combinano tipicamente arabica (per aroma e dolcezza) e robusta (per crema e corpo), in percentuali variabili dal 10% al 50% di robusta.</p>
+            </div>
+          </div>
+
+          <div class="term-entry">
+            <div>
+              <div class="term-name">Monorigine<span class="term-en">Single Origin</span></div>
+              <span class="term-tag tag-tecnica">Tecnica</span>
+            </div>
+            <div>
+              <p class="term-def">Caffè proveniente da un unico paese, regione o tenuta, senza mescolanza con altri caffè. I monorigine sono apprezzati dagli appassionati per la loro <strong>identità gustativa unica</strong> — spesso fruttata, floreale o speziata — che riflette clima, terreno e varietà locale. Più delicati dei blend per l'espresso tradizionale, sono ideali per metodi di estrazione filtro.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- O -->
+      <div class="glossary-letter" id="O">
+        <div class="letter-heading">O</div>
+        <div class="term-list">
+
+          <div class="term-entry">
+            <div>
+              <div class="term-name">Orzo (caffè d'orzo)</div>
+              <span class="term-tag tag-bevanda">Bevanda</span>
+            </div>
+            <div>
+              <p class="term-def">Bevanda calda ottenuta dall'orzo tostato e macinato, <strong>senza caffeina</strong>. Ha un sapore leggermente amaro e maltato, simile al caffè ma più delicato. È indicata per chi vuole evitare la caffeina, per bambini o nelle ore serali. Nelle macchine multibevanda è disponibile come capsula solubile istantanea (orzo solubile) o infusa (orzo in cialde).</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- P -->
+      <div class="glossary-letter" id="P">
+        <div class="letter-heading">P</div>
+        <div class="term-list">
+
+          <div class="term-entry">
+            <div>
+              <div class="term-name">Pressione<span class="term-en">Bar</span></div>
+              <span class="term-tag tag-tecnica">Tecnica</span>
+            </div>
+            <div>
+              <p class="term-def">Vedi <strong>Bar</strong>. La pressione di 9 bar è lo standard per l'espresso italiano. Le macchine per ufficio a capsule e cialde replicano questa pressione attraverso pompe elettriche, garantendo un espresso equivalente a quello da bar, senza la necessità di un barista esperto.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- R -->
+      <div class="glossary-letter" id="R">
+        <div class="letter-heading">R</div>
+        <div class="term-list">
+
+          <div class="term-entry">
+            <div>
+              <div class="term-name">Ristretto</div>
+              <span class="term-tag tag-bevanda">Bevanda</span>
+            </div>
+            <div>
+              <p class="term-def">Espresso estratto con la stessa quantità di caffè ma <strong>meno acqua (15–20 ml)</strong>, risultando più concentrato, dolce e meno amaro del normale espresso. La ridotta quantità di acqua estrae principalmente gli aromi dolci e lascia indietro i composti amari. È la variante preferita dai veri amanti del caffè italiano.</p>
+            </div>
+          </div>
+
+          <div class="term-entry">
+            <div>
+              <div class="term-name">Robusta<span class="term-en">Coffea canephora</span></div>
+              <span class="term-tag tag-specie">Specie botanica</span>
+            </div>
+            <div>
+              <p class="term-def">La seconda specie di caffè più coltivata (circa il 30–40% della produzione mondiale). Cresce a basse altitudini, è più resistente alle malattie (da cui il nome), ha <strong>il doppio di caffeina rispetto all'arabica</strong> e produce una crema più abbondante. Il sapore è più intenso, terroso e amaro. Usata nei blend espresso per dare corpo, crema e caffeina; in purezza ha un profilo più aggressivo.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- S -->
+      <div class="glossary-letter" id="S">
+        <div class="letter-heading">S</div>
+        <div class="term-list">
+
+          <div class="term-entry">
+            <div>
+              <div class="term-name">Solubile</div>
+              <span class="term-tag tag-formato">Formato</span>
+            </div>
+            <div>
+              <p class="term-def">Prodotto in polvere o granuli che si dissolve istantaneamente in acqua calda senza necessità di estrazione. In capsule multibevanda, i solubili comprendono <strong>ginseng, orzo, cacao, latte, cappuccino e bevanda bianca</strong> — preparati con la stessa macchina del caffè. Hanno tempi di erogazione più brevi rispetto all'infusione vera e propria.</p>
+            </div>
+          </div>
+
+          <div class="term-entry">
+            <div>
+              <div class="term-name">Specialty Coffee</div>
+              <span class="term-tag tag-settore">Settore</span>
+            </div>
+            <div>
+              <p class="term-def">Termine della Specialty Coffee Association (SCA) che identifica caffè di alta qualità con <strong>punteggio Q-Grader ≥ 80/100</strong>, ottenuto in base a caratteristiche sensoriali, provenienza tracciata e assenza di difetti. Lo specialty coffee è quasi sempre monorigine, arabica, con lavorazione curata. Rappresenta circa il 15–20% del mercato globale del caffè.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- T -->
+      <div class="glossary-letter" id="T">
+        <div class="letter-heading">T</div>
+        <div class="term-list">
+
+          <div class="term-entry">
+            <div>
+              <div class="term-name">Tisana</div>
+              <span class="term-tag tag-bevanda">Bevanda</span>
+            </div>
+            <div>
+              <p class="term-def">Preparazione a base di piante aromatiche (camomilla, melissa, menta, rosa canina, finocchio…) in acqua calda. Priva di teina e caffeina, è indicata per il relax o la sera. Nelle macchine multibevanda come quelle della gamma <a href="/caffe/capsule-caffe-ditalia.html">Caffè d'Italia</a> o <a href="/caffe/capsule-mokador.html">Mokador</a>, si eroga con capsule dedicate in pochi secondi.</p>
+            </div>
+          </div>
+
+          <div class="term-entry">
+            <div>
+              <div class="term-name">Tostatura<span class="term-en">Roasting</span></div>
+              <span class="term-tag tag-tecnica">Tecnica</span>
+            </div>
+            <div>
+              <p class="term-def">Processo termico (180–240°C) che trasforma i chicchi di caffè verde in caffè pronto per la macinatura. Durante la tostatura avvengono centinaia di reazioni chimiche (<strong>reazione di Maillard, caramelizzazione</strong>) che sviluppano gli aromi, riducono l'acidità e variano il colore da verde a marrone scuro. Esistono tre gradi principali:</p>
+              <ul style="font-size: 14px; color: var(--text-2); line-height: 1.8; margin: 8px 0 0 16px;">
+                <li><strong>Chiara (light roast):</strong> più acida, aromi floreali e fruttati, più caffeina</li>
+                <li><strong>Media (medium roast):</strong> bilanciata, note di caramello e cioccolato</li>
+                <li><strong>Scura (dark roast):</strong> amara, note tostate e di carbone, meno caffeina</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="bg-2">
+    <div class="section-inner">
+      <div class="cta-banner">
+        <span class="eyebrow">Dalla teoria alla pratica</span>
+        <h2>Pronto a scegliere il tuo caffè?</h2>
+        <p>Ora che conosci la terminologia, scopri i sistemi a capsule e cialde che distribuiamo — o contattaci per una consulenza gratuita.</p>
+        <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+          <a href="/caffe/capsule.html" class="btn btn-dark">Confronta i sistemi capsule</a>
+          <a href="/contatti.html" class="btn btn-outline">Contattaci</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <div id="footer-root"></div>
+</body>
+</html>

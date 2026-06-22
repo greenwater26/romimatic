@@ -111,6 +111,14 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- Risorse / Contenuti evergreen -->
+  <url>
+    <loc>https://romimatic.it/glossario-caffe.html</loc>
+    <lastmod>2026-06-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
   <!-- Blog articoli -->
   <url>
     <loc>https://romimatic.it/blog/il-bergamotto.html</loc>
