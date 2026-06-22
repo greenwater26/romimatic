@@ -121,6 +121,66 @@
 
   <!-- Blog articoli -->
   <url>
+    <loc>https://romimatic.it/blog/macchina-caffe-ufficio-come-scegliere.html</loc>
+    <lastmod>2026-06-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://romimatic.it/blog/comodato-uso-macchina-caffe.html</loc>
+    <lastmod>2026-06-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://romimatic.it/blog/capsule-vs-cialde-caffe.html</loc>
+    <lastmod>2026-06-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://romimatic.it/blog/arabica-vs-robusta.html</loc>
+    <lastmod>2026-06-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://romimatic.it/blog/caffe-salute-quante-tazzine-al-giorno.html</loc>
+    <lastmod>2026-06-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://romimatic.it/blog/espresso-ristretto-lungo-americano-differenze.html</loc>
+    <lastmod>2026-06-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://romimatic.it/blog/caffe-ufficio-guida-aziende.html</loc>
+    <lastmod>2026-06-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://romimatic.it/blog/caffe-ginseng-proprieta-benefici.html</loc>
+    <lastmod>2026-06-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://romimatic.it/blog/decaffeinato-fa-bene-o-fa-male.html</loc>
+    <lastmod>2026-06-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://romimatic.it/blog/tostatura-caffe-chiara-media-scura.html</loc>
+    <lastmod>2026-06-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://romimatic.it/blog/il-bergamotto.html</loc>
     <lastmod>2025-06-21</lastmod>
     <changefreq>yearly</changefreq>
