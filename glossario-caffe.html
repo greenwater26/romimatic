@@ -152,6 +152,58 @@
         gap: 6px;
       }
     }
+
+    /* Search bar */
+    .glossary-search {
+      margin: 28px auto 0;
+      max-width: 560px;
+      position: relative;
+    }
+    .glossary-search input {
+      width: 100%;
+      padding: 14px 44px 14px 48px;
+      border: 2px solid var(--border);
+      border-radius: var(--r-lg);
+      font-size: 16px;
+      font-family: inherit;
+      color: var(--text);
+      background: var(--bg);
+      outline: none;
+      transition: border-color .2s;
+      box-sizing: border-box;
+    }
+    .glossary-search input:focus { border-color: var(--accent); }
+    .glossary-search input::placeholder { color: var(--text-3); }
+    .glossary-search .gs-icon {
+      position: absolute;
+      left: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-3);
+      pointer-events: none;
+    }
+    .glossary-search-clear {
+      position: absolute;
+      right: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: var(--text-3);
+      font-size: 20px;
+      line-height: 1;
+      padding: 4px;
+      display: none;
+    }
+    .glossary-search-clear:hover { color: var(--text); }
+    .glossary-no-results {
+      text-align: center;
+      padding: 56px 0;
+      color: var(--text-2);
+      font-size: 15px;
+      display: none;
+    }
   </style>
   <link rel="icon" href="/favicon.png" type="image/png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -175,7 +227,13 @@
     <span class="eyebrow">Caffè · Terminologia</span>
     <h1>Glossario del Caffè</h1>
     <p>Arabica o robusta? Capsule o cialde? Comodato o acquisto? Qui trovi tutti i termini del mondo caffè spiegati in modo semplice — dalle specie botaniche ai formati monodose, dalla tostatura al comodato d'uso.</p>
-    <nav class="letter-nav" aria-label="Navigazione per lettera">
+    <div class="glossary-search">
+      <svg class="gs-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      <input type="search" id="glossary-search-input" placeholder="Cerca un termine… es. arabica, crema, capsule" autocomplete="off" aria-label="Cerca nel glossario">
+      <button class="glossary-search-clear" id="glossary-search-clear" aria-label="Cancella ricerca">×</button>
+    </div>
+
+    <nav class="letter-nav" id="glossary-letter-nav" aria-label="Navigazione per lettera">
       <a href="#A">A</a>
       <a href="#B">B</a>
       <a href="#C">C</a>
@@ -637,6 +695,7 @@
         </div>
       </div>
 
+      <p class="glossary-no-results" id="glossary-no-results"></p>
     </div>
   </section>
 
@@ -658,5 +717,52 @@
   </main>
 
   <div id="footer-root"></div>
+
+  <script>
+  (function () {
+    const input    = document.getElementById('glossary-search-input');
+    const clearBtn = document.getElementById('glossary-search-clear');
+    const letterNav = document.getElementById('glossary-letter-nav');
+    const noResults = document.getElementById('glossary-no-results');
+    const sections  = document.querySelectorAll('.glossary-letter');
+
+    function normalize(s) {
+      return s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+    }
+
+    function filter(query) {
+      const q = normalize(query.trim());
+      clearBtn.style.display  = q ? 'block' : 'none';
+      letterNav.style.display = q ? 'none'  : '';
+
+      if (!q) {
+        sections.forEach(sec => {
+          sec.style.display = '';
+          sec.querySelectorAll('.term-entry').forEach(e => e.style.display = '');
+        });
+        noResults.style.display = 'none';
+        return;
+      }
+
+      let total = 0;
+      sections.forEach(sec => {
+        let visible = 0;
+        sec.querySelectorAll('.term-entry').forEach(entry => {
+          const match = normalize(entry.textContent).includes(q);
+          entry.style.display = match ? '' : 'none';
+          if (match) visible++;
+        });
+        sec.style.display = visible ? '' : 'none';
+        total += visible;
+      });
+
+      noResults.textContent  = total ? '' : 'Nessun termine trovato per "' + query.trim() + '"';
+      noResults.style.display = total ? 'none' : 'block';
+    }
+
+    input.addEventListener('input', () => filter(input.value));
+    clearBtn.addEventListener('click', () => { input.value = ''; input.focus(); filter(''); });
+  })();
+  </script>
 </body>
 </html>
