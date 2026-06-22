@@ -50,9 +50,6 @@ const NAV_HTML = `
           <div class="dropdown-item">
             <a class="dropdown-link" href="/caffe/horeca.html">HO.RE.CA</a>
           </div>
-          <div class="dropdown-item">
-            <a class="dropdown-link" href="/glossario-caffe.html">Glossario del caffè</a>
-          </div>
         </div>
       </li>
       <li class="nav-item">
@@ -65,6 +62,9 @@ const NAV_HTML = `
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/blog.html">Blog</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/glossario-caffe.html">Glossario</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/contatti.html">Contatti</a>
