@@ -10,7 +10,7 @@
   <meta property="og:url" content="https://romimatic.it/caffe/macchine-essse-caffe.html">
   <meta property="og:title" content="Macchina Essse Caffè S.12 — Design Italdesign Giugiaro | RoMimatic">
   <meta property="og:description" content="S.12: macchina espresso compatta disegnata da Italdesign Giugiaro. Compatibile esclusivamente con le capsule Essse Caffè Sistema Espresso. Distributore RoMimatic, Garbagnate Milanese.">
-  <meta property="og:image" content="https://romimatic.it/assets/sermatic/macchine-essse/s12.jpg">
+  <meta property="og:image" content="https://romimatic.it/assets/sermatic/macchine-essse/s12-real.jpg">
   <meta property="og:locale" content="it_IT">
   <meta property="og:site_name" content="RoMimatic">
   <meta name="twitter:card" content="summary_large_image">
@@ -28,32 +28,36 @@
 
     .features-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-top: 32px; }
     @media (max-width: 720px) { .features-grid { grid-template-columns: 1fr; } }
+    .s12-colori { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-top: 32px; max-width: 720px; margin-left: auto; margin-right: auto; }
+    @media (max-width: 540px) { .s12-colori { grid-template-columns: 1fr; } }
 
     .capsule-preview-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       gap: 16px;
       margin-top: 32px;
     }
     @media (max-width: 720px) { .capsule-preview-grid { grid-template-columns: repeat(2, 1fr); } }
-    @media (max-width: 480px) { .capsule-preview-grid { grid-template-columns: 1fr; } }
+    @media (max-width: 400px) { .capsule-preview-grid { grid-template-columns: 1fr; } }
     .capsule-chip {
       background: var(--bg-2);
       border: 1px solid var(--border);
       border-radius: var(--r);
-      padding: 14px 16px;
+      padding: 12px;
       display: flex;
+      flex-direction: column;
       align-items: center;
-      gap: 10px;
+      text-align: center;
+      gap: 8px;
     }
-    .capsule-chip-dot {
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-      flex-shrink: 0;
+    .capsule-chip img {
+      width: 80px;
+      height: 110px;
+      object-fit: contain;
+      display: block;
     }
-    .capsule-chip-name { font-size: 14px; font-weight: 600; }
-    .capsule-chip-sub { font-size: 12px; color: var(--text-3); }
+    .capsule-chip-name { font-size: 13px; font-weight: 700; }
+    .capsule-chip-sub { font-size: 11px; color: var(--text-3); line-height: 1.4; }
 
     .designer-box {
       background: var(--bg-2);
@@ -174,7 +178,32 @@
         </div>
 
         <div class="split-img">
-          <img src="/assets/sermatic/macchine-essse/s12.jpg" alt="Essse Caffè S.12 — macchina espresso compatta design Italdesign Giugiaro" fetchpriority="high" style="width:100%;height:100%;object-fit:cover;border-radius:var(--r-lg);">
+          <img src="/assets/sermatic/macchine-essse/s12-real.jpg" alt="Essse Caffè S.12 — macchina espresso con design Giuciaro, colore rosso" fetchpriority="high" style="width:100%;height:100%;object-fit:cover;border-radius:var(--r-lg);">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRE COLORI -->
+  <section class="bg-2">
+    <div class="section-inner">
+      <div class="section-head centered">
+        <span class="eyebrow">3 colorazioni disponibili</span>
+        <h2>Scegli il colore che si adatta al tuo spazio</h2>
+        <p>La S.12 è disponibile in tre finiture — rosso, bianco e nero — per integrarsi perfettamente in qualsiasi ambiente, dalla cucina di casa alla scrivania in ufficio.</p>
+      </div>
+      <div class="s12-colori">
+        <div style="text-align:center; background:var(--bg); border:1px solid var(--border); border-radius:var(--r-lg); padding:24px 16px;">
+          <img src="/assets/sermatic/macchine-essse/s12-red.png" alt="Essse Caffè S.12 rossa" style="width:100%; max-width:160px; height:220px; object-fit:contain;" loading="lazy">
+          <div style="font-size:14px; font-weight:600; margin-top:12px;">Rosso</div>
+        </div>
+        <div style="text-align:center; background:var(--bg); border:1px solid var(--border); border-radius:var(--r-lg); padding:24px 16px;">
+          <img src="/assets/sermatic/macchine-essse/s12-white.png" alt="Essse Caffè S.12 bianca" style="width:100%; max-width:160px; height:220px; object-fit:contain;" loading="lazy">
+          <div style="font-size:14px; font-weight:600; margin-top:12px;">Bianco</div>
+        </div>
+        <div style="text-align:center; background:var(--bg); border:1px solid var(--border); border-radius:var(--r-lg); padding:24px 16px;">
+          <img src="/assets/sermatic/macchine-essse/s12-black.png" alt="Essse Caffè S.12 nera" style="width:100%; max-width:160px; height:220px; object-fit:contain;" loading="lazy">
+          <div style="font-size:14px; font-weight:600; margin-top:12px;">Nero</div>
         </div>
       </div>
     </div>
@@ -183,11 +212,16 @@
   <!-- DESIGN ITALDESIGN -->
   <section class="bg-2">
     <div class="section-inner" style="max-width: 860px;">
-      <div class="section-head">
-        <span class="eyebrow">Il design</span>
-        <h2>Nata dalla collaborazione con Italdesign Giugiaro</h2>
+      <div class="split">
+        <div class="split-text">
+          <span class="eyebrow">Il design</span>
+          <h2>Nata dalla collaborazione con Italdesign Giugiaro</h2>
+          <p style="font-size: 16px; color: var(--text-2); line-height: 1.7; margin-bottom: 0;">Italdesign Giugiaro è lo studio di design fondato a Torino nel 1968 da Giorgetto Giugiaro — autore di icone automobilistiche come la Fiat Panda, la Volkswagen Golf e la BMW M1. Portare la firma Italdesign su una macchina da caffè non è solo una questione estetica: significa applicare una metodologia progettuale orientata alla funzione, alla ergonomia e alla durabilità. La S.12 è il risultato di questo approccio: ogni linea e ogni dettaglio è pensato per rendere l'esperienza del caffè più bella e più semplice.</p>
+        </div>
+        <div class="split-img">
+          <img src="/assets/sermatic/macchine-essse/s12-real.jpg" alt="Essse Caffè S.12 in uso — coppia a colazione" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:var(--r-lg);">
+        </div>
       </div>
-      <p style="font-size: 16px; color: var(--text-2); line-height: 1.7; margin-bottom: 0;">Italdesign Giugiaro è lo studio di design fondato a Torino nel 1968 da Giorgetto Giugiaro — autore di icone automobilistiche come la Fiat Panda, la Volkswagen Golf e la BMW M1. Portare la firma Italdesign su una macchina da caffè non è solo una questione estetica: significa applicare una metodologia progettuale orientata alla funzione, alla ergonomia e alla durabilità. La S.12 è il risultato di questo approccio: ogni linea e ogni dettaglio è pensato per rendere l'esperienza del caffè più bella e più semplice.</p>
 
       <div class="designer-box">
         <div class="designer-box-icon" aria-hidden="true">🏆</div>
@@ -198,6 +232,7 @@
       </div>
     </div>
   </section>
+  <!-- fine DESIGN -->
 
   <!-- CAPSULE COMPATIBILI -->
   <section>
@@ -210,53 +245,39 @@
 
       <div class="capsule-preview-grid">
         <div class="capsule-chip">
-          <div class="capsule-chip-dot" style="background: #c8a96e;"></div>
-          <div>
-            <div class="capsule-chip-name">Arabesco</div>
-            <div class="capsule-chip-sub">100% Arabica · Alta acidità</div>
-          </div>
+          <img src="/assets/sermatic/capsule-essse/Arabesco.png" alt="Capsula Arabesco" loading="lazy">
+          <div class="capsule-chip-name">Arabesco</div>
+          <div class="capsule-chip-sub">100% Arabica · Alta acidità</div>
         </div>
         <div class="capsule-chip">
-          <div class="capsule-chip-dot" style="background: #2c1a0e;"></div>
-          <div>
-            <div class="capsule-chip-name">Barocco</div>
-            <div class="capsule-chip-sub">100% Robusta · Corpo pieno</div>
-          </div>
+          <img src="/assets/sermatic/capsule-essse/Barocco.png" alt="Capsula Barocco" loading="lazy">
+          <div class="capsule-chip-name">Barocco</div>
+          <div class="capsule-chip-sub">100% Robusta · Corpo pieno</div>
         </div>
         <div class="capsule-chip">
-          <div class="capsule-chip-dot" style="background: #5c3317;"></div>
-          <div>
-            <div class="capsule-chip-name">Infinito</div>
-            <div class="capsule-chip-sub">Arabica &amp; Robusta · Cioccolato</div>
-          </div>
+          <img src="/assets/sermatic/capsule-essse/Infinito.png" alt="Capsula Infinito" loading="lazy">
+          <div class="capsule-chip-name">Infinito</div>
+          <div class="capsule-chip-sub">Arabica &amp; Robusta · Cioccolato</div>
         </div>
         <div class="capsule-chip">
-          <div class="capsule-chip-dot" style="background: #8b6914;"></div>
-          <div>
-            <div class="capsule-chip-name">Maestoso</div>
-            <div class="capsule-chip-sub">Blend · Vaniglia &amp; Spezie</div>
-          </div>
+          <img src="/assets/sermatic/capsule-essse/Maestoso.png" alt="Capsula Maestoso" loading="lazy">
+          <div class="capsule-chip-name">Maestoso</div>
+          <div class="capsule-chip-sub">Blend · Vaniglia &amp; Spezie</div>
         </div>
         <div class="capsule-chip">
-          <div class="capsule-chip-dot" style="background: #7a9e6a;"></div>
-          <div>
-            <div class="capsule-chip-name">Ideale</div>
-            <div class="capsule-chip-sub">Blend · Mezza caffeina</div>
-          </div>
+          <img src="/assets/sermatic/capsule-essse/Ideale.png" alt="Capsula Ideale" loading="lazy">
+          <div class="capsule-chip-name">Ideale</div>
+          <div class="capsule-chip-sub">Blend · Mezza caffeina</div>
         </div>
         <div class="capsule-chip">
-          <div class="capsule-chip-dot" style="background: #4a7c59;"></div>
-          <div>
-            <div class="capsule-chip-name">Decaffeinato</div>
-            <div class="capsule-chip-sub">Blend · &lt;0,1% caffeina</div>
-          </div>
+          <img src="/assets/sermatic/capsule-essse/Decaffeinato.png" alt="Capsula Decaffeinato" loading="lazy">
+          <div class="capsule-chip-name">Decaffeinato</div>
+          <div class="capsule-chip-sub">Blend · &lt;0,1% caffeina</div>
         </div>
         <div class="capsule-chip">
-          <div class="capsule-chip-dot" style="background: #c4a35a;"></div>
-          <div>
-            <div class="capsule-chip-name">Ginseng</div>
-            <div class="capsule-chip-sub">Caramello &amp; Vaniglia · Senza glutine</div>
-          </div>
+          <img src="/assets/sermatic/capsule-essse/Ginseng.png" alt="Capsula Ginseng" loading="lazy">
+          <div class="capsule-chip-name">Ginseng</div>
+          <div class="capsule-chip-sub">Caramello &amp; Vaniglia · Senza glutine</div>
         </div>
       </div>
 

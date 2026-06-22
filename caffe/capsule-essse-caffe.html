@@ -50,16 +50,18 @@
     @media (max-width: 860px) { .cap-card { flex: 0 0 calc(50% - 12px); } }
     @media (max-width: 540px) { .cap-card { flex: 0 0 100%; min-width: auto; } }
 
-    .cap-card-header {
-      padding: 28px 28px 20px;
+    .cap-card-img {
+      width: 100%;
+      height: 160px;
+      object-fit: contain;
+      background: var(--bg-2);
+      padding: 16px;
+      display: block;
       border-bottom: 1px solid var(--border);
     }
-    .cap-color-dot {
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
-      margin-bottom: 14px;
-      border: 3px solid rgba(0,0,0,0.08);
+    .cap-card-header {
+      padding: 16px 28px 16px;
+      border-bottom: 1px solid var(--border);
     }
     .cap-name {
       font-size: 22px;
@@ -250,8 +252,8 @@
 
         <!-- 1. ARABESCO -->
         <div class="cap-card" id="arabesco">
+          <img src="/assets/sermatic/capsule-essse/Arabesco.png" alt="Capsula Essse Caffè Arabesco — 100% Arabica" class="cap-card-img" loading="lazy">
           <div class="cap-card-header">
-            <div class="cap-color-dot" style="background: #c8a96e;"></div>
             <div class="cap-name">Arabesco</div>
             <div class="cap-sub">100% Arabica · Monorigine</div>
           </div>
@@ -290,8 +292,8 @@
 
         <!-- 2. BAROCCO -->
         <div class="cap-card" id="barocco">
+          <img src="/assets/sermatic/capsule-essse/Barocco.png" alt="Capsula Essse Caffè Barocco — 100% Robusta" class="cap-card-img" loading="lazy">
           <div class="cap-card-header">
-            <div class="cap-color-dot" style="background: #1e0f06;"></div>
             <div class="cap-name">Barocco</div>
             <div class="cap-sub">100% Robusta · Intenso</div>
           </div>
@@ -330,8 +332,8 @@
 
         <!-- 3. INFINITO -->
         <div class="cap-card" id="infinito">
+          <img src="/assets/sermatic/capsule-essse/Infinito.png" alt="Capsula Essse Caffè Infinito — Arabica e Robusta" class="cap-card-img" loading="lazy">
           <div class="cap-card-header">
-            <div class="cap-color-dot" style="background: #4a1e06;"></div>
             <div class="cap-name">Infinito</div>
             <div class="cap-sub">Arabica &amp; Robusta · Aromatico</div>
           </div>
@@ -370,8 +372,8 @@
 
         <!-- 4. MAESTOSO -->
         <div class="cap-card" id="maestoso">
+          <img src="/assets/sermatic/capsule-essse/Maestoso.png" alt="Capsula Essse Caffè Maestoso — blend dolce e speziato" class="cap-card-img" loading="lazy">
           <div class="cap-card-header">
-            <div class="cap-color-dot" style="background: #8b6914;"></div>
             <div class="cap-name">Maestoso</div>
             <div class="cap-sub">Arabica &amp; Robusta · Dolce e speziato</div>
           </div>
@@ -410,8 +412,8 @@
 
         <!-- 5. IDEALE -->
         <div class="cap-card" id="ideale">
+          <img src="/assets/sermatic/capsule-essse/Ideale.png" alt="Capsula Essse Caffè Ideale — mezza caffeina" class="cap-card-img" loading="lazy">
           <div class="cap-card-header">
-            <div class="cap-color-dot" style="background: #7a9e6a;"></div>
             <div class="cap-name">Ideale</div>
             <div class="cap-sub">Arabica, Robusta &amp; Decaf · Mezza caffeina</div>
           </div>
@@ -450,8 +452,8 @@
 
         <!-- 6. DECAFFEINATO -->
         <div class="cap-card" id="decaffeinato">
+          <img src="/assets/sermatic/capsule-essse/Decaffeinato.png" alt="Capsula Essse Caffè Decaffeinato — meno di 0,1% caffeina" class="cap-card-img" loading="lazy">
           <div class="cap-card-header">
-            <div class="cap-color-dot" style="background: #4a7c59;"></div>
             <div class="cap-name">Decaffeinato</div>
             <div class="cap-sub">Blend · &lt;0,1% caffeina</div>
           </div>
@@ -490,8 +492,8 @@
 
         <!-- 7. GINSENG -->
         <div class="cap-card" id="ginseng">
+          <img src="/assets/sermatic/capsule-essse/Ginseng.png" alt="Capsula Essse Caffè Ginseng — caramello e vaniglia" class="cap-card-img" loading="lazy">
           <div class="cap-card-header">
-            <div class="cap-color-dot" style="background: #c4a35a;"></div>
             <div class="cap-name">Ginseng</div>
             <div class="cap-sub">Bevanda al ginseng · Senza glutine</div>
           </div>
