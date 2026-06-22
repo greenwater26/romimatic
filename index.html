@@ -335,11 +335,11 @@
         <div class="card">
           <div class="card-icon">
             <!-- Capsula caffè stile Nespresso: corpo + punta conica + bordo foil -->
+            <!-- Capsule: stile Nespresso — corpo trapezoidale, bottone top, bordo base -->
             <svg width="44" height="44" viewBox="0 0 44 44" fill="none" aria-hidden="true">
-              <rect x="7" y="14" width="20" height="16" rx="3" fill="#9b0b01"/>
-              <polygon points="27,14 27,30 37,22" fill="#6F4E37"/>
-              <rect x="6" y="14" width="6" height="16" rx="2" fill="#6F4E37"/>
-              <line x1="11" y1="18" x2="11" y2="26" stroke="white" stroke-width="1.5" stroke-linecap="round" opacity="0.35"/>
+              <ellipse cx="22" cy="7.5" rx="4" ry="2.5" fill="#9b0b01"/>
+              <path d="M18 9 Q11 12 10 31 Q10 34 22 35 Q34 34 34 31 Q33 12 26 9 Z" fill="#9b0b01" opacity="0.15" stroke="#9b0b01" stroke-width="2" stroke-linejoin="round"/>
+              <ellipse cx="22" cy="35" rx="12.5" ry="3" fill="none" stroke="#6F4E37" stroke-width="2"/>
             </svg>
           </div>
           <h3>Capsule</h3>
@@ -348,12 +348,10 @@
         </div>
         <div class="card">
           <div class="card-icon">
-            <!-- Cialda ESE: disco rotondo con anello filtro e centro caffè -->
+            <!-- Cialda: forma pod ovale con disco caffè interno (stile cialda ESE) -->
             <svg width="44" height="44" viewBox="0 0 44 44" fill="none" aria-hidden="true">
-              <circle cx="22" cy="22" r="17" fill="none" stroke="#9b0b01" stroke-width="4.5"/>
-              <circle cx="22" cy="22" r="11" fill="#6F4E37"/>
-              <circle cx="22" cy="22" r="5" fill="#9b0b01"/>
-              <circle cx="22" cy="22" r="2" fill="white" opacity="0.4"/>
+              <path d="M22 5 C31 5 38 12 38 21 C38 33 32 40 22 40 C12 40 6 33 6 21 C6 12 13 5 22 5 Z" fill="none" stroke="#9b0b01" stroke-width="2.5"/>
+              <ellipse cx="22" cy="23" rx="11" ry="12" fill="#6F4E37"/>
             </svg>
           </div>
           <h3>Cialde</h3>
@@ -362,16 +360,21 @@
         </div>
         <div class="card">
           <div class="card-icon">
-            <!-- Macchina espresso da ufficio: corpo + display + beccuccio + tazzina -->
-            <svg width="44" height="44" viewBox="0 0 44 44" fill="none" aria-hidden="true">
-              <rect x="5" y="6" width="26" height="26" rx="3" fill="#9b0b01"/>
-              <rect x="8" y="9" width="20" height="10" rx="2" fill="white" opacity="0.88"/>
-              <circle cx="18" cy="14" r="3" fill="#9b0b01"/>
-              <rect x="11" y="22" width="14" height="4" rx="2" fill="#6F4E37"/>
-              <rect x="16" y="26" width="4" height="5" rx="1" fill="#6F4E37"/>
-              <path d="M31 10 C38 10 38 20 31 20" stroke="#6F4E37" stroke-width="3" fill="none" stroke-linecap="round"/>
-              <rect x="3" y="32" width="30" height="3" rx="1.5" fill="#6F4E37"/>
-              <path d="M12 35 Q12 40 16 40 H22 Q26 40 26 35 Z" fill="#6F4E37" opacity="0.65"/>
+            <!-- Macchina espresso: contorno outline con beccuccio e tazzina (stile icon lineare) -->
+            <svg width="44" height="44" viewBox="0 0 44 44" fill="none" stroke="#9b0b01" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <!-- Corpo principale -->
+              <rect x="5" y="6" width="26" height="26" rx="3"/>
+              <!-- Display/pannello superiore -->
+              <rect x="9" y="10" width="10" height="7" rx="1.5"/>
+              <!-- Manopola/tasto -->
+              <circle cx="25" cy="13.5" r="2.5"/>
+              <!-- Beccuccio (portafiltro) -->
+              <path d="M19 26 L19 33 L15 38 H27 L23 33 L23 26"/>
+              <!-- Piattino/base -->
+              <rect x="3" y="38" width="30" height="3" rx="1.5" fill="#6F4E37" stroke="none"/>
+              <!-- Tazzina -->
+              <path d="M13 38 Q13 43 17 43 H19 Q23 43 23 38" stroke="#6F4E37"/>
+              <line x1="23" y1="41" x2="26" y2="41" stroke="#6F4E37"/>
             </svg>
           </div>
           <h3>Macchine</h3>
@@ -380,19 +383,21 @@
         </div>
         <div class="card">
           <div class="card-icon">
-            <!-- Macchina bar professionale a 2 gruppi: larga, beccucci doppi, vapore -->
-            <svg width="44" height="44" viewBox="0 0 44 44" fill="none" aria-hidden="true">
-              <rect x="2" y="10" width="38" height="18" rx="3" fill="#9b0b01"/>
-              <rect x="13" y="13" width="16" height="7" rx="1.5" fill="white" opacity="0.88"/>
-              <rect x="5" y="22" width="12" height="4" rx="2" fill="#6F4E37"/>
-              <rect x="25" y="22" width="12" height="4" rx="2" fill="#6F4E37"/>
-              <line x1="9"  y1="26" x2="9"  y2="32" stroke="#6F4E37" stroke-width="2" stroke-linecap="round"/>
-              <line x1="13" y1="26" x2="13" y2="32" stroke="#6F4E37" stroke-width="2" stroke-linecap="round"/>
-              <line x1="29" y1="26" x2="29" y2="32" stroke="#6F4E37" stroke-width="2" stroke-linecap="round"/>
-              <line x1="33" y1="26" x2="33" y2="32" stroke="#6F4E37" stroke-width="2" stroke-linecap="round"/>
-              <path d="M41 8 C41 8 40 11 40 14" stroke="#6F4E37" stroke-width="2.5" stroke-linecap="round"/>
-              <circle cx="41" cy="6" r="2" fill="#6F4E37" opacity="0.5"/>
-              <rect x="0" y="32" width="44" height="4" rx="2" fill="#6F4E37"/>
+            <!-- HO.RE.CA: posate — cucchiaio, coltello, forchetta con barra orizzontale (stile silhouette) -->
+            <svg width="44" height="44" viewBox="0 0 44 44" fill="#9b0b01" aria-hidden="true">
+              <!-- Cucchiaio (sinistra) -->
+              <ellipse cx="10" cy="10" rx="5" ry="6.5"/>
+              <rect x="8.5" y="16" width="3" height="20" rx="1.5"/>
+              <!-- Coltello (centro) -->
+              <path d="M20 4 C20 4 23 6 23 14 L21.5 14 L21.5 36 Q21 37 20.5 36 L20.5 14 Z"/>
+              <!-- Forchetta (destra) -->
+              <rect x="31" y="4" width="2.5" height="9" rx="1"/>
+              <rect x="35" y="4" width="2.5" height="9" rx="1"/>
+              <rect x="27" y="4" width="2.5" height="9" rx="1"/>
+              <path d="M27 11 Q27 16 31 16 Q35 16 35 11"/>
+              <rect x="30" y="16" width="3" height="20" rx="1.5"/>
+              <!-- Barra orizzontale -->
+              <rect x="5" y="22" width="34" height="3" rx="1.5"/>
             </svg>
           </div>
           <h3>HO.RE.CA</h3>

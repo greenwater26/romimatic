@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Capsule Essse Caffè Sistema Espresso: 7 Miscele | RoMimatic</title>
+  <meta name="description" content="Le 7 capsule Essse Caffè Sistema Espresso: Arabesco, Barocco, Infinito, Maestoso, Ideale, Decaffeinato e Ginseng. 100% arabica, robusta, blend e bevande speciali. Distribuite da RoMimatic a Garbagnate Milanese.">
+  <link rel="canonical" href="https://romimatic.it/caffe/capsule-essse-caffe.html">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://romimatic.it/caffe/capsule-essse-caffe.html">
+  <meta property="og:title" content="Capsule Essse Caffè Sistema Espresso: 7 Miscele | RoMimatic">
+  <meta property="og:description" content="7 capsule Essse Caffè Sistema Espresso — arabica pura, robusta intensa, blend equilibrati, decaffeinato e ginseng. Compatibili con la macchina S.12 design Italdesign Giugiaro.">
+  <meta property="og:image" content="https://romimatic.it/assets/sermatic/capsule-essse/capsule-essse-caffe.jpg">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:site_name" content="RoMimatic">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"ItemList","name":"Capsule Essse Caffè Sistema Espresso","description":"Le 7 miscele Essse Caffè Sistema Espresso distribuite da RoMimatic","numberOfItems":7,"itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Arabesco — 100% Arabica","url":"https://romimatic.it/caffe/capsule-essse-caffe.html#arabesco"},
+    {"@type":"ListItem","position":2,"name":"Barocco — 100% Robusta","url":"https://romimatic.it/caffe/capsule-essse-caffe.html#barocco"},
+    {"@type":"ListItem","position":3,"name":"Infinito — Arabica e Robusta","url":"https://romimatic.it/caffe/capsule-essse-caffe.html#infinito"},
+    {"@type":"ListItem","position":4,"name":"Maestoso — Blend Dolce e Speziato","url":"https://romimatic.it/caffe/capsule-essse-caffe.html#maestoso"},
+    {"@type":"ListItem","position":5,"name":"Ideale — Mezza Caffeina","url":"https://romimatic.it/caffe/capsule-essse-caffe.html#ideale"},
+    {"@type":"ListItem","position":6,"name":"Decaffeinato Essse Caffè","url":"https://romimatic.it/caffe/capsule-essse-caffe.html#decaffeinato"},
+    {"@type":"ListItem","position":7,"name":"Ginseng Essse Caffè","url":"https://romimatic.it/caffe/capsule-essse-caffe.html#ginseng"}
+  ]}
+  </script>
+  <link rel="stylesheet" href="/css/style.css">
+  <style>
+    /* Grid capsule */
+    .caps-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 24px;
+      margin-top: 48px;
+    }
+    .cap-card {
+      flex: 0 0 calc(33.333% - 16px);
+      min-width: 260px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--r-lg);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .cap-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+    @media (max-width: 860px) { .cap-card { flex: 0 0 calc(50% - 12px); } }
+    @media (max-width: 540px) { .cap-card { flex: 0 0 100%; min-width: auto; } }
+
+    .cap-card-header {
+      padding: 28px 28px 20px;
+      border-bottom: 1px solid var(--border);
+    }
+    .cap-color-dot {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      margin-bottom: 14px;
+      border: 3px solid rgba(0,0,0,0.08);
+    }
+    .cap-name {
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 4px;
+    }
+    .cap-sub {
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-3);
+    }
+    .cap-card-body { padding: 20px 28px 28px; flex: 1; display: flex; flex-direction: column; }
+    .cap-desc { font-size: 14px; color: var(--text-2); line-height: 1.65; margin-bottom: 20px; }
+    .cap-bars { display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px; }
+    .cap-bar-row { display: flex; align-items: center; gap: 10px; }
+    .cap-bar-label { font-size: 12px; font-weight: 600; color: var(--text-3); width: 80px; flex-shrink: 0; }
+    .bar-track { flex: 1; height: 6px; background: var(--bg-3); border-radius: 3px; overflow: hidden; }
+    .bar-fill { height: 100%; border-radius: 3px; background: var(--accent); }
+    .cap-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; }
+    .cap-tag {
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 100px;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      background: var(--bg-2);
+      color: var(--text-2);
+      border: 1px solid var(--border);
+    }
+
+    /* Sezione intro stat bar */
+    .caps-stats {
+      display: flex;
+      gap: 0;
+      border: 1px solid var(--border);
+      border-radius: var(--r);
+      overflow: hidden;
+      margin-top: 32px;
+    }
+    .caps-stat {
+      flex: 1;
+      text-align: center;
+      padding: 18px 8px;
+      border-right: 1px solid var(--border);
+    }
+    .caps-stat:last-child { border-right: none; }
+    .caps-stat .s-num {
+      display: block;
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--accent);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .caps-stat .s-lbl {
+      display: block;
+      font-size: 11px;
+      color: var(--text-3);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* Nav lettere capsule */
+    .caps-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: center;
+      margin: 32px 0 48px;
+    }
+    .caps-nav a {
+      display: inline-block;
+      padding: 8px 18px;
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-2);
+      text-decoration: none;
+      transition: background 0.15s, color 0.15s;
+    }
+    .caps-nav a:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+
+    /* Guida */
+    .guide-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 32px;
+    }
+    @media (max-width: 640px) { .guide-row { grid-template-columns: 1fr; } }
+    .guide-item { padding: 20px; background: var(--bg); border: 1px solid var(--border); border-radius: var(--r); }
+    .guide-item h3 { font-size: 14px; font-weight: 700; margin-bottom: 8px; }
+    .guide-item p { font-size: 13px; color: var(--text-2); line-height: 1.6; margin: 0; }
+    .guide-item .guide-icon { font-size: 24px; margin-bottom: 10px; }
+  </style>
+  <link rel="icon" href="/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preload" as="image" href="/assets/img/logo-s.webp">
+  <meta name="theme-color" content="#ffffff">
+  <script src="/js/components.js" defer></script>
+  <script src="/js/main.js" defer></script>
+</head>
+<body>
+
+  <div id="nav-root"></div>
+
+  <main id="main-content">
+
+  <div class="breadcrumb">
+    <a href="/">Home</a><span>›</span>
+    <a href="/caffe.html">Caffè</a><span>›</span>
+    <a href="/caffe/capsule.html">Capsule</a><span>›</span>
+    <span>Essse Caffè</span>
+  </div>
+
+  <!-- HERO -->
+  <div class="page-hero">
+    <span class="eyebrow">Capsule · Essse Caffè · Sistema Espresso</span>
+    <h1>Le 7 miscele Essse Caffè</h1>
+    <p>Arabica pura, robusta intensa, blend aromatici, decaffeinato e ginseng. Ogni capsula è progettata per la macchina S.12 e il suo beccuccio brevettato — per un espresso sempre perfetto.</p>
+  </div>
+
+  <!-- OVERVIEW -->
+  <section>
+    <div class="section-inner">
+      <div class="split">
+        <div class="split-text">
+          <span class="eyebrow">7 miscele · Sistema Espresso</span>
+          <h2>Qualità bolognese dal 1901</h2>
+          <p>Essse Caffè è un marchio con oltre 120 anni di storia nel mondo del caffè. Le capsule Sistema Espresso raccolgono il meglio di questa tradizione: selezione rigorosa dei chicchi verdi, tostatura artigianale e confezionamento ermetico che preserva l'aroma intatto fino alla tua tazzina.</p>
+          <p>Il sistema prevede 7 miscele distinte — ognuna con un profilo sensoriale preciso — compatibili esclusivamente con la macchina <strong>Essse Caffè S.12</strong>, dotata del beccuccio brevettato per l'estrazione ottimale.</p>
+
+          <div class="caps-stats">
+            <div class="caps-stat">
+              <span class="s-num">7</span>
+              <span class="s-lbl">Miscele</span>
+            </div>
+            <div class="caps-stat">
+              <span class="s-num">2</span>
+              <span class="s-lbl">Pure origin</span>
+            </div>
+            <div class="caps-stat">
+              <span class="s-num">1</span>
+              <span class="s-lbl">Decaff.</span>
+            </div>
+            <div class="caps-stat">
+              <span class="s-num">1</span>
+              <span class="s-lbl">Ginseng</span>
+            </div>
+          </div>
+
+          <div style="margin-top: 24px;">
+            <a href="/caffe/macchine-essse-caffe.html" class="btn btn-outline">Vedi la macchina S.12</a>
+          </div>
+        </div>
+        <div class="split-img">
+          <img src="/assets/sermatic/capsule-essse/capsule-essse-caffe.jpg" alt="Capsule Essse Caffè Sistema Espresso — 7 miscele" fetchpriority="high" style="width:100%;height:100%;object-fit:cover;border-radius:var(--r-lg);">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- NAV CAPSULE -->
+  <section>
+    <div class="section-inner">
+      <div style="text-align:center; margin-bottom:16px;">
+        <span class="eyebrow">Vai alla miscela</span>
+      </div>
+      <nav class="caps-nav" aria-label="Navigazione miscele">
+        <a href="#arabesco">Arabesco</a>
+        <a href="#barocco">Barocco</a>
+        <a href="#infinito">Infinito</a>
+        <a href="#maestoso">Maestoso</a>
+        <a href="#ideale">Ideale</a>
+        <a href="#decaffeinato">Decaffeinato</a>
+        <a href="#ginseng">Ginseng</a>
+      </nav>
+
+      <!-- GRID CAPSULE -->
+      <div class="caps-grid">
+
+        <!-- 1. ARABESCO -->
+        <div class="cap-card" id="arabesco">
+          <div class="cap-card-header">
+            <div class="cap-color-dot" style="background: #c8a96e;"></div>
+            <div class="cap-name">Arabesco</div>
+            <div class="cap-sub">100% Arabica · Monorigine</div>
+          </div>
+          <div class="cap-card-body">
+            <p class="cap-desc">La miscela per gli amanti del caffè più delicato e fruttato. Arabica 100% in purezza — selezione dei migliori chicchi dalle origini più pregiate — per un espresso con bouquet floreale, acidità vivace e finale pulito. La scelta ideale per chi preferisce un caffè leggero nel corpo ma ricco di aromi.</p>
+            <div class="cap-bars">
+              <div class="cap-bar-row">
+                <span class="cap-bar-label">Aroma</span>
+                <div class="bar-track"><div class="bar-fill" style="width:100%;"></div></div>
+                <span style="font-size:12px;color:var(--text-3);width:24px;text-align:right;">5/5</span>
+              </div>
+              <div class="cap-bar-row">
+                <span class="cap-bar-label">Acidità</span>
+                <div class="bar-track"><div class="bar-fill" style="width:100%;"></div></div>
+                <span style="font-size:12px;color:var(--text-3);width:24px;text-align:right;">5/5</span>
+              </div>
+              <div class="cap-bar-row">
+                <span class="cap-bar-label">Corpo</span>
+                <div class="bar-track"><div class="bar-fill" style="width:40%;"></div></div>
+                <span style="font-size:12px;color:var(--text-3);width:24px;text-align:right;">2/5</span>
+              </div>
+              <div class="cap-bar-row">
+                <span class="cap-bar-label">Amaro</span>
+                <div class="bar-track"><div class="bar-fill" style="width:20%;"></div></div>
+                <span style="font-size:12px;color:var(--text-3);width:24px;text-align:right;">1/5</span>
+              </div>
+            </div>
+            <div class="cap-tags">
+              <span class="cap-tag">Floreale</span>
+              <span class="cap-tag">Fruttato</span>
+              <span class="cap-tag">100% Arabica</span>
+              <span class="cap-tag">Delicato</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. BAROCCO -->
+        <div class="cap-card" id="barocco">
+          <div class="cap-card-header">
+            <div class="cap-color-dot" style="background: #1e0f06;"></div>
+            <div class="cap-name">Barocco</div>
+            <div class="cap-sub">100% Robusta · Intenso</div>
+          </div>
+          <div class="cap-card-body">
+            <p class="cap-desc">Per chi non scende a compromessi sull'intensità. Robusta 100% in purezza — carattere deciso, corpo pieno e crema persistente e compatta. Sapore terroso con note di cacao amaro e finale lungo. Il caffè napoletano per definizione: potente, avvolgente, senza cedimenti.</p>
+            <div class="cap-bars">
+              <div class="cap-bar-row">
+                <span class="cap-bar-label">Corpo</span>
+                <div class="bar-track"><div class="bar-fill" style="width:100%;"></div></div>
+                <span style="font-size:12px;color:var(--text-3);width:24px;text-align:right;">5/5</span>
+              </div>
+              <div class="cap-bar-row">
+                <span class="cap-bar-label">Amaro</span>
+                <div class="bar-track"><div class="bar-fill" style="width:100%;"></div></div>
+                <span style="font-size:12px;color:var(--text-3);width:24px;text-align:right;">5/5</span>
+              </div>
+              <div class="cap-bar-row">
+                <span class="cap-bar-label">Crema</span>
+                <div class="bar-track"><div class="bar-fill" style="width:100%;"></div></div>
+                <span style="font-size:12px;color:var(--text-3);width:24px;text-align:right;">5/5</span>
+              </div>
+              <div class="cap-bar-row">
+                <span class="cap-bar-label">Acidità</span>
+                <div class="bar-track"><div class="bar-fill" style="width:20%;"></div></div>
+                <span style="font-size:12px;color:var(--text-3);width:24px;text-align:right;">1/5</span>
+              </div>
+            </div>
+            <div class="cap-tags">
+              <span class="cap-tag">Cacao amaro</span>
+              <span class="cap-tag">Terroso</span>
+              <span class="cap-tag">100% Robusta</span>
+              <span class="cap-tag">Crema intensa</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. INFINITO -->
+        <div class="cap-card" id="infinito">
+          <div class="cap-card-header">
+            <div class="cap-color-dot" style="background: #4a1e06;"></div>
+            <div class="cap-name">Infinito</div>
+            <div class="cap-sub">Arabica &amp; Robusta · Aromatico</div>
+          </div>
+          <div class="cap-card-body">
+            <p class="cap-desc">Il blend dell'equilibrio impossibile: Arabica e Robusta in proporzione studiata per ottenere il meglio di entrambe. Corpo pieno grazie alla Robusta, aromi complessi dalla Arabica. Note di cioccolato fondente e spezie dolci si intrecciano in un espresso persistente e avvolgente — infinito, appunto.</p>
+            <div class="cap-bars">
+              <div class="cap-bar-row">
+                <span class="cap-bar-label">Corpo</span>
+                <div class="bar-track"><div class="bar-fill" style="width:100%;"></div></div>
+                <span style="font-size:12px;color:var(--text-3);width:24px;text-align:right;">5/5</span>
+              </div>
+              <div class="cap-bar-row">
+                <span class="cap-bar-label">Aroma</span>
+                <div class="bar-track"><div class="bar-fill" style="width:80%;"></div></div>
+                <span style="font-size:12px;color:var(--text-3);width:24px;text-align:right;">4/5</span>
+              </div>
+              <div class="cap-bar-row">
+                <span class="cap-bar-label">Persistenza</span>
+                <div class="bar-track"><div class="bar-fill" style="width:100%;"></div></div>
+                <span style="font-size:12px;color:var(--text-3);width:24px;text-align:right;">5/5</span>
+              </div>
+              <div class="cap-bar-row">
+                <span class="cap-bar-label">Acidità</span>
+                <div class="bar-track"><div class="bar-fill" style="width:40%;"></div></div>
+                <span style="font-size:12px;color:var(--text-3);width:24px;text-align:right;">2/5</span>
+              </div>
+            </div>
+            <div class="cap-tags">
+              <span class="cap-tag">Cioccolato</span>
+              <span class="cap-tag">Spezie dolci</span>
+              <span class="cap-tag">Blend</span>
+              <span class="cap-tag">Corpo pieno</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. MAESTOSO -->
+        <div class="cap-card" id="maestoso">
+          <div class="cap-card-header">
+            <div class="cap-color-dot" style="background: #8b6914;"></div>
+            <div class="cap-name">Maestoso</div>
+            <div class="cap-sub">Arabica &amp; Robusta · Dolce e speziato</div>
+          </div>
+          <div class="cap-card-body">
+            <p class="cap-desc">Un blend pensato per chi ama il caffè con carattere ma senza eccessi di amarezza. Note di vaniglia e spezie esotiche si sviluppano in tazza con una persistenza lunga e morbida. Arabica e Robusta in equilibrio — il Maestoso è grandioso per la sua capacità di coniugare dolcezza e complessità.</p>
+            <div class="cap-bars">
+              <div class="cap-bar-row">
+                <span class="cap-bar-label">Persistenza</span>
+                <div class="bar-track"><div class="bar-fill" style="width:100%;"></div></div>
+                <span style="font-size:12px;color:var(--text-3);width:24px;text-align:right;">5/5</span>
+              </div>
+              <div class="cap-bar-row">
+                <span class="cap-bar-label">Dolcezza</span>
+                <div class="bar-track"><div class="bar-fill" style="width:80%;"></div></div>
+                <span style="font-size:12px;color:var(--text-3);width:24px;text-align:right;">4/5</span>
+              </div>
+              <div class="cap-bar-row">
+                <span class="cap-bar-label">Corpo</span>
+                <div class="bar-track"><div class="bar-fill" style="width:80%;"></div></div>
+                <span style="font-size:12px;color:var(--text-3);width:24px;text-align:right;">4/5</span>
+              </div>
+              <div class="cap-bar-row">
+                <span class="cap-bar-label">Acidità</span>
+                <div class="bar-track"><div class="bar-fill" style="width:40%;"></div></div>
+                <span style="font-size:12px;color:var(--text-3);width:24px;text-align:right;">2/5</span>
+              </div>
+            </div>
+            <div class="cap-tags">
+              <span class="cap-tag">Vaniglia</span>
+              <span class="cap-tag">Spezie esotiche</span>
+              <span class="cap-tag">Blend</span>
+              <span class="cap-tag">Persistente</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. IDEALE -->
+        <div class="cap-card" id="ideale">
+          <div class="cap-card-header">
+            <div class="cap-color-dot" style="background: #7a9e6a;"></div>
+            <div class="cap-name">Ideale</div>
+            <div class="cap-sub">Arabica, Robusta &amp; Decaf · Mezza caffeina</div>
+          </div>
+          <div class="cap-card-body">
+            <p class="cap-desc">Il caffè intelligente: Arabica, Robusta e una componente di decaffeinato per dimezzare la caffeina senza rinunciare al gusto. Ideale dopo pranzo o nel pomeriggio — quando vuoi il piacere dell'espresso ma non l'effetto energizzante pieno. Sapore bilanciato, rotondo, senza asperità.</p>
+            <div class="cap-bars">
+              <div class="cap-bar-row">
+                <span class="cap-bar-label">Equilibrio</span>
+                <div class="bar-track"><div class="bar-fill" style="width:100%;"></div></div>
+                <span style="font-size:12px;color:var(--text-3);width:24px;text-align:right;">5/5</span>
+              </div>
+              <div class="cap-bar-row">
+                <span class="cap-bar-label">Corpo</span>
+                <div class="bar-track"><div class="bar-fill" style="width:60%;"></div></div>
+                <span style="font-size:12px;color:var(--text-3);width:24px;text-align:right;">3/5</span>
+              </div>
+              <div class="cap-bar-row">
+                <span class="cap-bar-label">Caffeina</span>
+                <div class="bar-track"><div class="bar-fill" style="width:50%; background:#6b9e80;"></div></div>
+                <span style="font-size:12px;color:var(--text-3);width:24px;text-align:right;">~50%</span>
+              </div>
+              <div class="cap-bar-row">
+                <span class="cap-bar-label">Amaro</span>
+                <div class="bar-track"><div class="bar-fill" style="width:40%;"></div></div>
+                <span style="font-size:12px;color:var(--text-3);width:24px;text-align:right;">2/5</span>
+              </div>
+            </div>
+            <div class="cap-tags">
+              <span class="cap-tag">Mezza caffeina</span>
+              <span class="cap-tag">Bilanciato</span>
+              <span class="cap-tag">Blend 3-origine</span>
+              <span class="cap-tag">Pomeridiano</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. DECAFFEINATO -->
+        <div class="cap-card" id="decaffeinato">
+          <div class="cap-card-header">
+            <div class="cap-color-dot" style="background: #4a7c59;"></div>
+            <div class="cap-name">Decaffeinato</div>
+            <div class="cap-sub">Blend · &lt;0,1% caffeina</div>
+          </div>
+          <div class="cap-card-body">
+            <p class="cap-desc">Il piacere del caffè senza caffeina — in qualsiasi momento della giornata. Essse Caffè applica la propria expertise alla selezione di chicchi decaffeinati preservando aroma, corpo e crema. Il risultato è un espresso che non tradisce i propri gusti, anche la sera. Privo di caffeina, non di carattere.</p>
+            <div class="cap-bars">
+              <div class="cap-bar-row">
+                <span class="cap-bar-label">Aroma</span>
+                <div class="bar-track"><div class="bar-fill" style="width:80%;"></div></div>
+                <span style="font-size:12px;color:var(--text-3);width:24px;text-align:right;">4/5</span>
+              </div>
+              <div class="cap-bar-row">
+                <span class="cap-bar-label">Corpo</span>
+                <div class="bar-track"><div class="bar-fill" style="width:60%;"></div></div>
+                <span style="font-size:12px;color:var(--text-3);width:24px;text-align:right;">3/5</span>
+              </div>
+              <div class="cap-bar-row">
+                <span class="cap-bar-label">Caffeina</span>
+                <div class="bar-track"><div class="bar-fill" style="width:4%; background:#6b9e80;"></div></div>
+                <span style="font-size:12px;color:var(--text-3);width:24px;text-align:right;">&lt;0,1%</span>
+              </div>
+              <div class="cap-bar-row">
+                <span class="cap-bar-label">Amaro</span>
+                <div class="bar-track"><div class="bar-fill" style="width:40%;"></div></div>
+                <span style="font-size:12px;color:var(--text-3);width:24px;text-align:right;">2/5</span>
+              </div>
+            </div>
+            <div class="cap-tags">
+              <span class="cap-tag">Decaffeinato</span>
+              <span class="cap-tag">Serale</span>
+              <span class="cap-tag">Gravidanza-friendly</span>
+              <span class="cap-tag">Blend</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 7. GINSENG -->
+        <div class="cap-card" id="ginseng">
+          <div class="cap-card-header">
+            <div class="cap-color-dot" style="background: #c4a35a;"></div>
+            <div class="cap-name">Ginseng</div>
+            <div class="cap-sub">Bevanda al ginseng · Senza glutine</div>
+          </div>
+          <div class="cap-card-body">
+            <p class="cap-desc">Non un caffè, ma una bevanda speciale: il ginseng unisce il sapore dolce e avvolgente del caffè con le note di caramello e vaniglia tipiche della radice asiatica. Una pausa energetica e diversa dal solito — senza glutine, senza lattosio, adatta a chi cerca un'alternativa al classico espresso. Perfetta per chi non beve caffè.</p>
+            <div class="cap-bars">
+              <div class="cap-bar-row">
+                <span class="cap-bar-label">Dolcezza</span>
+                <div class="bar-track"><div class="bar-fill" style="width:100%; background:#c4a35a;"></div></div>
+                <span style="font-size:12px;color:var(--text-3);width:24px;text-align:right;">5/5</span>
+              </div>
+              <div class="cap-bar-row">
+                <span class="cap-bar-label">Cremosità</span>
+                <div class="bar-track"><div class="bar-fill" style="width:80%; background:#c4a35a;"></div></div>
+                <span style="font-size:12px;color:var(--text-3);width:24px;text-align:right;">4/5</span>
+              </div>
+              <div class="cap-bar-row">
+                <span class="cap-bar-label">Energia</span>
+                <div class="bar-track"><div class="bar-fill" style="width:60%; background:#c4a35a;"></div></div>
+                <span style="font-size:12px;color:var(--text-3);width:24px;text-align:right;">3/5</span>
+              </div>
+              <div class="cap-bar-row">
+                <span class="cap-bar-label">Amaro</span>
+                <div class="bar-track"><div class="bar-fill" style="width:20%;"></div></div>
+                <span style="font-size:12px;color:var(--text-3);width:24px;text-align:right;">1/5</span>
+              </div>
+            </div>
+            <div class="cap-tags">
+              <span class="cap-tag">Caramello</span>
+              <span class="cap-tag">Vaniglia</span>
+              <span class="cap-tag">Senza glutine</span>
+              <span class="cap-tag">Alternativa al caffè</span>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- end caps-grid -->
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- GUIDA ALLA SCELTA -->
+  <section class="bg-2">
+    <div class="section-inner">
+      <div class="section-head centered">
+        <span class="eyebrow">Come scegliere</span>
+        <h2>Quale miscela fa per te?</h2>
+        <p>Sette profili sensoriali diversi per ogni esigenza e momento della giornata.</p>
+      </div>
+      <div class="guide-row">
+        <div class="guide-item">
+          <div class="guide-icon">☀️</div>
+          <h3>Mattina con energia</h3>
+          <p>Inizia la giornata con <strong>Barocco</strong> (robusta pura, massima crema e corpo) o <strong>Infinito</strong> (blend ricco e persistente). Entrambi danno la carica giusta per affrontare il lavoro.</p>
+        </div>
+        <div class="guide-item">
+          <div class="guide-icon">🌿</div>
+          <h3>Pausa raffinata</h3>
+          <p><strong>Arabesco</strong> (100% arabica, floreale e fruttato) o <strong>Maestoso</strong> (vaniglia e spezie) sono perfetti per una pausa che vuole essere un momento di piacere, non solo di abitudine.</p>
+        </div>
+        <div class="guide-item">
+          <div class="guide-icon">🌙</div>
+          <h3>Pomeriggio e sera</h3>
+          <p><strong>Ideale</strong> (mezza caffeina) per dopo pranzo, <strong>Decaffeinato</strong> per la sera. <strong>Ginseng</strong> è perfetto a qualsiasi ora per chi preferisce evitare la caffeina.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MACCHINA COMPATIBILE -->
+  <section>
+    <div class="section-inner">
+      <div class="split reverse">
+        <div class="split-text">
+          <span class="eyebrow">Compatibilità esclusiva</span>
+          <h2>La macchina S.12 — disegnata per queste capsule</h2>
+          <p>Le capsule Essse Caffè Sistema Espresso sono compatibili esclusivamente con la macchina <strong>S.12</strong>, progettata in collaborazione con Italdesign Giugiaro. Il beccuccio brevettato ottimizza l'estrazione per ogni miscela: crema densa, temperatura perfetta, aromi intatti dalla prima all'ultima goccia.</p>
+          <p>RoMimatic distribuisce la macchina S.12 e tutte le 7 capsule a Garbagnate Milanese e in provincia di Milano.</p>
+          <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:24px;">
+            <a href="/caffe/macchine-essse-caffe.html" class="btn btn-dark">Scopri la macchina S.12</a>
+            <a href="/contatti.html" class="btn btn-outline">Richiedi informazioni</a>
+          </div>
+        </div>
+        <div class="split-img">
+          <img src="/assets/sermatic/macchine-essse/s12.jpg" alt="Macchina Essse Caffè S.12 — compatibile con le 7 capsule Sistema Espresso" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:var(--r-lg);">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="bg-2">
+    <div class="section-inner">
+      <div class="cta-banner">
+        <span class="eyebrow">Portale in ufficio</span>
+        <h2>Scopri le capsule Essse Caffè per la tua azienda</h2>
+        <p>RoMimatic distribuisce le capsule e la macchina Essse Caffè a Garbagnate Milanese e nelle province di Milano, Monza, Varese, Como e Lecco. Contattaci per un preventivo personalizzato.</p>
+        <div style="display:flex; gap:12px; justify-content:center; flex-wrap:wrap;">
+          <a href="/contatti.html" class="btn btn-dark">Richiedi preventivo gratuito</a>
+          <a href="/caffe/capsule.html" class="btn btn-outline">Tutti i sistemi a capsule</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <div id="footer-root"></div>
+</body>
+</html>
