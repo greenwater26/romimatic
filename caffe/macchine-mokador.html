@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Macchine Mokador per Ufficio: Dado Optima e Tata a Capsule | RoMimatic</title>
+  <meta name="description" content="Macchine Mokador a capsule per ufficio: Dado Optima e Tata. 100% Made in Italy, 14 bevande, sistema brevettato. Comodato d'uso gratuito. Distribuite da RoMimatic a Garbagnate Milanese.">
+  <link rel="canonical" href="https://romimatic.it/caffe/macchine-mokador.html">
+  <meta property="og:title" content="Macchine Mokador per Ufficio: Dado Optima e Tata | RoMimatic">
+  <meta property="og:description" content="Dado Optima e Tata: le macchine a capsule Mokador 100% Made in Italy con 14 bevande. Comodato gratuito, installazione e manutenzione incluse.">
+  <meta property="og:type" content="product">
+  <meta property="og:url" content="https://romimatic.it/caffe/macchine-mokador.html">
+  <meta property="og:image" content="https://romimatic.it/assets/sermatic/cialde/elle_sito_1100x600-px_1571396155.webp">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"ItemList","name":"Macchine Mokador a Capsule — Dado e Tata","description":"Macchine a capsule Mokador distribuite da RoMimatic in comodato d'uso gratuito","numberOfItems":2,"itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Dado Optima — macchina a capsule Mokador","description":"240×290×290mm, bianca o nera, 100% Made in Italy, 14 bevande disponibili, meccanica stabile e silenziosa"},
+    {"@type":"ListItem","position":2,"name":"Tata — macchina a capsule Mokador","description":"100×260×320mm, nera, sistema di infusione brevettato, griglia posatazze regolabile, serbatoio estraibile, 100% Made in Italy"}
+  ]}
+  </script>
+  <link rel="stylesheet" href="/css/style.css">
+  <style>
+    .mokador-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+    }
+    @media (max-width: 700px) {
+      .mokador-grid { grid-template-columns: 1fr; }
+    }
+    .mokador-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--r-lg);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform .2s, box-shadow .2s;
+    }
+    .mokador-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+    .mokador-card-img {
+      background: var(--bg-2);
+      aspect-ratio: 4/3;
+      overflow: hidden;
+    }
+    .mokador-card-img img { width: 100%; height: 100%; object-fit: contain; display: block; padding: 20px; }
+    .mokador-card-body { padding: 24px 26px 28px; flex: 1; display: flex; flex-direction: column; }
+    .mokador-card-body h3 { font-size: 24px; font-weight: 700; margin-bottom: 4px; letter-spacing: -0.01em; }
+    .mokador-card-body .tagline { font-size: 12px; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: .08em; margin-bottom: 14px; display: block; }
+    .mokador-card-body p { font-size: 14px; color: var(--text-2); line-height: 1.65; margin-bottom: 16px; flex: 1; }
+
+    .badge-it {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 11px; font-weight: 700; letter-spacing: .06em;
+      text-transform: uppercase; padding: 4px 10px; border-radius: 100px;
+      background: #fff3e0; color: #e65100; margin-bottom: 12px;
+    }
+    .badge-comodato {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 12px; font-weight: 700; letter-spacing: .05em;
+      text-transform: uppercase; padding: 5px 12px; border-radius: 100px;
+      background: #e8f5e9; color: #2e7d32; margin-bottom: 12px; margin-left: 6px;
+    }
+
+    .spec-table { width: 100%; border-collapse: collapse; font-size: 13px; margin-top: 8px; }
+    .spec-table td { padding: 5px 0; border-bottom: 1px solid var(--border); color: var(--text-2); vertical-align: top; }
+    .spec-table td:first-child { font-weight: 600; color: var(--text); width: 46%; }
+    .spec-table tr:last-child td { border-bottom: none; }
+
+    .bev-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 12px;
+    }
+    .bev-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--r-lg);
+      overflow: hidden;
+      text-align: center;
+      flex: 0 0 calc(20% - 16px);
+      min-width: 140px;
+      transition: transform .15s, box-shadow .15s;
+    }
+    .bev-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
+    .bev-card img { width: 100%; aspect-ratio: 1; object-fit: contain; display: block; background: var(--bg-2); padding: 14px; }
+    .bev-card-name { font-size: 12px; font-weight: 600; padding: 10px 10px 12px; color: var(--text); line-height: 1.3; }
+
+    .bev-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    .bev-tag {
+      background: var(--bg-2);
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      padding: 6px 14px;
+      font-size: 13px;
+      color: var(--text-2);
+      font-weight: 500;
+    }
+
+    .mokador-logo { height: 42px; width: auto; display: block; margin-bottom: 20px; }
+
+    @media (max-width: 640px) {
+      .bev-card { flex: 0 0 calc(50% - 10px); min-width: 0; }
+    }
+  </style>
+  <link rel="icon" href="/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preload" as="image" href="/assets/img/logo-s.webp">
+  <meta name="theme-color" content="#ffffff">
+  <script src="/js/components.js" defer></script>
+  <script src="/js/main.js" defer></script>
+</head>
+<body>
+
+  <div id="nav-root"></div>
+
+  <main id="main-content">
+
+  <div class="breadcrumb">
+    <a href="/">Home</a><span>›</span>
+    <a href="/caffe.html">Caffè</a><span>›</span>
+    <a href="/caffe/macchine.html">Macchine</a><span>›</span>
+    <span>Mokador</span>
+  </div>
+
+  <div class="page-hero">
+    <span class="eyebrow">Macchine a capsule · Mokador</span>
+    <h1>Macchine Mokador per l'ufficio</h1>
+    <p>Dado Optima e Tata: due macchine a capsule 100% Made in Italy progettate per offrire ogni giorno un caffè perfetto, in qualsiasi ambiente di lavoro. Silenziose, compatte e versatili.</p>
+  </div>
+
+  <!-- DUE MACCHINE -->
+  <section id="modelli">
+    <div class="section-inner">
+      <div class="section-head centered">
+        <img src="/assets/sermatic/loghi/logo-mokador-large_1200x.webp" alt="Logo Mokador" class="mokador-logo" style="margin: 0 auto 20px;">
+        <span class="eyebrow">I modelli disponibili</span>
+        <h2>Dado Optima e Tata</h2>
+        <p>Entrambe le macchine nascono dall'esperienza e dall'innovazione Mokador, azienda italiana leader nelle soluzioni caffè. Compatibili con le stesse 14 varietà di capsule.</p>
+      </div>
+
+      <div class="mokador-grid" style="margin-top: 36px;">
+
+        <!-- DADO OPTIMA -->
+        <div class="mokador-card">
+          <div class="mokador-card-img">
+            <img src="/assets/sermatic/cialde/ELLE_SITO_400x400-px.webp" alt="Macchina a capsule Mokador Dado Optima — vista frontale" fetchpriority="high">
+          </div>
+          <div class="mokador-card-body">
+            <div>
+              <span class="badge-it">🇮🇹 Made in Italy</span>
+              <span class="badge-comodato">✓ Comodato gratuito</span>
+            </div>
+            <h3>Dado Optima</h3>
+            <span class="tagline">La macchina versatile per ogni ufficio</span>
+            <p>Nata dalla sintesi di esperienza e innovazione Mokador, il Dado Optima è la macchina pensata per chi cerca affidabilità senza rinunciare a ingombri ridotti. Meccanica perfezionata, erogazione sempre stabile, consumi ottimizzati.</p>
+            <p>Disponibile in versione bianca e nera, si adatta a qualsiasi ambiente: dalla scrivania personale alla sala riunioni. Veloce, silenziosa e praticamente priva di manutenzione.</p>
+            <table class="spec-table">
+              <tr><td>Dimensioni</td><td>24 × 29 × 29 cm</td></tr>
+              <tr><td>Colori disponibili</td><td>Bianco / Nero</td></tr>
+              <tr><td>Origine</td><td>100% Made in Italy</td></tr>
+              <tr><td>Erogazione</td><td>Veloce e silenziosa</td></tr>
+              <tr><td>Consumo</td><td>Ottimizzato in standby</td></tr>
+              <tr><td>Bevande disponibili</td><td>14 varietà di capsule</td></tr>
+            </table>
+          </div>
+        </div>
+
+        <!-- TATA -->
+        <div class="mokador-card">
+          <div class="mokador-card-img">
+            <img src="/assets/sermatic/cialde/elle_img3_1.webp" alt="Macchina a capsule Mokador Tata — design compatto per ufficio" loading="lazy">
+          </div>
+          <div class="mokador-card-body">
+            <div>
+              <span class="badge-it">🇮🇹 Made in Italy</span>
+              <span class="badge-comodato">✓ Comodato gratuito</span>
+            </div>
+            <h3>Tata</h3>
+            <span class="tagline">Linee eleganti, prestazioni superiori</span>
+            <p>La Tata è la nuova macchina dalle linee eleganti ed essenziali, perfetta in qualsiasi ambiente. Compattissima (solo 10 cm di larghezza), si installa ovunque senza occupare spazio prezioso.</p>
+            <p>La griglia posatazze è regolabile a diverse altezze per adattarsi a tazzine e bicchieri. Serbatoio e contenitore capsule usate sono facilmente estraibili per la pulizia. Sistema di infusione brevettato Mokador per un espresso sempre perfetto.</p>
+            <table class="spec-table">
+              <tr><td>Dimensioni</td><td>10 × 26 × 32 cm</td></tr>
+              <tr><td>Colori disponibili</td><td>Nero</td></tr>
+              <tr><td>Origine</td><td>100% Made in Italy</td></tr>
+              <tr><td>Infusione</td><td>Sistema brevettato Mokador</td></tr>
+              <tr><td>Posatazze</td><td>Regolabile a diverse altezze</td></tr>
+              <tr><td>Bevande disponibili</td><td>14 varietà di capsule</td></tr>
+            </table>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- CONFRONTO RAPIDO -->
+      <div style="margin-top: 36px; overflow-x: auto;">
+        <table style="width: 100%; min-width: 480px; border-collapse: collapse; font-size: 14px; background: var(--bg); border: 1px solid var(--border); border-radius: var(--r-lg); overflow: hidden;">
+          <thead>
+            <tr style="background: var(--bg-2);">
+              <th style="padding: 14px 18px; text-align: left; font-size: 12px; text-transform: uppercase; letter-spacing: .06em; color: var(--text-3); border-bottom: 1px solid var(--border);">Caratteristica</th>
+              <th style="padding: 14px 18px; text-align: center; font-size: 13px; font-weight: 700; color: var(--text); border-bottom: 1px solid var(--border);">Dado Optima</th>
+              <th style="padding: 14px 18px; text-align: center; font-size: 13px; font-weight: 700; color: var(--text); border-bottom: 1px solid var(--border);">Tata</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom: 1px solid var(--border);">
+              <td style="padding: 12px 18px; color: var(--text); font-weight: 600;">Dimensioni (L×P×A)</td>
+              <td style="padding: 12px 18px; text-align: center; color: var(--text-2);">24 × 29 × 29 cm</td>
+              <td style="padding: 12px 18px; text-align: center; color: var(--text-2);">10 × 26 × 32 cm</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border); background: var(--bg-2);">
+              <td style="padding: 12px 18px; color: var(--text); font-weight: 600;">Colori</td>
+              <td style="padding: 12px 18px; text-align: center; color: var(--text-2);">Bianco / Nero</td>
+              <td style="padding: 12px 18px; text-align: center; color: var(--text-2);">Nero</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border);">
+              <td style="padding: 12px 18px; color: var(--text); font-weight: 600;">Sistema infusione</td>
+              <td style="padding: 12px 18px; text-align: center; color: var(--text-2);">Meccanica perfezionata</td>
+              <td style="padding: 12px 18px; text-align: center; color: var(--text-2);">Brevettato Mokador</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border); background: var(--bg-2);">
+              <td style="padding: 12px 18px; color: var(--text); font-weight: 600;">Posatazze regolabile</td>
+              <td style="padding: 12px 18px; text-align: center; color: var(--text-2);">—</td>
+              <td style="padding: 12px 18px; text-align: center; color: #2e7d32; font-weight: 700;">✓</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border);">
+              <td style="padding: 12px 18px; color: var(--text); font-weight: 600;">Serbatoio estraibile</td>
+              <td style="padding: 12px 18px; text-align: center; color: var(--text-2);">—</td>
+              <td style="padding: 12px 18px; text-align: center; color: #2e7d32; font-weight: 700;">✓</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border); background: var(--bg-2);">
+              <td style="padding: 12px 18px; color: var(--text); font-weight: 600;">Bevande disponibili</td>
+              <td style="padding: 12px 18px; text-align: center; color: var(--text-2);">14 varietà</td>
+              <td style="padding: 12px 18px; text-align: center; color: var(--text-2);">14 varietà</td>
+            </tr>
+            <tr>
+              <td style="padding: 12px 18px; color: var(--text); font-weight: 600;">Made in Italy</td>
+              <td style="padding: 12px 18px; text-align: center; color: #2e7d32; font-weight: 700;">✓</td>
+              <td style="padding: 12px 18px; text-align: center; color: #2e7d32; font-weight: 700;">✓</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- BEVANDE DISPONIBILI -->
+  <section class="bg-2" id="bevande">
+    <div class="section-inner">
+      <div class="section-head centered">
+        <span class="eyebrow">Varietà di capsule</span>
+        <h2>14 bevande in un solo sistema</h2>
+        <p>Caffè, infusi, solubili e specialità: le capsule Mokador coprono ogni momento della giornata e ogni preferenza del palato, dal classico espresso al tè deteinato.</p>
+      </div>
+
+      <!-- Capsule con foto -->
+      <div class="bev-grid">
+        <div class="bev-card">
+          <img src="/assets/sermatic/cialde/aroma-top.webp" alt="Capsule Mokador Aroma Top" loading="lazy">
+          <div class="bev-card-name">Aroma Top</div>
+        </div>
+        <div class="bev-card">
+          <img src="/assets/sermatic/cialde/crema.webp" alt="Capsule Mokador Crema" loading="lazy">
+          <div class="bev-card-name">Crema</div>
+        </div>
+        <div class="bev-card">
+          <img src="/assets/sermatic/cialde/piu-crema.webp" alt="Capsule Mokador Più Crema" loading="lazy">
+          <div class="bev-card-name">Più Crema</div>
+        </div>
+        <div class="bev-card">
+          <img src="/assets/sermatic/cialde/arabica-100.webp" alt="Capsule Mokador 100% Arabica" loading="lazy">
+          <div class="bev-card-name">100% Arabica</div>
+        </div>
+        <div class="bev-card">
+          <img src="/assets/sermatic/cialde/decaffeinato.webp" alt="Capsule Mokador Decaffeinato" loading="lazy">
+          <div class="bev-card-name">Deca</div>
+        </div>
+      </div>
+
+      <!-- Resto delle bevande come tag -->
+      <div class="bev-list">
+        <span class="bev-tag">Big Cup</span>
+        <span class="bev-tag">Frutti di Bosco</span>
+        <span class="bev-tag">Tè Limone</span>
+        <span class="bev-tag">Tè Deteinato</span>
+        <span class="bev-tag">Gianduia</span>
+        <span class="bev-tag">Ginseng</span>
+        <span class="bev-tag">Orzo</span>
+        <span class="bev-tag">Camomilla</span>
+        <span class="bev-tag">Bevanda Bianca</span>
+        <span class="bev-tag">Mou</span>
+      </div>
+
+      <p style="text-align: center; font-size: 13px; color: var(--text-3); margin-top: 20px;">Le capsule Mokador sono compatibili sia con il Dado Optima che con la Tata.</p>
+    </div>
+  </section>
+
+  <!-- PERCHÉ MOKADOR -->
+  <section id="perche-mokador">
+    <div class="section-inner">
+      <div class="split">
+        <div class="split-text">
+          <span class="eyebrow">Il marchio</span>
+          <h2>Perché scegliere Mokador</h2>
+          <p>Mokador è un marchio italiano con oltre 40 anni di esperienza nel settore caffè. Le sue macchine nascono da una filosofia semplice: garantire sempre un caffè di qualità superiore, senza complicazioni.</p>
+          <div class="feature-list" style="margin-top: 20px;">
+            <div class="feature-item">
+              <div class="feature-icon">🇮🇹</div>
+              <div><strong>100% Made in Italy</strong><span>Progettate e prodotte interamente in Italia, con materiali selezionati</span></div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">🔬</div>
+              <div><strong>Sistema brevettato</strong><span>Il sistema di infusione Mokador è protetto da brevetto per garantire prestazioni uniche</span></div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">☕</div>
+              <div><strong>14 bevande in un tocco</strong><span>Caffè, infusi, tisane, solubili e specialità: tutto con un solo sistema capsule</span></div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">🔇</div>
+              <div><strong>Silenziosa e veloce</strong><span>Erogazione rapida e rumore ridotto: ideale per uffici open space e ambienti condivisi</span></div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">🔧</div>
+              <div><strong>Manutenzione minima</strong><span>Meccanica perfezionata e componenti estraibili per la pulizia senza utensili</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="split-img">
+          <img src="/assets/sermatic/cialde/elle_sito_1100x600-px_1571396155.webp" alt="Macchina Mokador — design italiano per ufficio" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:var(--r-lg);">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMODATO D'USO -->
+  <section class="bg-2" id="comodato">
+    <div class="section-inner">
+      <div class="section-head centered">
+        <span class="eyebrow">Il nostro servizio</span>
+        <h2>Macchina in comodato d'uso gratuito</h2>
+        <p>RoMimatic installa le macchine Mokador nel tuo ufficio senza alcun costo. Paghi solo le capsule che consumi, con rifornimento diretto e assistenza inclusa.</p>
+      </div>
+
+      <div class="step-list" style="max-width: 640px; margin: 40px auto 0; display: flex; flex-direction: column; gap: 20px;">
+        <div style="display: flex; gap: 20px; align-items: flex-start;">
+          <div style="width: 40px; height: 40px; border-radius: 50%; background: var(--accent); color: #fff; font-weight: 700; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+          <div>
+            <strong style="display: block; font-size: 16px; margin-bottom: 4px;">Contattaci</strong>
+            <p style="font-size: 14px; color: var(--text-2); margin: 0;">Scrivici o chiamaci: valutiamo insieme la soluzione giusta per il tuo spazio e i tuoi consumi.</p>
+          </div>
+        </div>
+        <div style="display: flex; gap: 20px; align-items: flex-start;">
+          <div style="width: 40px; height: 40px; border-radius: 50%; background: var(--accent); color: #fff; font-weight: 700; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+          <div>
+            <strong style="display: block; font-size: 16px; margin-bottom: 4px;">Installiamo la macchina</strong>
+            <p style="font-size: 14px; color: var(--text-2); margin: 0;">Portiamo e installiamo la macchina direttamente nella tua sede, senza costi e senza burocrazia.</p>
+          </div>
+        </div>
+        <div style="display: flex; gap: 20px; align-items: flex-start;">
+          <div style="width: 40px; height: 40px; border-radius: 50%; background: var(--accent); color: #fff; font-weight: 700; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+          <div>
+            <strong style="display: block; font-size: 16px; margin-bottom: 4px;">Riforniamo le capsule</strong>
+            <p style="font-size: 14px; color: var(--text-2); margin: 0;">Consegniamo le capsule Mokador direttamente in ufficio, con cadenza programmata o su richiesta.</p>
+          </div>
+        </div>
+        <div style="display: flex; gap: 20px; align-items: flex-start;">
+          <div style="width: 40px; height: 40px; border-radius: 50%; background: var(--accent); color: #fff; font-weight: 700; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">4</div>
+          <div>
+            <strong style="display: block; font-size: 16px; margin-bottom: 4px;">Assistenza inclusa</strong>
+            <p style="font-size: 14px; color: var(--text-2); margin: 0;">Qualsiasi problema tecnico viene gestito da noi. Manutenzione ordinaria e interventi compresi nel servizio.</p>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top: 36px; text-align: center;">
+        <a href="/contatti.html" class="btn btn-dark">Richiedi il comodato gratuito</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="section-inner">
+      <div class="section-head centered">
+        <span class="eyebrow">Domande frequenti</span>
+        <h2>Tutto quello che vuoi sapere sulle macchine Mokador</h2>
+      </div>
+      <div style="max-width: 720px; margin: 40px auto 0; display: flex; flex-direction: column; gap: 16px;">
+
+        <div style="background: var(--bg-2); border-radius: var(--r); padding: 22px 24px; border: 1px solid var(--border);">
+          <strong style="font-size: 15px; display: block; margin-bottom: 8px;">Qual è la differenza tra Dado Optima e Tata?</strong>
+          <p style="font-size: 14px; color: var(--text-2); margin: 0;">Il Dado Optima è più compatto (24×29×29 cm) e disponibile in bianco o nero, con una meccanica perfezionata per erogazioni sempre stabili. La Tata è invece ancora più sottile (solo 10 cm di larghezza) con un sistema di infusione brevettato, griglia posatazze regolabile e componenti estraibili per la pulizia. Entrambe offrono le stesse 14 varietà di capsule.</p>
+        </div>
+
+        <div style="background: var(--bg-2); border-radius: var(--r); padding: 22px 24px; border: 1px solid var(--border);">
+          <strong style="font-size: 15px; display: block; margin-bottom: 8px;">Quante persone può servire una macchina Mokador?</strong>
+          <p style="font-size: 14px; color: var(--text-2); margin: 0;">Le macchine Dado e Tata sono ideali per uffici fino a 15–20 persone. Per ambienti più grandi o con consumo più elevato, possiamo valutare insieme la soluzione più adatta. Contattaci per una consulenza gratuita.</p>
+        </div>
+
+        <div style="background: var(--bg-2); border-radius: var(--r); padding: 22px 24px; border: 1px solid var(--border);">
+          <strong style="font-size: 15px; display: block; margin-bottom: 8px;">Le capsule Mokador si trovano solo da RoMimatic?</strong>
+          <p style="font-size: 14px; color: var(--text-2); margin: 0;">RoMimatic è il distributore ufficiale delle capsule Mokador nella zona di Milano e hinterland, Monza e Brianza, Varese, Como e Lecco. Ci occupiamo direttamente dell'acquisto, della consegna e del rifornimento, così non devi pensare a niente.</p>
+        </div>
+
+        <div style="background: var(--bg-2); border-radius: var(--r); padding: 22px 24px; border: 1px solid var(--border);">
+          <strong style="font-size: 15px; display: block; margin-bottom: 8px;">Le capsule Mokador sono biodegradabili?</strong>
+          <p style="font-size: 14px; color: var(--text-2); margin: 0;">Le capsule Mokador sono realizzate in materiali compatibili con la raccolta differenziata. Per le indicazioni specifiche sullo smaltimento nella tua zona, consulta il sito del tuo Comune oppure chiedi informazioni a RoMimatic al momento della consegna.</p>
+        </div>
+
+        <div style="background: var(--bg-2); border-radius: var(--r); padding: 22px 24px; border: 1px solid var(--border);">
+          <strong style="font-size: 15px; display: block; margin-bottom: 8px;">Dove consegna RoMimatic le capsule Mokador?</strong>
+          <p style="font-size: 14px; color: var(--text-2); margin: 0;">Serviamo uffici, studi professionali e attività commerciali nella Città Metropolitana di Milano, nelle province di Monza e Brianza, Varese, Como e Lecco. La consegna avviene direttamente presso la tua sede, con frequenza concordata.</p>
+        </div>
+
+        <div style="background: var(--bg-2); border-radius: var(--r); padding: 22px 24px; border: 1px solid var(--border);">
+          <strong style="font-size: 15px; display: block; margin-bottom: 8px;">Il comodato d'uso è davvero gratuito?</strong>
+          <p style="font-size: 14px; color: var(--text-2); margin: 0;">Sì. RoMimatic installa la macchina Mokador nel tuo ufficio senza alcun costo di acquisto, noleggio o installazione. L'unica spesa è quella delle capsule consumate, con prezzi competitivi e forniture regolari. Il servizio di manutenzione è compreso.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section>
+    <div class="section-inner">
+      <div class="cta-banner">
+        <span class="eyebrow">Caffè in ufficio, senza pensieri</span>
+        <h2>Prova Dado o Tata nel tuo ufficio</h2>
+        <p>Contattaci per ricevere informazioni sul comodato gratuito e scegliere il modello Mokador più adatto ai tuoi spazi e ai tuoi consumi.</p>
+        <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+          <a href="/contatti.html" class="btn btn-dark">Richiedi informazioni</a>
+          <a href="/caffe/macchine.html" class="btn btn-outline">Tutte le macchine</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <div id="footer-root"></div>
+</body>
+</html>
