@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Caffè: Capsule, Cialde, Macchine e HO.RE.CA | RoMimatic Garbagnate Milanese</title>
-  <meta name="description" content="Distributori ufficiali Caffè d'Italia, Lavazza Firma e Mokador. Capsule (26 bevande), cialde ESE, macchine in comodato gratuito e soluzioni HO.RE.CA a Garbagnate Milanese (MI).">
+  <meta name="description" content="Distributori ufficiali Caffè d'Italia, Lavazza Firma e Mokador. Capsule (40 bevande totali), cialde ESE, macchine in comodato gratuito e soluzioni HO.RE.CA a Garbagnate Milanese (MI).">
   <link rel="canonical" href="https://romimatic.it/caffe.html">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://romimatic.it/caffe.html">
@@ -79,7 +79,7 @@
     /* Sub-system cards all'interno di una sezione */
     .sub-cards {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(3, 1fr);
       gap: 16px;
       margin-top: 24px;
     }
@@ -127,10 +127,10 @@
       margin-top: 4px;
     }
 
-    /* Macchine section — 2 column cards */
+    /* Macchine section — 3 column cards */
     .macchine-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(3, 1fr);
       gap: 24px;
       margin-top: 48px;
     }
@@ -207,9 +207,13 @@
     .co-step h3 { font-size: 15px; font-weight: 600; margin-bottom: 4px; }
     .co-step p { font-size: 13px; color: var(--text-2); line-height: 1.55; }
 
+    @media (max-width: 1000px) {
+      .macchine-grid { grid-template-columns: 1fr 1fr; }
+    }
     @media (max-width: 860px) {
       .macchine-grid { grid-template-columns: 1fr; }
       .comodato-steps { grid-template-columns: 1fr; }
+      .sub-cards { grid-template-columns: 1fr 1fr; }
     }
     @media (max-width: 640px) {
       .sub-cards { grid-template-columns: 1fr; }
@@ -254,7 +258,7 @@
     <div class="section-inner">
       <div class="stats-strip">
         <div class="st">
-          <span class="st-num">26</span>
+          <span class="st-num">40</span>
           <span class="st-lbl">Bevande totali</span>
         </div>
         <div class="st">
@@ -284,10 +288,10 @@
     <div class="section-inner">
       <div class="split">
         <div class="split-text">
-          <span class="eyebrow">Capsule · 2 sistemi · 26 bevande</span>
+          <span class="eyebrow">Capsule · 3 sistemi · 40 bevande</span>
           <h2>Capsule caffè per uffici e aziende</h2>
-          <p>Le capsule monodose sono la scelta ideale per gli ambienti di lavoro: preparazione in meno di un minuto, aroma preservato dalla capsula ermetica, nessuna pulizia. Con i nostri due sistemi puoi scegliere tra <strong>26 bevande totali</strong> — caffè, infusi, solubili e alternative — dalla stessa macchina in comodato.</p>
-          <p>Siamo distributori ufficiali <strong>Caffè d'Italia</strong> e distributori autorizzati <strong>Lavazza Firma</strong>. Consegniamo direttamente in azienda a Garbagnate Milanese e in tutta la provincia di Milano, Monza, Varese, Como e Lecco.</p>
+          <p>Le capsule monodose sono la scelta ideale per gli ambienti di lavoro: preparazione in meno di un minuto, aroma preservato dalla capsula ermetica, nessuna pulizia. Con i nostri tre sistemi puoi scegliere tra <strong>40 bevande totali</strong> — caffè, infusi, solubili e alternative — dalla stessa macchina in comodato.</p>
+          <p>Siamo distributori ufficiali <strong>Caffè d'Italia</strong>, distributori autorizzati <strong>Lavazza Firma</strong> e distributori <strong>Mokador</strong> a capsule 100% Made in Italy. Consegniamo in azienda a Garbagnate Milanese e nelle province di Milano, Monza, Varese, Como e Lecco.</p>
           <div class="sub-cards">
             <a href="/caffe/capsule-caffe-ditalia.html" class="sub-card">
               <img src="/assets/sermatic/capsule-cdi/4-caps-1ape-1chiu-scaled.webp" alt="Capsule Caffè d'Italia" class="sub-card-img" loading="lazy">
@@ -306,6 +310,16 @@
                 <span class="sc-badge">9 bevande</span>
                 <div class="sc-title">Lavazza Firma</div>
                 <div class="sc-sub">6 caffè · tè · ginseng · orzo</div>
+                <div class="sub-card-cta">Scopri la gamma →</div>
+              </div>
+            </a>
+            <a href="/caffe/capsule-mokador.html" class="sub-card">
+              <img src="/assets/sermatic/capsule-mokador/mokador-capsula-aroma-top.png" alt="Capsule Mokador — 14 bevande Made in Italy" class="sub-card-img" loading="lazy" style="object-fit:contain; background:var(--bg-2); padding:12px;">
+              <div class="sub-card-body">
+                <img src="/assets/sermatic/loghi/logo-mokador-large_1200x.webp" alt="Mokador">
+                <span class="sc-badge">14 bevande</span>
+                <div class="sc-title">Mokador</div>
+                <div class="sc-sub">6 caffè · 8 specialità · Bio cert.</div>
                 <div class="sub-card-cta">Scopri la gamma →</div>
               </div>
             </a>
@@ -407,6 +421,22 @@
           </div>
         </div>
 
+        <div class="macchina-card">
+          <img src="/assets/sermatic/macchine-mokador/dado-optima.jpg" alt="Macchine Mokador a capsule — Dado Optima" class="macchina-card-img" loading="lazy" style="object-fit:contain; background:var(--bg-2); padding:16px;">
+          <div class="macchina-card-body">
+            <img src="/assets/sermatic/loghi/logo-mokador-large_1200x.webp" alt="Mokador">
+            <h3>Macchine Mokador a capsule</h3>
+            <p>Dado Optima e Tata: due macchine 100% Made in Italy con sistema di infusione brevettato. Compatte, silenziose, disponibili in bianco e nero. Compatibili con le 14 capsule della gamma Mokador.</p>
+            <div class="miscele-strip">
+              <span class="miscela-chip">Dado Optima</span>
+              <span class="miscela-chip">Tata</span>
+              <span class="miscela-chip">Made in Italy</span>
+              <span class="miscela-chip">Brevettato</span>
+            </div>
+            <a href="/caffe/macchine-mokador.html" class="btn btn-outline" style="margin-top:20px;">Vedi le macchine Mokador</a>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -471,9 +501,9 @@
           <img src="/assets/sermatic/loghi/Lavazza-Logo.wine_-scaled.webp" alt="Lavazza Firma — distributore autorizzato RoMimatic" loading="lazy">
           <span>Distributore autorizzato</span>
         </a>
-        <a href="/caffe/cialde.html" class="brand-logo-item">
-          <img src="/assets/sermatic/loghi/logo-mokador-large_1200x.webp" alt="Mokador — cialde ESE 44mm" loading="lazy">
-          <span>Cialde ESE 44mm</span>
+        <a href="/caffe/capsule-mokador.html" class="brand-logo-item">
+          <img src="/assets/sermatic/loghi/logo-mokador-large_1200x.webp" alt="Mokador — capsule e cialde ESE 44mm" loading="lazy">
+          <span>Capsule &amp; cialde ESE</span>
         </a>
       </div>
     </div>
