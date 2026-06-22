@@ -3,18 +3,221 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Caffè: Capsule, Cialde, Macchine HO.RE.CA | RoMimatic Garbagnate Milanese</title>
-  <meta name="description" content="Capsule Caffè d'Italia e Lavazza Firma, cialde Mokador, macchine in comodato d'uso e soluzioni HO.RE.CA. Distributore ufficiale a Garbagnate Milanese (MI).">
+  <title>Caffè: Capsule, Cialde, Macchine e HO.RE.CA | RoMimatic Garbagnate Milanese</title>
+  <meta name="description" content="Distributori ufficiali Caffè d'Italia, Lavazza Firma e Mokador. Capsule (26 bevande), cialde ESE, macchine in comodato gratuito e soluzioni HO.RE.CA a Garbagnate Milanese (MI).">
   <link rel="canonical" href="https://romimatic.it/caffe.html">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://romimatic.it/caffe.html">
-  <meta property="og:title" content="Caffè — Capsule, Cialde, Macchine HO.RE.CA | RoMimatic">
-  <meta property="og:description" content="Distributore ufficiale Caffè d'Italia, Lavazza Firma e Mokador a Garbagnate Milanese. Capsule, cialde, macchine in comodato e distributori HO.RE.CA.">
-  <meta property="og:image" content="https://romimatic.it/assets/img/logo-s.webp">
+  <meta property="og:title" content="Caffè — Capsule, Cialde, Macchine, HO.RE.CA | RoMimatic">
+  <meta property="og:description" content="Caffè d'Italia, Lavazza Firma e Mokador. 26 bevande in capsule, cialde ESE, macchine in comodato e soluzioni per hotel e ristoranti. Garbagnate Milanese (MI).">
+  <meta property="og:image" content="https://romimatic.it/assets/sermatic/capsule-cdi/4-caps-1ape-1chiu-scaled.webp">
   <meta property="og:locale" content="it_IT">
   <meta property="og:site_name" content="RoMimatic">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="stylesheet" href="/css/style.css">
+  <style>
+    /* Quick-nav anchor pills */
+    .cat-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      margin-top: 32px;
+    }
+    .cat-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 10px 20px;
+      background: var(--bg);
+      border: 1.5px solid var(--border);
+      border-radius: 40px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text);
+      text-decoration: none;
+      transition: border-color var(--t), background var(--t);
+    }
+    .cat-pill:hover { border-color: var(--accent); background: var(--bg-2); color: var(--accent); }
+
+    /* Stats strip */
+    .stats-strip {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0;
+      border: 1px solid var(--border);
+      border-radius: var(--r);
+      overflow: hidden;
+    }
+    .stats-strip .st {
+      flex: 1;
+      min-width: 140px;
+      text-align: center;
+      padding: 22px 12px;
+      border-right: 1px solid var(--border);
+    }
+    .stats-strip .st:last-child { border-right: none; }
+    .stats-strip .st-num {
+      display: block;
+      font-size: 32px;
+      font-weight: 800;
+      color: var(--accent);
+      line-height: 1;
+      margin-bottom: 6px;
+      letter-spacing: -0.02em;
+    }
+    .stats-strip .st-lbl {
+      display: block;
+      font-size: 12px;
+      color: var(--text-3);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-weight: 600;
+    }
+
+    /* Sub-system cards all'interno di una sezione */
+    .sub-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 24px;
+    }
+    .sub-card {
+      border: 1.5px solid var(--border);
+      border-radius: var(--r);
+      overflow: hidden;
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      transition: border-color var(--t), box-shadow var(--t);
+    }
+    .sub-card:hover { border-color: var(--accent); box-shadow: var(--shadow); }
+    .sub-card-img {
+      width: 100%;
+      aspect-ratio: 3 / 2;
+      object-fit: cover;
+      display: block;
+    }
+    .sub-card-body {
+      padding: 16px;
+      background: var(--bg);
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .sub-card-body img { height: 28px; width: auto; object-fit: contain; object-position: left; }
+    .sub-card-body .sc-badge {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--accent);
+      background: var(--bg-3);
+      padding: 2px 8px;
+      border-radius: 20px;
+      align-self: flex-start;
+    }
+    .sub-card-body .sc-title { font-size: 14px; font-weight: 600; color: var(--text); }
+    .sub-card-body .sc-sub { font-size: 12px; color: var(--text-3); }
+    .sub-card-cta {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--accent);
+      margin-top: 4px;
+    }
+
+    /* Macchine section — 2 column cards */
+    .macchine-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-top: 48px;
+    }
+    .macchina-card {
+      border: 1px solid var(--border);
+      border-radius: var(--r-lg);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .macchina-card-img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      display: block;
+    }
+    .macchina-card-body { padding: 24px; flex: 1; display: flex; flex-direction: column; }
+    .macchina-card-body img { height: 32px; width: auto; object-fit: contain; object-position: left; margin-bottom: 12px; }
+    .macchina-card-body h3 { font-size: 18px; font-weight: 700; margin-bottom: 8px; }
+    .macchina-card-body p { font-size: 14px; color: var(--text-2); line-height: 1.6; margin-bottom: 20px; flex: 1; }
+
+    /* Cialde miscele strip */
+    .miscele-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 20px;
+    }
+    .miscela-chip {
+      padding: 6px 14px;
+      background: var(--bg-2);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text-2);
+    }
+
+    /* Brand logos */
+    .brand-logos {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 48px;
+      margin-top: 40px;
+    }
+    .brand-logo-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+    .brand-logo-item img { height: 48px; width: auto; object-fit: contain; filter: grayscale(20%); transition: filter var(--t); }
+    .brand-logo-item:hover img { filter: grayscale(0%); }
+    .brand-logo-item span { font-size: 12px; color: var(--text-3); font-weight: 500; }
+
+    /* Sezione comodato steps inline */
+    .comodato-steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 40px;
+    }
+    .co-step { display: flex; gap: 16px; align-items: flex-start; }
+    .co-num {
+      width: 40px; height: 40px; border-radius: 50%;
+      background: var(--accent); color: #fff;
+      font-size: 16px; font-weight: 700;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .co-step h3 { font-size: 15px; font-weight: 600; margin-bottom: 4px; }
+    .co-step p { font-size: 13px; color: var(--text-2); line-height: 1.55; }
+
+    @media (max-width: 860px) {
+      .macchine-grid { grid-template-columns: 1fr; }
+      .comodato-steps { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 640px) {
+      .sub-cards { grid-template-columns: 1fr; }
+      .stats-strip { flex-direction: column; }
+      .stats-strip .st { border-right: none; border-bottom: 1px solid var(--border); }
+      .stats-strip .st:last-child { border-bottom: none; }
+    }
+  </style>
   <link rel="icon" href="/favicon.png" type="image/png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="preload" as="image" href="/assets/img/logo-s.webp">
@@ -28,105 +231,302 @@
 
   <main id="main-content">
 
-  <div class="page-hero">
-    <span class="eyebrow">La nostra proposta</span>
-    <h1>Caffè</h1>
-    <p>Dai migliori marchi italiani, soluzioni complete per ogni contesto: ufficio, ristorante, casa.</p>
+  <div class="breadcrumb">
+    <a href="/">Home</a><span>›</span>
+    <span>Caffè</span>
   </div>
 
-  <!-- SOTTOCATEGORIE -->
-  <section>
+  <!-- ── HERO ── -->
+  <div class="page-hero">
+    <span class="eyebrow">Dal 1984 · Garbagnate Milanese</span>
+    <h1>Caffè per Ogni Esigenza</h1>
+    <p>Distributori ufficiali Caffè d'Italia, Lavazza Firma e Mokador.<br>Capsule, cialde, macchine in comodato e soluzioni professionali HO.RE.CA.</p>
+    <nav class="cat-pills" aria-label="Categorie caffè">
+      <a href="#capsule" class="cat-pill">💊 Capsule</a>
+      <a href="#cialde" class="cat-pill">💿 Cialde</a>
+      <a href="#macchine" class="cat-pill">⚙️ Macchine</a>
+      <a href="#horeca" class="cat-pill">🍽️ HO.RE.CA</a>
+    </nav>
+  </div>
+
+  <!-- ── STATS ── -->
+  <section class="bg-2">
     <div class="section-inner">
-      <div class="cards">
-        <div class="card">
-          <div class="card-icon">
-            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" aria-hidden="true">
-              <path d="M6 16 C6 11 10 9 14 9 H28 L34 20 L28 31 H14 C10 31 6 29 6 24 Z" fill="#9b0b01"/>
-              <path d="M28 9 L34 20 L28 31" fill="#6F4E37"/>
-              <circle cx="18" cy="20" r="3" fill="white" opacity="0.7"/>
-            </svg>
-          </div>
-          <h3>Capsule</h3>
-          <p>17 bevande disponibili con Caffè d'Italia. Caffè, infusi e solubili. Distribuiamo anche Lavazza Firma.</p>
-          <a href="/caffe/capsule.html" class="card-link">Esplora →</a>
+      <div class="stats-strip">
+        <div class="st">
+          <span class="st-num">26</span>
+          <span class="st-lbl">Bevande totali</span>
         </div>
-        <div class="card">
-          <div class="card-icon">
-            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" aria-hidden="true">
-              <ellipse cx="20" cy="20" rx="17" ry="6" fill="#9b0b01"/>
-              <ellipse cx="20" cy="18" rx="17" ry="6" fill="#9b0b01"/>
-              <ellipse cx="20" cy="18" rx="10" ry="3.5" fill="#6F4E37"/>
-              <ellipse cx="20" cy="17" rx="10" ry="3.5" fill="#6F4E37"/>
-              <ellipse cx="20" cy="17" rx="4" ry="1.5" fill="#9b0b01"/>
-            </svg>
-          </div>
-          <h3>Cialde</h3>
-          <p>La linea Mokador in cialde ESE 44mm. 5 miscele per ogni gusto, dalla classica all'Arabica 100%, dal decaffeinato al Più Crema.</p>
-          <a href="/caffe/cialde.html" class="card-link">Esplora →</a>
+        <div class="st">
+          <span class="st-num">3</span>
+          <span class="st-lbl">Marchi ufficiali</span>
         </div>
-        <div class="card">
-          <div class="card-icon">
-            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" aria-hidden="true">
-              <rect x="6" y="4" width="26" height="30" rx="4" fill="#9b0b01"/>
-              <rect x="32" y="10" width="4" height="10" rx="2" fill="#6F4E37"/>
-              <rect x="10" y="8" width="18" height="10" rx="2" fill="white" opacity="0.85"/>
-              <circle cx="19" cy="13" r="3" fill="#9b0b01"/>
-              <rect x="13" y="22" width="12" height="7" rx="2" fill="#6F4E37"/>
-            </svg>
-          </div>
-          <h3>Macchine</h3>
-          <p>Macchine a capsule e cialde per uffici e ambienti professionali. Compatte, efficienti, progettate e prodotte in Italia.</p>
-          <a href="/caffe/macchine.html" class="card-link">Esplora →</a>
+        <div class="st">
+          <span class="st-num">40+</span>
+          <span class="st-lbl">Anni di esperienza</span>
         </div>
-        <div class="card">
-          <div class="card-icon">🍽️</div>
-          <h3>HO.RE.CA</h3>
-          <p>Soluzioni professionali per hotel, ristoranti, pizzerie, mense e bar. Il vero espresso italiano nel tuo locale.</p>
-          <a href="/caffe/horeca.html" class="card-link">Esplora →</a>
+        <div class="st">
+          <span class="st-num">5</span>
+          <span class="st-lbl">Province servite</span>
+        </div>
+        <div class="st">
+          <span class="st-num">€0</span>
+          <span class="st-lbl">Costo macchina comodato</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- I NOSTRI MARCHI -->
-  <section class="bg-2">
+  <hr class="divider">
+
+  <!-- ── CAPSULE ── -->
+  <section id="capsule">
+    <div class="section-inner">
+      <div class="split">
+        <div class="split-text">
+          <span class="eyebrow">Capsule · 2 sistemi · 26 bevande</span>
+          <h2>Capsule caffè per uffici e aziende</h2>
+          <p>Le capsule monodose sono la scelta ideale per gli ambienti di lavoro: preparazione in meno di un minuto, aroma preservato dalla capsula ermetica, nessuna pulizia. Con i nostri due sistemi puoi scegliere tra <strong>26 bevande totali</strong> — caffè, infusi, solubili e alternative — dalla stessa macchina in comodato.</p>
+          <p>Siamo distributori ufficiali <strong>Caffè d'Italia</strong> e distributori autorizzati <strong>Lavazza Firma</strong>. Consegniamo direttamente in azienda a Garbagnate Milanese e in tutta la provincia di Milano, Monza, Varese, Como e Lecco.</p>
+          <div class="sub-cards">
+            <a href="/caffe/capsule-caffe-ditalia.html" class="sub-card">
+              <img src="/assets/sermatic/capsule-cdi/4-caps-1ape-1chiu-scaled.webp" alt="Capsule Caffè d'Italia" class="sub-card-img" loading="lazy">
+              <div class="sub-card-body">
+                <img src="/assets/sermatic/loghi/caffed_italia.webp" alt="Caffè d'Italia">
+                <span class="sc-badge">17 bevande</span>
+                <div class="sc-title">Caffè d'Italia</div>
+                <div class="sc-sub">6 caffè · 5 infusi · 6 solubili</div>
+                <div class="sub-card-cta">Scopri la gamma →</div>
+              </div>
+            </a>
+            <a href="/caffe/capsule-lavazza-firma.html" class="sub-card">
+              <img src="/assets/sermatic/capsule-lavazza/cappsule-firma_large.webp" alt="Capsule Lavazza Firma" class="sub-card-img" loading="lazy">
+              <div class="sub-card-body">
+                <img src="/assets/sermatic/loghi/Lavazza-Logo.wine_-scaled.webp" alt="Lavazza">
+                <span class="sc-badge">9 bevande</span>
+                <div class="sc-title">Lavazza Firma</div>
+                <div class="sc-sub">6 caffè · tè · ginseng · orzo</div>
+                <div class="sub-card-cta">Scopri la gamma →</div>
+              </div>
+            </a>
+          </div>
+          <a href="/caffe/capsule.html" class="btn btn-outline" style="margin-top:20px;">Confronta i sistemi capsule</a>
+        </div>
+        <div class="split-img">
+          <img src="/assets/sermatic/bevande/1100x600-caffe-bevande16_1607607113-1.webp" alt="Caffè espresso — capsule per uffici" fetchpriority="high">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ── CIALDE ── -->
+  <section id="cialde" class="bg-2">
+    <div class="section-inner">
+      <div class="split">
+        <div class="split-img">
+          <img src="/assets/sermatic/cialde/elle_sito_1100x600-px_1571396155.webp" alt="Cialde Mokador ESE 44mm — macchina Elle" loading="lazy">
+        </div>
+        <div class="split-text">
+          <span class="eyebrow">Cialde · Mokador · ESE 44mm</span>
+          <h2>Cialde ESE: la tradizione del vero espresso</h2>
+          <p>Le cialde in carta sono il formato più vicino al caffè da bar tradizionale. Il caffè macinato e pressato tra due fogli di carta porosa permette un'estrazione lenta e completa degli aromi, con una crema persistente e un gusto pieno.</p>
+          <p>Distribuiamo la linea <strong>Mokador</strong> in formato ESE 44mm — lo standard universale compatibile con la maggior parte delle macchine a cialde sul mercato. Cinque miscele per soddisfare ogni palato, dalla classica Crema all'arabica pura.</p>
+          <div class="miscele-strip">
+            <span class="miscela-chip">Crema</span>
+            <span class="miscela-chip">Aroma Top</span>
+            <span class="miscela-chip">Arabica 100%</span>
+            <span class="miscela-chip">Più Crema</span>
+            <span class="miscela-chip">Decaffeinato</span>
+          </div>
+          <div class="feature-list" style="margin-top:24px;">
+            <div class="feature-item">
+              <div class="feature-icon">✓</div>
+              <div>
+                <strong>Formato ESE 44mm universale</strong>
+                <span>Compatibile con la maggior parte delle macchine a cialde in commercio</span>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">✓</div>
+              <div>
+                <strong>Macchina Elle in comodato gratuito</strong>
+                <span>Compatta, silenziosa, prodotta in Italia da Mokador — zero costi di partenza</span>
+              </div>
+            </div>
+          </div>
+          <a href="/caffe/cialde.html" class="btn btn-dark" style="margin-top:24px;">Scopri le cialde Mokador</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ── MACCHINE ── -->
+  <section id="macchine">
+    <div class="section-inner">
+      <div class="section-head centered">
+        <span class="eyebrow">Macchine · In comodato gratuito</span>
+        <h2>Macchine da caffè per uffici e ambienti professionali</h2>
+        <p>Compatte, progettate per un utilizzo continuativo, con interfaccia semplice. Disponibili in comodato d'uso gratuito con fornitura di capsule o cialde.</p>
+      </div>
+
+      <div class="macchine-grid">
+
+        <div class="macchina-card">
+          <img src="/assets/sermatic/macchine-cdi/Birba-nero-principal-.webp" alt="Macchine Caffè d'Italia — Birba" class="macchina-card-img" loading="lazy">
+          <div class="macchina-card-body">
+            <img src="/assets/sermatic/loghi/caffed_italia.webp" alt="Caffè d'Italia">
+            <h3>Macchine Caffè d'Italia</h3>
+            <p>Una gamma completa di macchine a capsule per ogni ambiente: dalla compatta Birba per piccoli uffici, alle versioni con schermo touch per ambienti con molti utenti. Tutte erogate 17 bevande con la stessa capsula. Progettate e prodotte in Italia.</p>
+            <div class="miscele-strip">
+              <span class="miscela-chip">Birba</span>
+              <span class="miscela-chip">Mago</span>
+              <span class="miscela-chip">Pepita</span>
+              <span class="miscela-chip">Duo / Duo Vap</span>
+              <span class="miscela-chip">Perla</span>
+            </div>
+            <a href="/caffe/macchine-caffe-ditalia.html" class="btn btn-outline" style="margin-top:20px;">Vedi le macchine CDI</a>
+          </div>
+        </div>
+
+        <div class="macchina-card">
+          <img src="/assets/sermatic/macchine-lavazza/perla-900.webp" alt="Macchine Lavazza Firma" class="macchina-card-img" loading="lazy">
+          <div class="macchina-card-body">
+            <img src="/assets/sermatic/loghi/Lavazza-Logo.wine_-scaled.webp" alt="Lavazza">
+            <h3>Macchine Lavazza Firma</h3>
+            <p>Il design elegante Lavazza per ambienti di rappresentanza. Ergonomica, silenziosa e veloce, eroga 9 bevande in pochi secondi. Perfetta per sale riunioni, reception e uffici direzionali dove anche l'estetica conta.</p>
+            <div class="miscele-strip">
+              <span class="miscela-chip">Firma A Modo Mio</span>
+              <span class="miscela-chip">Design premium</span>
+              <span class="miscela-chip">Interfaccia touch</span>
+            </div>
+            <a href="/caffe/macchine-lavazza-firma.html" class="btn btn-outline" style="margin-top:20px;">Vedi le macchine Lavazza</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ── HO.RE.CA ── -->
+  <section id="horeca" class="bg-2">
+    <div class="section-inner">
+      <div class="split">
+        <div class="split-img">
+          <img src="/assets/sermatic/horeca/elite-2-gruppi.webp" alt="Macchina professionale HO.RE.CA — Elite 2 gruppi" loading="lazy">
+        </div>
+        <div class="split-text">
+          <span class="eyebrow">HO.RE.CA · Uso professionale intensivo</span>
+          <h2>Il vero espresso italiano per hotel, ristoranti e bar</h2>
+          <p>Per chi opera nella ristorazione e nell'ospitalità, la qualità del caffè non è un dettaglio — è parte dell'esperienza che offri ai tuoi clienti. Le nostre soluzioni HO.RE.CA sono pensate per volumi elevati, con macchine professionali da 1 e 2 gruppi capaci di erogare centinaia di caffè al giorno.</p>
+          <p>Distribuiamo macchine per <strong>hotel</strong>, <strong>ristoranti</strong>, <strong>pizzerie</strong>, <strong>bar</strong> e <strong>mense aziendali</strong>. Fornitura di miscele professionali, assistenza tecnica e supporto continuo inclusi nel servizio.</p>
+          <div class="feature-list">
+            <div class="feature-item">
+              <div class="feature-icon">☕</div>
+              <div>
+                <strong>Macchine da 1 e 2 gruppi</strong>
+                <span>Ideal per volumi elevati — hotel, ristoranti, mense, bar</span>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">🔧</div>
+              <div>
+                <strong>Assistenza tecnica inclusa</strong>
+                <span>Interventi rapidi a Garbagnate Milanese e in tutta la provincia</span>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">🫘</div>
+              <div>
+                <strong>Miscele professionali</strong>
+                <span>Blend selezionati per la ristorazione, con crema densa e aroma intenso</span>
+              </div>
+            </div>
+          </div>
+          <a href="/caffe/horeca.html" class="btn btn-dark" style="margin-top:24px;">Scopri le soluzioni HO.RE.CA</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── MARCHI ── -->
+  <section>
     <div class="section-inner">
       <div class="section-head centered">
         <span class="eyebrow">I nostri partner</span>
-        <h2>Marchi di fiducia</h2>
-        <p>Distribuiamo solo marchi italiani selezionati per qualità, innovazione e affidabilità.</p>
+        <h2>Marchi italiani di fiducia</h2>
+        <p>Distribuiamo solo marchi selezionati per qualità del prodotto, affidabilità e reputazione nel settore.</p>
       </div>
-      <div class="cards">
-        <div class="card">
-          <div class="card-icon">🇮🇹</div>
-          <h3>Caffè d'Italia</h3>
-          <p>17 bevande in capsule compatibili. Caffè, infusi, solubili. Una gamma completa per ogni momento della giornata.</p>
-          <a href="/caffe/capsule-caffe-ditalia.html" class="card-link">Scopri →</a>
-        </div>
-        <div class="card">
-          <div class="card-icon">☕</div>
-          <h3>Lavazza Firma</h3>
-          <p>Il sistema professionale Lavazza per uffici e ambienti di lavoro. Qualità e design in ogni tazza.</p>
-          <a href="/caffe/capsule-lavazza-firma.html" class="card-link">Scopri →</a>
-        </div>
-        <div class="card">
-          <div class="card-icon">🫙</div>
-          <h3>Mokador</h3>
-          <p>Cialde e macchine di qualità artigianale italiana. La linea Elle: compatta, potente, ecologica.</p>
-          <a href="/caffe/cialde.html" class="card-link">Scopri →</a>
-        </div>
+      <div class="brand-logos">
+        <a href="/caffe/capsule-caffe-ditalia.html" class="brand-logo-item">
+          <img src="/assets/sermatic/loghi/caffed_italia.webp" alt="Caffè d'Italia — distributore ufficiale RoMimatic" loading="lazy">
+          <span>Distributore ufficiale</span>
+        </a>
+        <a href="/caffe/capsule-lavazza-firma.html" class="brand-logo-item">
+          <img src="/assets/sermatic/loghi/Lavazza-Logo.wine_-scaled.webp" alt="Lavazza Firma — distributore autorizzato RoMimatic" loading="lazy">
+          <span>Distributore autorizzato</span>
+        </a>
+        <a href="/caffe/cialde.html" class="brand-logo-item">
+          <img src="/assets/sermatic/loghi/logo-mokador-large_1200x.webp" alt="Mokador — cialde ESE 44mm" loading="lazy">
+          <span>Cialde ESE 44mm</span>
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- CTA -->
+  <!-- ── COMODATO ── -->
+  <section class="bg-2">
+    <div class="section-inner">
+      <div class="section-head centered">
+        <span class="eyebrow">Zero investimento iniziale</span>
+        <h2>Macchina in comodato d'uso gratuito</h2>
+        <p>Tutti i nostri sistemi — Caffè d'Italia, Lavazza Firma e Mokador — sono disponibili in comodato d'uso: la macchina è tua senza acquistarla.</p>
+      </div>
+      <div class="comodato-steps">
+        <div class="co-step">
+          <div class="co-num">1</div>
+          <div>
+            <h3>Consulenza gratuita</h3>
+            <p>Ti aiutiamo a scegliere il sistema più adatto alla tua azienda in base ai consumi, agli spazi e ai gusti del team.</p>
+          </div>
+        </div>
+        <div class="co-step">
+          <div class="co-num">2</div>
+          <div>
+            <h3>Macchina in comodato</h3>
+            <p>Installiamo la macchina gratuitamente. Nessun costo di acquisto, nessun canone mensile. L'unico impegno è la fornitura di capsule o cialde.</p>
+          </div>
+        </div>
+        <div class="co-step">
+          <div class="co-num">3</div>
+          <div>
+            <h3>Fornitura e assistenza</h3>
+            <p>Consegniamo periodicamente capsule o cialde direttamente in azienda. Gestiamo anche la manutenzione tecnica ordinaria.</p>
+          </div>
+        </div>
+      </div>
+      <div style="text-align:center; margin-top:40px;">
+        <a href="/contatti.html" class="btn btn-dark">Richiedi il comodato gratuito</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA ── -->
   <section>
     <div class="section-inner">
       <div class="cta-banner">
-        <span class="eyebrow">Hai domande?</span>
-        <h2>Trova la soluzione giusta per te</h2>
-        <p>Contattaci e ti aiutiamo a scegliere le macchine e i prodotti più adatti alle tue esigenze.</p>
-        <a href="/contatti.html" class="btn btn-dark">Contattaci</a>
+        <span class="eyebrow">Parliamoci</span>
+        <h2>Non sai da dove iniziare?</h2>
+        <p>Capsule o cialde? Caffè d'Italia o Lavazza? Ufficio o ristorante? Contattaci: ti aiutiamo a trovare la soluzione giusta, senza impegno.</p>
+        <div style="display:flex; gap:12px; justify-content:center; flex-wrap:wrap;">
+          <a href="/contatti.html" class="btn btn-dark">Contattaci ora</a>
+          <a href="/caffe/capsule.html" class="btn btn-outline">Confronta le capsule</a>
+        </div>
       </div>
     </div>
   </section>
