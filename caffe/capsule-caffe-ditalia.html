@@ -48,11 +48,34 @@
     .benefit-card h3 { font-size: 15px; font-weight: 600; margin-bottom: 8px; }
     .benefit-card p { font-size: 13px; color: var(--text-2); line-height: 1.55; }
 
+    /* Griglia capsule — flex centrata, nessun elemento orfano a sinistra */
+    .capsule-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 24px;
+    }
+    .capsule-grid .product-card {
+      flex: 0 0 calc(33.333% - 16px);
+      min-width: 240px;
+      max-width: 380px;
+      box-sizing: border-box;
+    }
+
     /* Tabella confronto */
-    .compare-table { width: 100%; border-collapse: collapse; font-size: 14px; overflow-x: auto; display: block; }
-    .compare-table th, .compare-table td { border: 1px solid var(--border); padding: 10px 14px; text-align: left; white-space: nowrap; }
-    .compare-table th { background: var(--bg-2); font-weight: 600; color: var(--text); }
+    .table-scroll {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      border-radius: var(--r);
+      border: 1px solid var(--border);
+    }
+    .compare-table { width: 100%; border-collapse: collapse; font-size: 13px; min-width: 680px; }
+    .compare-table th, .compare-table td { border-bottom: 1px solid var(--border); border-right: 1px solid var(--border); padding: 9px 12px; text-align: left; }
+    .compare-table th:last-child, .compare-table td:last-child { border-right: none; }
+    .compare-table thead tr { border-bottom: 2px solid var(--border); }
+    .compare-table th { background: var(--bg-2); font-weight: 600; color: var(--text); font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; white-space: nowrap; }
     .compare-table td { color: var(--text-2); }
+    .compare-table tr:last-child td { border-bottom: none; }
     .compare-table tr:nth-child(even) td { background: var(--bg-2); }
     .compare-table .badge-deca { color: #2e7d32; font-weight: 600; }
     .compare-table .badge-arabe { color: var(--accent-2); font-weight: 600; }
@@ -64,8 +87,14 @@
     .faq-item h3 { font-size: 16px; font-weight: 600; margin-bottom: 10px; color: var(--text); }
     .faq-item p { font-size: 15px; color: var(--text-2); line-height: 1.65; }
 
+    @media (max-width: 860px) {
+      .capsule-grid .product-card { flex: 0 0 calc(50% - 12px); }
+    }
     @media (max-width: 768px) {
       .benefits-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 480px) {
+      .capsule-grid .product-card { flex: 0 0 100%; max-width: 100%; }
     }
     @media (max-width: 640px) {
       .product-card-body .product-specs { grid-template-columns: 1fr; }
@@ -177,7 +206,7 @@
         <h2>Capsule Caffè</h2>
         <p>Sei blend diversi per accontentare ogni palato, dall'intenso napoletano al delicato arabica, fino al caffè al cioccolato.</p>
       </div>
-      <div class="products">
+      <div class="capsule-grid">
 
         <div class="product-card">
           <div class="product-card-img">
@@ -295,7 +324,7 @@
         <h2>Capsule Infusi</h2>
         <p>Infusi e tisane preparate con foglie vere, fiori e frutti selezionati — non polveri. La stessa macchina del caffè eroga anche queste bevande.</p>
       </div>
-      <div class="products products-3col">
+      <div class="capsule-grid">
 
         <div class="product-card">
           <div class="product-card-img">
@@ -396,7 +425,7 @@
         <h2>Capsule Solubili</h2>
         <p>Bevande solubili cremose per completare la proposta: dal ginseng all'orzo biologico, dalla nocciola al latte in polvere.</p>
       </div>
-      <div class="products">
+      <div class="capsule-grid">
 
         <div class="product-card">
           <div class="product-card-img">
@@ -512,7 +541,7 @@
         <h2>Tutte le 17 bevande a colpo d'occhio</h2>
         <p>Scegli la bevanda giusta per ogni momento della giornata.</p>
       </div>
-      <div style="overflow-x:auto;">
+      <div class="table-scroll">
         <table class="compare-table">
           <thead>
             <tr>
