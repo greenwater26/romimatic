@@ -3,15 +3,131 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Capsule Lavazza Firma — RoMimatic</title>
-  <meta name="description" content="Capsule Lavazza Firma per uffici e ambienti professionali. Distribuiti da RoMimatic.">
+  <title>Capsule Lavazza Firma: 9 Miscele per Uffici — RoMimatic Garbagnate Milanese</title>
+  <meta name="description" content="Capsule Lavazza Firma: 6 caffè (Corposo, Gustoso, Aromatico, Qualità Oro, Forte, Decaffeinato) e 3 alternative (tè, ginseng, orzo). RoMimatic distributore a Garbagnate Milanese (MI).">
+  <link rel="canonical" href="https://romimatic.it/caffe/capsule-lavazza-firma.html">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://romimatic.it/caffe/capsule-lavazza-firma.html">
+  <meta property="og:title" content="Capsule Lavazza Firma: 9 Miscele per Uffici | RoMimatic">
+  <meta property="og:description" content="6 caffè e 3 bevande alternative Lavazza Firma. RoMimatic distributore a Garbagnate Milanese. Fornitura per uffici, studi professionali e aziende.">
+  <meta property="og:image" content="https://romimatic.it/assets/sermatic/capsule-lavazza/cappsule-firma_large.webp">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:site_name" content="RoMimatic">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="stylesheet" href="/css/style.css">
+  <style>
+    /* Griglia capsule — flex centrata, nessun elemento orfano a sinistra */
+    .capsule-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 24px;
+    }
+    .capsule-grid .product-card {
+      flex: 0 0 calc(33.333% - 16px);
+      min-width: 240px;
+      max-width: 380px;
+      box-sizing: border-box;
+    }
+
+    /* Scheda prodotto — specifiche */
+    .product-card-body .product-specs {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px 12px;
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px solid var(--border);
+    }
+    .product-card-body .spec-row { display: flex; flex-direction: column; gap: 1px; }
+    .product-card-body .spec-label { color: var(--text-3); font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.07em; }
+    .product-card-body .spec-val { color: var(--text); font-weight: 500; font-size: 12px; }
+
+    /* Barra intensità */
+    .intensity-bar { display: flex; align-items: center; gap: 8px; margin-top: 10px; }
+    .intensity-bar .bar-track { flex: 1; height: 6px; background: var(--border); border-radius: 3px; overflow: hidden; }
+    .intensity-bar .bar-fill { height: 100%; background: var(--accent-2); border-radius: 3px; }
+    .intensity-bar .bar-label { font-size: 11px; color: var(--text-3); white-space: nowrap; }
+
+    /* Tabella confronto */
+    .table-scroll {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      border-radius: var(--r);
+      border: 1px solid var(--border);
+    }
+    .compare-table { width: 100%; border-collapse: collapse; font-size: 13px; min-width: 620px; }
+    .compare-table th, .compare-table td { border-bottom: 1px solid var(--border); border-right: 1px solid var(--border); padding: 9px 12px; text-align: left; }
+    .compare-table th:last-child, .compare-table td:last-child { border-right: none; }
+    .compare-table thead tr { border-bottom: 2px solid var(--border); }
+    .compare-table th { background: var(--bg-2); font-weight: 600; color: var(--text); font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; white-space: nowrap; }
+    .compare-table td { color: var(--text-2); }
+    .compare-table tr:last-child td { border-bottom: none; }
+    .compare-table tr:nth-child(even) td { background: var(--bg-2); }
+    .compare-table .badge-deca { color: #2e7d32; font-weight: 600; }
+    .compare-table .badge-alt { color: var(--accent-2); font-weight: 600; }
+
+    /* Benefici */
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 48px;
+    }
+    .benefit-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--r);
+      padding: 24px 20px;
+      text-align: center;
+    }
+    .benefit-card .benefit-icon { font-size: 32px; margin-bottom: 12px; }
+    .benefit-card h3 { font-size: 15px; font-weight: 600; margin-bottom: 8px; }
+    .benefit-card p { font-size: 13px; color: var(--text-2); line-height: 1.55; }
+
+    /* FAQ */
+    .faq-list { display: flex; flex-direction: column; gap: 0; }
+    .faq-item { border-bottom: 1px solid var(--border); padding: 24px 0; }
+    .faq-item:first-child { border-top: 1px solid var(--border); }
+    .faq-item h3 { font-size: 16px; font-weight: 600; margin-bottom: 10px; color: var(--text); }
+    .faq-item p { font-size: 15px; color: var(--text-2); line-height: 1.65; }
+
+    @media (max-width: 860px) {
+      .capsule-grid .product-card { flex: 0 0 calc(50% - 12px); }
+      .benefits-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 480px) {
+      .capsule-grid .product-card { flex: 0 0 100%; max-width: 100%; }
+      .benefits-grid { grid-template-columns: 1fr; }
+      .product-card-body .product-specs { grid-template-columns: 1fr; }
+    }
+  </style>
   <link rel="icon" href="/favicon.png" type="image/png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="preload" as="image" href="/assets/img/logo-s.webp">
   <meta name="theme-color" content="#ffffff">
   <script src="/js/components.js" defer></script>
   <script src="/js/main.js" defer></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Capsule Lavazza Firma — RoMimatic",
+    "description": "9 bevande disponibili in capsule Lavazza Firma: 6 caffè e 3 alternative",
+    "numberOfItems": 9,
+    "itemListElement": [
+      {"@type":"ListItem","position":1,"name":"Espresso Corposo — Intensità 8/13","description":"Miscela corposa e ricca con note di nocciola e aroma di miele. Confezione 48 capsule."},
+      {"@type":"ListItem","position":2,"name":"Espresso Gustoso — Intensità 9/13","description":"Blend dolce-amaro bilanciato con note di cioccolato al latte e nocciola. Confezione 48 capsule."},
+      {"@type":"ListItem","position":3,"name":"Espresso Aromatico — Intensità 9/13","description":"Miscela forte e aromatica, note di frutta secca e finale dolce persistente. Confezione 48 capsule."},
+      {"@type":"ListItem","position":4,"name":"Qualità Oro — Intensità 7/13 — 100% Arabica","description":"Miscela storica dal 1956, 100% arabica da Centro e Sud America. Dolce e delicata. Confezione 48 capsule."},
+      {"@type":"ListItem","position":5,"name":"Espresso Forte — Intensità 10/13","description":"Crema densa, retrogusto di cacao e caramello da tostatura prolungata. Confezione 48 capsule."},
+      {"@type":"ListItem","position":6,"name":"Espresso Decaffeinato — Intensità 6/13","description":"Bilanciato e persistente con leggere note di cioccolato, crema compatta. Confezione 24 capsule."},
+      {"@type":"ListItem","position":7,"name":"Tè al limone","description":"Tè solubile al limone, rinfrescante e dissetante. Confezione 24 capsule."},
+      {"@type":"ListItem","position":8,"name":"Ginseng","description":"Caffè al ginseng, tonico e rivitalizzante con proprietà benefiche. Confezione 24 capsule."},
+      {"@type":"ListItem","position":9,"name":"Orzo","description":"Orzo solubile aromatico, senza caffeina, nutriente e genuino. Confezione 24 capsule."}
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -28,120 +144,393 @@
 
   <div class="page-hero">
     <span class="eyebrow">Capsule · Lavazza Firma</span>
-    <h1>Lavazza Firma</h1>
-    <p>Il sistema professionale Lavazza per uffici. Design premium, qualità garantita, scelta di miscele per ogni gusto.</p>
-    <img src="/assets/sermatic/loghi/Lavazza-Logo.wine_-scaled.webp" alt="Lavazza" style="height:52px; width:auto; margin:24px auto 0; display:block;" loading="lazy">
+    <h1>Capsule Lavazza Firma</h1>
+    <p>9 bevande disponibili: 6 miscele di caffè e 3 alternative.<br>Il sistema professionale Lavazza per uffici, studi e aziende.</p>
+    <img src="/assets/sermatic/loghi/Lavazza-Logo.wine_-scaled.webp" alt="Lavazza — logo ufficiale" style="height:56px; width:auto; margin:28px auto 0; display:block;" loading="lazy">
   </div>
 
-  <!-- BANNER CAPSULE -->
-  <section class="bg-2">
+  <!-- INTRO -->
+  <section>
     <div class="section-inner">
-      <img src="/assets/sermatic/capsule-lavazza/cappsule-firma_large.webp" alt="Capsule Lavazza Firma" style="width:100%; max-width:800px; margin:0 auto; display:block; border-radius:var(--r-lg); object-fit:contain;" loading="lazy">
+      <div class="split">
+        <div class="split-text">
+          <span class="eyebrow">Sistema Lavazza Firma</span>
+          <h2>Qualità da bar, comodità da ufficio</h2>
+          <p>Lavazza Firma è il sistema professionale di Lavazza pensato per ambienti di lavoro esigenti: uffici, studi professionali, reception e sale riunioni. Capsule monoporzione in alluminio che preservano freschezza e aroma fino all'erogazione.</p>
+          <p>Con un'unica macchina compatta ottieni 9 bevande diverse: dai caffè intensi alle alternative senza caffeina come orzo e tè. Tutto con la qualità di una delle marche di caffè più conosciute al mondo.</p>
+          <div class="feature-list">
+            <div class="feature-item">
+              <div class="feature-icon">9</div>
+              <div>
+                <strong>9 bevande in un solo sistema</strong>
+                <span>6 caffè · tè al limone · ginseng · orzo — tutto dalla stessa macchina</span>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">✓</div>
+              <div>
+                <strong>Qualità Lavazza dal 1895</strong>
+                <span>Oltre 125 anni di esperienza nella selezione e tostatura del caffè</span>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">✓</div>
+              <div>
+                <strong>Comodato d'uso gratuito</strong>
+                <span>Macchina in comodato con fornitura continuativa di capsule</span>
+              </div>
+            </div>
+          </div>
+          <a href="/caffe/macchine-lavazza-firma.html" class="btn btn-outline" style="margin-top:12px;">Vedi le macchine Lavazza Firma</a>
+        </div>
+        <div class="split-img">
+          <img src="/assets/sermatic/capsule-lavazza/cappsule-firma_large.webp" alt="Capsule Lavazza Firma — gamma completa" fetchpriority="high">
+        </div>
+      </div>
     </div>
   </section>
 
+  <hr class="divider">
+
+  <!-- ─────────── CAPSULE CAFFÈ ─────────── -->
+  <section>
+    <div class="section-inner">
+      <div class="section-head">
+        <span class="eyebrow">6 miscele · Scala intensità 1–13</span>
+        <h2>Capsule Caffè</h2>
+        <p>Sei miscele con intensità crescente, dalla delicata Qualità Oro all'intensa Espresso Forte — una per ogni palato.</p>
+      </div>
+
+      <div class="capsule-grid">
+
+        <div class="product-card">
+          <div class="product-card-img">
+            <img src="/assets/sermatic/capsule-lavazza/photo_5827889339701507361_y.webp" alt="Lavazza Firma Espresso Corposo" loading="lazy">
+          </div>
+          <div class="product-card-body">
+            <span class="product-tag">Intensità 8 / 13</span>
+            <h3>Espresso Corposo</h3>
+            <p>Una miscela corposa e ricca che conquista al primo sorso. Note di nocciola tostata e un avvolgente aroma di miele rendono questa capsula ideale per un espresso classico e soddisfacente.</p>
+            <div class="intensity-bar" aria-label="Intensità 8 su 13">
+              <div class="bar-track"><div class="bar-fill" style="width:61.5%"></div></div>
+              <span class="bar-label">8 / 13</span>
+            </div>
+            <div class="product-specs">
+              <div class="spec-row"><span class="spec-label">Aroma</span><span class="spec-val">Nocciola · Miele</span></div>
+              <div class="spec-row"><span class="spec-label">Confezione</span><span class="spec-val">48 capsule</span></div>
+              <div class="spec-row"><span class="spec-label">Formato</span><span class="spec-val">Espresso</span></div>
+              <div class="spec-row"><span class="spec-label">Caffeina</span><span class="spec-val">Sì</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-card-img">
+            <img src="/assets/sermatic/capsule-lavazza/photo_5827889339701507362_y.webp" alt="Lavazza Firma Espresso Gustoso" loading="lazy">
+          </div>
+          <div class="product-card-body">
+            <span class="product-tag">Intensità 9 / 13</span>
+            <h3>Espresso Gustoso</h3>
+            <p>Un blend dall'equilibrio perfetto tra dolce e amaro. Note di cioccolato al latte e nocciola si fondono in un espresso che soddisfa senza appesantire — il preferito di chi cerca armonia in tazza.</p>
+            <div class="intensity-bar" aria-label="Intensità 9 su 13">
+              <div class="bar-track"><div class="bar-fill" style="width:69.2%"></div></div>
+              <span class="bar-label">9 / 13</span>
+            </div>
+            <div class="product-specs">
+              <div class="spec-row"><span class="spec-label">Aroma</span><span class="spec-val">Cioccolato · Nocciola</span></div>
+              <div class="spec-row"><span class="spec-label">Confezione</span><span class="spec-val">48 capsule</span></div>
+              <div class="spec-row"><span class="spec-label">Formato</span><span class="spec-val">Espresso</span></div>
+              <div class="spec-row"><span class="spec-label">Caffeina</span><span class="spec-val">Sì</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-card-img">
+            <img src="/assets/sermatic/capsule-lavazza/photo_5827889339701507363_y.webp" alt="Lavazza Firma Espresso Aromatico" loading="lazy">
+          </div>
+          <div class="product-card-body">
+            <span class="product-tag">Intensità 9 / 13</span>
+            <h3>Espresso Aromatico</h3>
+            <p>Una miscela forte e aromatica che lascia il segno. Sentori di frutta secca e un finale dolce e persistente la rendono la scelta ideale per chi cerca un profilo aromatico complesso e avvolgente.</p>
+            <div class="intensity-bar" aria-label="Intensità 9 su 13">
+              <div class="bar-track"><div class="bar-fill" style="width:69.2%"></div></div>
+              <span class="bar-label">9 / 13</span>
+            </div>
+            <div class="product-specs">
+              <div class="spec-row"><span class="spec-label">Aroma</span><span class="spec-val">Frutta secca · Dolce</span></div>
+              <div class="spec-row"><span class="spec-label">Confezione</span><span class="spec-val">48 capsule</span></div>
+              <div class="spec-row"><span class="spec-label">Formato</span><span class="spec-val">Espresso</span></div>
+              <div class="spec-row"><span class="spec-label">Caffeina</span><span class="spec-val">Sì</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-card-img">
+            <img src="/assets/sermatic/capsule-lavazza/Lavazza_oro_firma_it_thumb.webp" alt="Lavazza Firma Qualità Oro — 100% Arabica" loading="lazy">
+          </div>
+          <div class="product-card-body">
+            <span class="product-tag hot">100% Arabica · Dal 1956</span>
+            <h3>Qualità Oro</h3>
+            <p>La miscela storica di Lavazza, creata nel 1956 e rimasta invariata. 100% arabica selezionata da Centro e Sud America. Dolce, delicata e profumata — una tazza elegante che non stanca mai.</p>
+            <div class="intensity-bar" aria-label="Intensità 7 su 13">
+              <div class="bar-track"><div class="bar-fill" style="width:53.8%"></div></div>
+              <span class="bar-label">7 / 13</span>
+            </div>
+            <div class="product-specs">
+              <div class="spec-row"><span class="spec-label">Blend</span><span class="spec-val">100% Arabica</span></div>
+              <div class="spec-row"><span class="spec-label">Confezione</span><span class="spec-val">48 capsule</span></div>
+              <div class="spec-row"><span class="spec-label">Origine</span><span class="spec-val">C. e S. America</span></div>
+              <div class="spec-row"><span class="spec-label">Caffeina</span><span class="spec-val">Sì</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-card-img">
+            <img src="/assets/sermatic/capsule-lavazza/photo_5827889339701507364_y.webp" alt="Lavazza Firma Espresso Forte" loading="lazy">
+          </div>
+          <div class="product-card-body">
+            <span class="product-tag">Intensità 10 / 13</span>
+            <h3>Espresso Forte</h3>
+            <p>Per i palati più esigenti. La tostatura prolungata sviluppa una crema densa e persistente con un retrogusto inconfondibile di cacao e caramello. Il caffè più intenso della gamma Firma.</p>
+            <div class="intensity-bar" aria-label="Intensità 10 su 13">
+              <div class="bar-track"><div class="bar-fill" style="width:76.9%"></div></div>
+              <span class="bar-label">10 / 13</span>
+            </div>
+            <div class="product-specs">
+              <div class="spec-row"><span class="spec-label">Aroma</span><span class="spec-val">Cacao · Caramello</span></div>
+              <div class="spec-row"><span class="spec-label">Confezione</span><span class="spec-val">48 capsule</span></div>
+              <div class="spec-row"><span class="spec-label">Tostatura</span><span class="spec-val">Prolungata</span></div>
+              <div class="spec-row"><span class="spec-label">Caffeina</span><span class="spec-val">Sì</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-card-img">
+            <img src="/assets/sermatic/capsule-lavazza/photo_5827889339701507365_y.webp" alt="Lavazza Firma Espresso Decaffeinato" loading="lazy">
+          </div>
+          <div class="product-card-body">
+            <span class="product-tag badge-deca">Decaffeinato · Intensità 6 / 13</span>
+            <h3>Espresso Decaffeinato</h3>
+            <p>Bilanciato e persistente, con leggere note di cioccolato e una crema compatta. Tutto il piacere dell'espresso Lavazza, senza caffeina — ideale la sera o per chi deve limitarla per motivi di salute.</p>
+            <div class="intensity-bar" aria-label="Intensità 6 su 13">
+              <div class="bar-track"><div class="bar-fill" style="width:46.2%; background:#2e7d32;"></div></div>
+              <span class="bar-label" style="color:#2e7d32;">6 / 13</span>
+            </div>
+            <div class="product-specs">
+              <div class="spec-row"><span class="spec-label">Aroma</span><span class="spec-val">Cioccolato</span></div>
+              <div class="spec-row"><span class="spec-label">Confezione</span><span class="spec-val">24 capsule</span></div>
+              <div class="spec-row"><span class="spec-label">Caffeina</span><span class="spec-val badge-deca">Zero</span></div>
+              <div class="spec-row"><span class="spec-label">Crema</span><span class="spec-val">Compatta</span></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ─────────── BEVANDE ALTERNATIVE ─────────── -->
+  <section class="bg-2">
+    <div class="section-inner">
+      <div class="section-head">
+        <span class="eyebrow">3 alternative · Senza caffè espresso</span>
+        <h2>Bevande Alternative</h2>
+        <p>Dalla stessa macchina Lavazza Firma: tè, ginseng e orzo per accontentare tutti in ufficio.</p>
+      </div>
+
+      <div class="capsule-grid">
+
+        <div class="product-card">
+          <div class="product-card-img">
+            <img src="/assets/sermatic/capsule-lavazza/photo_5827889339701507366_y.webp" alt="Lavazza Firma Tè al Limone" loading="lazy">
+          </div>
+          <div class="product-card-body">
+            <span class="product-tag badge-deca">Senza caffeina</span>
+            <h3>Tè al Limone</h3>
+            <p>Rinfrescante e dissetante, con note agrumate di limone. Si prepara caldo in pochi secondi dalla macchina Lavazza Firma. Perfetto come alternativa pomeridiana al caffè.</p>
+            <div class="product-specs">
+              <div class="spec-row"><span class="spec-label">Confezione</span><span class="spec-val">24 capsule</span></div>
+              <div class="spec-row"><span class="spec-label">Caffeina</span><span class="spec-val badge-deca">Zero</span></div>
+              <div class="spec-row"><span class="spec-label">Note</span><span class="spec-val">Limone · Agrumi</span></div>
+              <div class="spec-row"><span class="spec-label">Formato</span><span class="spec-val">Bevanda calda</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-card-img">
+            <img src="/assets/sermatic/capsule-lavazza/photo_5827889339701507367_y.webp" alt="Lavazza Firma Ginseng" loading="lazy">
+          </div>
+          <div class="product-card-body">
+            <span class="product-tag hot">Tonico · Bestseller</span>
+            <h3>Ginseng</h3>
+            <p>Caffè solubile arricchito con estratto di ginseng: tonico, rivitalizzante e antiossidante. Riduce la sensazione di stanchezza e potenzia il rendimento fisico e mentale. Creamy e dolce.</p>
+            <div class="product-specs">
+              <div class="spec-row"><span class="spec-label">Confezione</span><span class="spec-val">24 capsule</span></div>
+              <div class="spec-row"><span class="spec-label">Caffeina</span><span class="spec-val">Bassa</span></div>
+              <div class="spec-row"><span class="spec-label">Benefici</span><span class="spec-val">Tonico · Antiossid.</span></div>
+              <div class="spec-row"><span class="spec-label">Formato</span><span class="spec-val">Bevanda calda</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-card-img">
+            <img src="/assets/sermatic/capsule-lavazza/photo_5827889339701507368_y.webp" alt="Lavazza Firma Orzo" loading="lazy">
+          </div>
+          <div class="product-card-body">
+            <span class="product-tag badge-deca">Senza caffeina · Naturale</span>
+            <h3>Orzo</h3>
+            <p>Aromatico e genuino, dall'orzo tostato. Privo di caffeina, nutriente e facilmente digeribile. L'alternativa naturale al caffè per chi è sensibile alla caffeina o vuole una pausa leggera.</p>
+            <div class="product-specs">
+              <div class="spec-row"><span class="spec-label">Confezione</span><span class="spec-val">24 capsule</span></div>
+              <div class="spec-row"><span class="spec-label">Caffeina</span><span class="spec-val badge-deca">Zero</span></div>
+              <div class="spec-row"><span class="spec-label">Note</span><span class="spec-val">Orzo tostato</span></div>
+              <div class="spec-row"><span class="spec-label">Formato</span><span class="spec-val">Bevanda calda</span></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- TABELLA CONFRONTO -->
   <section>
     <div class="section-inner">
       <div class="section-head centered">
-        <span class="eyebrow">La gamma</span>
-        <h2>Capsule Lavazza Firma</h2>
-        <p>Un sistema pensato per ambienti di lavoro esigenti. Scopri le miscele disponibili.</p>
+        <span class="eyebrow">Confronto rapido</span>
+        <h2>Tutte le 9 bevande a colpo d'occhio</h2>
+        <p>Scegli la miscela giusta per ogni esigenza.</p>
       </div>
-      <div class="products">
-        <div class="product-card">
-          <div class="product-card-img">
-            <img src="/assets/sermatic/capsule-lavazza/photo_5827889339701507361_y.webp" alt="Lavazza Firma Intenso" loading="lazy">
-          </div>
-          <div class="product-card-body">
-            <h3>Intenso</h3>
-            <p>Miscela intensa e corposa, con note di cioccolato fondente e una crema densa. Il preferito di chi ama il caffè deciso.</p>
-          </div>
-        </div>
-        <div class="product-card">
-          <div class="product-card-img">
-            <img src="/assets/sermatic/capsule-lavazza/photo_5827889339701507362_y.webp" alt="Lavazza Firma Delicato" loading="lazy">
-          </div>
-          <div class="product-card-body">
-            <h3>Delicato</h3>
-            <p>Un blend equilibrato con note dolci e una leggerezza che conquista. Perfetto per chi preferisce un gusto morbido.</p>
-          </div>
-        </div>
-        <div class="product-card">
-          <div class="product-card-img">
-            <img src="/assets/sermatic/capsule-lavazza/photo_5827889339701507363_y.webp" alt="Lavazza Firma Gran Espresso" loading="lazy">
-          </div>
-          <div class="product-card-body">
-            <h3>Gran Espresso</h3>
-            <p>L'espresso italiano per eccellenza. Aroma intenso, crema persistente, gusto che non dimentichi.</p>
-          </div>
-        </div>
-        <div class="product-card">
-          <div class="product-card-img">
-            <img src="/assets/sermatic/capsule-lavazza/photo_5827889339701507364_y.webp" alt="Lavazza Firma Decaffeinato" loading="lazy">
-          </div>
-          <div class="product-card-body">
-            <span class="product-tag">Decaffeinato</span>
-            <h3>Decaffeinato</h3>
-            <p>Tutto il gusto Lavazza senza caffeina. Per chi vuole godere di una tazza in qualsiasi momento.</p>
-          </div>
-        </div>
-        <div class="product-card">
-          <div class="product-card-img">
-            <img src="/assets/sermatic/capsule-lavazza/photo_5827889339701507365_y.webp" alt="Lavazza Firma Espresso" loading="lazy">
-          </div>
-          <div class="product-card-body">
-            <h3>Espresso Barista</h3>
-            <p>La miscela preferita dai professionisti. Crema abbondante e aroma complesso per un risultato da bar.</p>
-          </div>
-        </div>
-        <div class="product-card">
-          <div class="product-card-img">
-            <img src="/assets/sermatic/capsule-lavazza/photo_5827889339701507366_y.webp" alt="Lavazza Firma Lungo" loading="lazy">
-          </div>
-          <div class="product-card-body">
-            <h3>Lungo</h3>
-            <p>Un caffè allungato, delicato e aromatico. Ideale per chi ama una tazza grande senza perdere di gusto.</p>
-          </div>
-        </div>
-        <div class="product-card">
-          <div class="product-card-img">
-            <img src="/assets/sermatic/capsule-lavazza/photo_5827889339701507367_y.webp" alt="Lavazza Firma Espresso" loading="lazy">
-          </div>
-          <div class="product-card-body">
-            <h3>Espresso Classico</h3>
-            <p>L'equilibrio perfetto tra corpo e acidità. Una miscela versatile per tutti i momenti della giornata.</p>
-          </div>
-        </div>
-        <div class="product-card">
-          <div class="product-card-img">
-            <img src="/assets/sermatic/capsule-lavazza/photo_5827889339701507368_y.webp" alt="Lavazza Firma Cappuccino" loading="lazy">
-          </div>
-          <div class="product-card-body">
-            <h3>Cappuccino</h3>
-            <p>La combinazione perfetta di caffè e latte vellutato. Un cappuccino di qualità a portata di tasto.</p>
-          </div>
-        </div>
-      </div>
-
-      <div style="margin-top: 48px; padding: 32px; background: var(--bg-2); border-radius: var(--r-lg);">
-        <p style="font-size:14px; color:var(--text-2); text-align:center;">
-          La gamma Lavazza Firma è in continuo aggiornamento. Contattaci per conoscere tutti i prodotti e le miscele disponibili.
-        </p>
+      <div class="table-scroll">
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th>Miscela</th>
+              <th>Categoria</th>
+              <th>Intensità</th>
+              <th>Note aromatiche</th>
+              <th>Confezione</th>
+              <th>Caffeina</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Espresso Corposo</strong></td><td>Caffè</td><td>8 / 13</td><td>Nocciola, Miele</td><td>48 cps</td><td>Sì</td></tr>
+            <tr><td><strong>Espresso Gustoso</strong></td><td>Caffè</td><td>9 / 13</td><td>Cioccolato latte, Nocciola</td><td>48 cps</td><td>Sì</td></tr>
+            <tr><td><strong>Espresso Aromatico</strong></td><td>Caffè</td><td>9 / 13</td><td>Frutta secca, Dolce</td><td>48 cps</td><td>Sì</td></tr>
+            <tr><td><strong>Qualità Oro</strong></td><td>Caffè</td><td>7 / 13</td><td>Dolce, Delicato</td><td>48 cps</td><td>Sì</td></tr>
+            <tr><td><strong>Espresso Forte</strong></td><td>Caffè</td><td>10 / 13</td><td>Cacao, Caramello</td><td>48 cps</td><td>Sì</td></tr>
+            <tr><td><strong>Espresso Decaffeinato</strong></td><td>Caffè</td><td>6 / 13</td><td>Cioccolato</td><td>24 cps</td><td class="badge-deca">Zero</td></tr>
+            <tr><td><strong>Tè al Limone</strong></td><td class="badge-alt">Alternativa</td><td>—</td><td>Limone, Agrumi</td><td>24 cps</td><td class="badge-deca">Zero</td></tr>
+            <tr><td><strong>Ginseng</strong></td><td class="badge-alt">Alternativa</td><td>—</td><td>Cremoso, Dolce</td><td>24 cps</td><td>Bassa</td></tr>
+            <tr><td><strong>Orzo</strong></td><td class="badge-alt">Alternativa</td><td>—</td><td>Orzo tostato</td><td>24 cps</td><td class="badge-deca">Zero</td></tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </section>
 
-  <section class="bg-dark">
+  <!-- PERCHÉ SCEGLIERLE -->
+  <section class="bg-2">
+    <div class="section-inner">
+      <div class="section-head centered">
+        <span class="eyebrow">I vantaggi</span>
+        <h2>Perché scegliere Lavazza Firma per il tuo ufficio</h2>
+      </div>
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <div class="benefit-icon" aria-hidden="true">🏆</div>
+          <h3>Brand di fiducia dal 1895</h3>
+          <p>Lavazza è sinonimo di qualità italiana nel caffè da oltre 125 anni. La Firma è la sua linea dedicata agli ambienti professionali più esigenti.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon" aria-hidden="true">☕</div>
+          <h3>9 bevande, una macchina</h3>
+          <p>Un'unica macchina compatta eroga tutti i 9 prodotti. Caffè, tè, ginseng e orzo disponibili per tutti i colleghi senza cambiare attrezzatura.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon" aria-hidden="true">🏢</div>
+          <h3>Comodato d'uso gratuito</h3>
+          <p>La macchina Lavazza Firma è disponibile in comodato d'uso per aziende che sottoscrivono un accordo di fornitura continuativa di capsule.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon" aria-hidden="true">🛡️</div>
+          <h3>Capsule in alluminio sigillato</h3>
+          <p>Le capsule Lavazza Firma in alluminio preservano aroma e freschezza fino al momento dell'erogazione, garantendo la stessa qualità dalla prima all'ultima della confezione.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon" aria-hidden="true">⚡</div>
+          <h3>Pronto in 30 secondi</h3>
+          <p>Le macchine Lavazza Firma raggiungono la temperatura ottimale rapidamente. Espresso pronto in 30 secondi dall'accensione — nessuna attesa in ufficio.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon" aria-hidden="true">📦</div>
+          <h3>Consegna a Garbagnate e Milano</h3>
+          <p>RoMimatic consegna direttamente le capsule nella tua azienda a Garbagnate Milanese e in tutta la provincia di Milano con forniture programmate.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section>
+    <div class="section-inner" style="max-width:800px;">
+      <div class="section-head">
+        <span class="eyebrow">Domande frequenti</span>
+        <h2>Tutto quello che vuoi sapere sulle capsule Lavazza Firma</h2>
+      </div>
+      <div class="faq-list">
+
+        <div class="faq-item">
+          <h3>Le capsule Lavazza Firma sono compatibili con le macchinette Nespresso o altri sistemi?</h3>
+          <p>No. Le capsule Lavazza Firma utilizzano un formato proprietario e sono compatibili esclusivamente con le macchine della linea Lavazza Firma (come A Modo Mio Firma). Non funzionano con macchine Nespresso, Dolce Gusto o altri sistemi. Se hai già una macchina di altro tipo, puoi valutare il sistema Caffè d'Italia, che distribuiamo anch'esso.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>È possibile avere la macchina Lavazza Firma in comodato d'uso gratuito?</h3>
+          <p>Sì. RoMimatic offre le macchine Lavazza Firma in comodato d'uso gratuito per aziende, studi professionali e uffici che sottoscrivono un accordo di fornitura continuativa di capsule. Non è richiesto alcun acquisto iniziale della macchina. Contattaci per valutare il consumo minimo e le condizioni del comodato.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Qual è la differenza tra Espresso Corposo, Gustoso, Aromatico e Forte?</h3>
+          <p><strong>Espresso Corposo</strong> (intensità 8) ha note di nocciola e miele, perfetto per un espresso classico e bilanciato. <strong>Espresso Gustoso</strong> (9) è dolce-amaro con cioccolato al latte, ideale per chi cerca armonia. <strong>Espresso Aromatico</strong> (9) ha un profilo più fruttato con frutta secca e finale dolce persistente. <strong>Espresso Forte</strong> (10) è il più intenso, con crema densa e retrogusto di cacao e caramello da tostatura prolungata.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Ci sono capsule Lavazza Firma senza caffeina?</h3>
+          <p>Sì. <strong>Espresso Decaffeinato</strong> (intensità 6/13) è l'opzione senza caffeina della gamma: bilanciato con note di cioccolato e crema compatta. Anche <strong>Tè al Limone</strong> e <strong>Orzo</strong> sono naturalmente privi di caffeina. Il <strong>Ginseng</strong> contiene solo una piccola quantità di caffeina. In totale, 3 su 9 bevande hanno caffeina zero e 1 ha caffeina molto bassa.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Come posso ordinare le capsule Lavazza Firma a Garbagnate Milanese?</h3>
+          <p>RoMimatic consegna le capsule Lavazza Firma direttamente nelle aziende di Garbagnate Milanese e della provincia di Milano. Puoi contattarci al <a href="tel:+390299574852">02 99574852</a>, via email a <a href="mailto:info@romimatic.it">info@romimatic.it</a>, oppure compilare il modulo di contatto. Organizziamo forniture programmate su misura per le esigenze della tua azienda.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="bg-2">
     <div class="section-inner">
       <div class="cta-banner">
-        <span class="eyebrow">Richiedi informazioni</span>
+        <span class="eyebrow">Ordina oggi</span>
         <h2>Porta Lavazza Firma nel tuo ufficio</h2>
-        <p>Contattaci per un preventivo personalizzato e la consegna delle capsule direttamente da te.</p>
-        <a href="/contatti.html" class="btn btn-accent">Contattaci</a>
+        <p>Contattaci per un preventivo gratuito. Macchina in comodato e capsule con consegna diretta a Garbagnate Milanese e provincia di Milano.</p>
+        <div style="display:flex; gap:12px; justify-content:center; flex-wrap:wrap;">
+          <a href="/contatti.html" class="btn btn-dark">Richiedi preventivo</a>
+          <a href="/caffe/macchine-lavazza-firma.html" class="btn btn-outline">Vedi le macchine</a>
+        </div>
       </div>
     </div>
   </section>
-
 
   </main>
 
