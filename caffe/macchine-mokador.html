@@ -66,49 +66,7 @@
     .spec-table td:first-child { font-weight: 600; color: var(--text); width: 46%; }
     .spec-table tr:last-child td { border-bottom: none; }
 
-    .bev-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-      margin-top: 12px;
-    }
-    .bev-card {
-      background: var(--bg);
-      border: 1px solid var(--border);
-      border-radius: var(--r-lg);
-      overflow: hidden;
-      text-align: center;
-      flex: 0 0 calc(20% - 16px);
-      min-width: 140px;
-      transition: transform .15s, box-shadow .15s;
-    }
-    .bev-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
-    .bev-card img { width: 100%; aspect-ratio: 1; object-fit: contain; display: block; background: var(--bg-2); padding: 14px; }
-    .bev-card-name { font-size: 12px; font-weight: 600; padding: 10px 10px 12px; color: var(--text); line-height: 1.3; }
-
-    .bev-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      justify-content: center;
-      margin-top: 20px;
-    }
-    .bev-tag {
-      background: var(--bg-2);
-      border: 1px solid var(--border);
-      border-radius: 100px;
-      padding: 6px 14px;
-      font-size: 13px;
-      color: var(--text-2);
-      font-weight: 500;
-    }
-
     .mokador-logo { height: 42px; width: auto; display: block; margin-bottom: 20px; }
-
-    @media (max-width: 640px) {
-      .bev-card { flex: 0 0 calc(50% - 10px); min-width: 0; }
-    }
   </style>
   <link rel="icon" href="/favicon.png" type="image/png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -151,7 +109,7 @@
         <!-- DADO OPTIMA -->
         <div class="mokador-card">
           <div class="mokador-card-img">
-            <img src="/assets/sermatic/cialde/ELLE_SITO_400x400-px.webp" alt="Macchina a capsule Mokador Dado Optima — vista frontale" fetchpriority="high">
+            <img src="/assets/sermatic/macchine-mokador/dado-optima.jpg" alt="Macchina a capsule Mokador Dado Optima — vista frontale" fetchpriority="high">
           </div>
           <div class="mokador-card-body">
             <div>
@@ -176,7 +134,7 @@
         <!-- TATA -->
         <div class="mokador-card">
           <div class="mokador-card-img">
-            <img src="/assets/sermatic/cialde/elle_img3_1.webp" alt="Macchina a capsule Mokador Tata — design compatto per ufficio" loading="lazy">
+            <img src="/assets/sermatic/macchine-mokador/tata.jpg" alt="Macchina a capsule Mokador Tata — design compatto per ufficio" loading="lazy">
           </div>
           <div class="mokador-card-body">
             <div>
@@ -252,57 +210,6 @@
     </div>
   </section>
 
-  <!-- BEVANDE DISPONIBILI -->
-  <section class="bg-2" id="bevande">
-    <div class="section-inner">
-      <div class="section-head centered">
-        <span class="eyebrow">Varietà di capsule</span>
-        <h2>14 bevande in un solo sistema</h2>
-        <p>Caffè, infusi, solubili e specialità: le capsule Mokador coprono ogni momento della giornata e ogni preferenza del palato, dal classico espresso al tè deteinato.</p>
-      </div>
-
-      <!-- Capsule con foto -->
-      <div class="bev-grid">
-        <div class="bev-card">
-          <img src="/assets/sermatic/cialde/aroma-top.webp" alt="Capsule Mokador Aroma Top" loading="lazy">
-          <div class="bev-card-name">Aroma Top</div>
-        </div>
-        <div class="bev-card">
-          <img src="/assets/sermatic/cialde/crema.webp" alt="Capsule Mokador Crema" loading="lazy">
-          <div class="bev-card-name">Crema</div>
-        </div>
-        <div class="bev-card">
-          <img src="/assets/sermatic/cialde/piu-crema.webp" alt="Capsule Mokador Più Crema" loading="lazy">
-          <div class="bev-card-name">Più Crema</div>
-        </div>
-        <div class="bev-card">
-          <img src="/assets/sermatic/cialde/arabica-100.webp" alt="Capsule Mokador 100% Arabica" loading="lazy">
-          <div class="bev-card-name">100% Arabica</div>
-        </div>
-        <div class="bev-card">
-          <img src="/assets/sermatic/cialde/decaffeinato.webp" alt="Capsule Mokador Decaffeinato" loading="lazy">
-          <div class="bev-card-name">Deca</div>
-        </div>
-      </div>
-
-      <!-- Resto delle bevande come tag -->
-      <div class="bev-list">
-        <span class="bev-tag">Big Cup</span>
-        <span class="bev-tag">Frutti di Bosco</span>
-        <span class="bev-tag">Tè Limone</span>
-        <span class="bev-tag">Tè Deteinato</span>
-        <span class="bev-tag">Gianduia</span>
-        <span class="bev-tag">Ginseng</span>
-        <span class="bev-tag">Orzo</span>
-        <span class="bev-tag">Camomilla</span>
-        <span class="bev-tag">Bevanda Bianca</span>
-        <span class="bev-tag">Mou</span>
-      </div>
-
-      <p style="text-align: center; font-size: 13px; color: var(--text-3); margin-top: 20px;">Le capsule Mokador sono compatibili sia con il Dado Optima che con la Tata.</p>
-    </div>
-  </section>
-
   <!-- PERCHÉ MOKADOR -->
   <section id="perche-mokador">
     <div class="section-inner">
@@ -335,7 +242,7 @@
           </div>
         </div>
         <div class="split-img">
-          <img src="/assets/sermatic/cialde/elle_sito_1100x600-px_1571396155.webp" alt="Macchina Mokador — design italiano per ufficio" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:var(--r-lg);">
+          <img src="/assets/sermatic/macchine-mokador/dado-optima.jpg" alt="Mokador Dado Optima — macchina a capsule Made in Italy" loading="lazy" style="width:100%;height:100%;object-fit:contain;background:var(--bg-2);border-radius:var(--r-lg);padding:20px;">
         </div>
       </div>
     </div>
