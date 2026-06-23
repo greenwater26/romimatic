@@ -202,13 +202,17 @@ function initNav() {
     e.stopPropagation();
   });
 
-  // Mobile: toggle sub-menus on click (items with chevron)
+  // Mobile: primo tap apre il sottomenu, secondo tap segue il link
   menu.querySelectorAll('.nav-link').forEach(link => {
     if (!link.querySelector('.chev')) return;
     link.addEventListener('click', e => {
       if (window.innerWidth > 960) return;
-      e.preventDefault();
-      link.closest('.nav-item').classList.toggle('is-open');
+      const item = link.closest('.nav-item');
+      if (!item.classList.contains('is-open')) {
+        e.preventDefault();
+        item.classList.add('is-open');
+      }
+      // se già aperto, il click naviga normalmente
     });
   });
 
@@ -216,8 +220,12 @@ function initNav() {
     if (!link.querySelector('.chev-r')) return;
     link.addEventListener('click', e => {
       if (window.innerWidth > 960) return;
-      e.preventDefault();
-      link.closest('.dropdown-item').classList.toggle('is-open');
+      const item = link.closest('.dropdown-item');
+      if (!item.classList.contains('is-open')) {
+        e.preventDefault();
+        item.classList.add('is-open');
+      }
+      // se già aperto, il click naviga normalmente
     });
   });
 
