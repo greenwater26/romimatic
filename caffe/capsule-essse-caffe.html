@@ -27,17 +27,19 @@
   </script>
   <link rel="stylesheet" href="/css/style.css">
   <style>
-    /* Grid capsule */
+    /* Grid capsule — riga unica con scroll orizzontale */
     .caps-grid {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+      flex-wrap: nowrap;
+      overflow-x: auto;
       gap: 24px;
       margin-top: 48px;
+      -webkit-overflow-scrolling: touch;
+      padding-bottom: 8px;
+      scrollbar-width: thin;
     }
     .cap-card {
-      flex: 0 0 calc(33.333% - 16px);
-      min-width: 260px;
+      flex: 0 0 260px;
       background: var(--bg);
       border: 1px solid var(--border);
       border-radius: var(--r-lg);
@@ -47,8 +49,6 @@
       transition: box-shadow 0.2s, transform 0.2s;
     }
     .cap-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
-    @media (max-width: 860px) { .cap-card { flex: 0 0 calc(50% - 12px); } }
-    @media (max-width: 540px) { .cap-card { flex: 0 0 100%; min-width: auto; } }
 
     .cap-card-img {
       width: 100%;
@@ -223,7 +223,7 @@
           </div>
         </div>
         <div class="split-img">
-          <img src="/assets/sermatic/capsule-essse/capsule-essse-caffe.jpg" alt="Capsule Essse Caffè Sistema Espresso — 7 miscele" fetchpriority="high" style="width:100%;height:100%;object-fit:cover;border-radius:var(--r-lg);">
+          <img src="/assets/sermatic/macchine-essse/s12-kit.png" alt="Essse Caffè S.12 con kit capsule Sistema Espresso" fetchpriority="high" style="width:100%;height:100%;object-fit:contain;border-radius:var(--r-lg);background:var(--bg-2);">
         </div>
       </div>
     </div>
@@ -579,7 +579,7 @@
           </div>
         </div>
         <div class="split-img">
-          <img src="/assets/sermatic/macchine-essse/s12.jpg" alt="Macchina Essse Caffè S.12 — compatibile con le 7 capsule Sistema Espresso" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:var(--r-lg);">
+          <img src="/assets/sermatic/macchine-essse/s12-real.jpg" alt="Macchina Essse Caffè S.12 — compatibile con le 7 capsule Sistema Espresso" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:var(--r-lg);">
         </div>
       </div>
     </div>
