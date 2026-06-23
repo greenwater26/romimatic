@@ -78,12 +78,17 @@
 
     /* Sub-system cards all'interno di una sezione */
     .sub-cards {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      display: flex;
+      flex-wrap: nowrap;
       gap: 16px;
       margin-top: 24px;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      padding-bottom: 8px;
+      scrollbar-width: thin;
     }
     .sub-card {
+      flex: 0 0 210px;
       border: 1.5px solid var(--border);
       border-radius: var(--r);
       overflow: hidden;
@@ -127,14 +132,19 @@
       margin-top: 4px;
     }
 
-    /* Macchine section — 3 column cards */
+    /* Macchine section — horizontal scroll row */
     .macchine-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      display: flex;
+      flex-wrap: nowrap;
       gap: 24px;
       margin-top: 48px;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      padding-bottom: 8px;
+      scrollbar-width: thin;
     }
     .macchina-card {
+      flex: 0 0 280px;
       border: 1px solid var(--border);
       border-radius: var(--r-lg);
       overflow: hidden;
@@ -207,16 +217,10 @@
     .co-step h3 { font-size: 15px; font-weight: 600; margin-bottom: 4px; }
     .co-step p { font-size: 13px; color: var(--text-2); line-height: 1.55; }
 
-    @media (max-width: 1000px) {
-      .macchine-grid { grid-template-columns: 1fr 1fr; }
-    }
     @media (max-width: 860px) {
-      .macchine-grid { grid-template-columns: 1fr; }
       .comodato-steps { grid-template-columns: 1fr; }
-      .sub-cards { grid-template-columns: 1fr 1fr; }
     }
     @media (max-width: 640px) {
-      .sub-cards { grid-template-columns: 1fr; }
       .stats-strip { flex-direction: column; }
       .stats-strip .st { border-right: none; border-bottom: 1px solid var(--border); }
       .stats-strip .st:last-child { border-bottom: none; }
@@ -417,7 +421,7 @@
         </div>
 
         <div class="macchina-card">
-          <img src="/assets/sermatic/macchine-lavazza/lavazza4890.webp" alt="Macchine Lavazza Firma" class="macchina-card-img" loading="lazy">
+          <img src="/assets/sermatic/macchine-cdi/18000319-d-inovy.webp" alt="Lavazza Firma Inovy — macchina per ufficio" class="macchina-card-img" loading="lazy">
           <div class="macchina-card-body">
             <img src="/assets/sermatic/loghi/Lavazza-Logo.wine_-scaled.webp" alt="Lavazza">
             <h3>Macchine Lavazza Firma</h3>
@@ -530,6 +534,10 @@
         <a href="/caffe/capsule-mokador.html" class="brand-logo-item">
           <img src="/assets/sermatic/loghi/logo-mokador-large_1200x.webp" alt="Mokador — capsule e cialde ESE 44mm" loading="lazy">
           <span>Capsule &amp; cialde ESE</span>
+        </a>
+        <a href="/caffe/capsule-essse-caffe.html" class="brand-logo-item">
+          <img src="/assets/sermatic/loghi/essse-caffe-logo.svg" alt="Essse Caffè — sistema espresso" loading="lazy">
+          <span>Sistema Espresso</span>
         </a>
       </div>
     </div>
