@@ -302,3 +302,62 @@ function injectCoffeeDeco() {
 
 document.addEventListener('DOMContentLoaded', injectComponents);
 document.addEventListener('DOMContentLoaded', injectCoffeeDeco);
+document.addEventListener('DOMContentLoaded', initCookieBanner);
+
+function initCookieBanner() {
+  if (localStorage.getItem('cookie-notice-dismissed')) return;
+
+  const style = document.createElement('style');
+  style.textContent = `
+    #cookie-banner {
+      position: fixed;
+      bottom: 0; left: 0; right: 0;
+      z-index: 9999;
+      background: var(--bg, #fff);
+      border-top: 1px solid var(--border, #e5e7eb);
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      font-size: 13px;
+      color: var(--text-2, #555);
+      box-shadow: 0 -4px 16px rgba(0,0,0,.07);
+    }
+    #cookie-banner p { margin: 0; flex: 1; line-height: 1.5; }
+    #cookie-banner a { color: var(--accent, #9b0b01); text-decoration: underline; }
+    #cookie-dismiss {
+      flex-shrink: 0;
+      background: var(--text, #111);
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      padding: 8px 20px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    #cookie-dismiss:hover { opacity: .85; }
+    @media (max-width: 480px) {
+      #cookie-banner { flex-direction: column; align-items: flex-start; gap: 12px; }
+      #cookie-dismiss { width: 100%; text-align: center; }
+    }
+  `;
+  document.head.appendChild(style);
+
+  const banner = document.createElement('div');
+  banner.id = 'cookie-banner';
+  banner.setAttribute('role', 'region');
+  banner.setAttribute('aria-label', 'Avviso cookie');
+  banner.innerHTML = `
+    <p>Questo sito utilizza solo <strong>cookie tecnici</strong> necessari al suo funzionamento. Non vengono usati cookie di profilazione o marketing. <a href="/cookie.html">Cookie Policy</a></p>
+    <button id="cookie-dismiss">Ho capito</button>
+  `;
+  document.body.appendChild(banner);
+
+  document.getElementById('cookie-dismiss').addEventListener('click', () => {
+    localStorage.setItem('cookie-notice-dismissed', '1');
+    banner.remove();
+  });
+}
