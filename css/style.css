@@ -96,7 +96,7 @@ button { font-family: var(--font); }
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: flex-start;
   gap: 26px;
 }
 .topbar-link {
@@ -759,6 +759,6 @@ footer {
 
 @media (max-width: 600px) {
   .topbar { font-size: 12px; }
-  .topbar-inner { justify-content: center; gap: 18px; padding: 0 16px; }
+  .topbar-inner { gap: 18px; padding: 0 16px; }
   .topbar-link svg { width: 14px; height: 14px; }
 }

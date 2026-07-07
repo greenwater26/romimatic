@@ -124,10 +124,6 @@ const FOOTER_HTML = `
             <li>Lecco e provincia</li>
           </ul>
         </div>
-        <div class="footer-social">
-          <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Seguici su Facebook"><span aria-hidden="true">f</span></a>
-          <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="Seguici su LinkedIn"><span aria-hidden="true">in</span></a>
-        </div>
       </div>
 
       <div class="footer-col">
