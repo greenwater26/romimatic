@@ -14,6 +14,7 @@
   --border:    #d2d2d7;
   --font:      -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
   --nav-h:     64px;
+  --topbar-h:  36px;
   --r:         12px;
   --r-lg:      20px;
   --t:         0.25s cubic-bezier(0.4, 0, 0.2, 1);
@@ -71,10 +72,46 @@ button { font-family: var(--font); }
 }
 
 /* ── Nav ── */
-.navbar {
+/* Sticky applicato a #nav-root (figlio diretto di <body>): l'intero header
+   — barra contatti + navbar — resta fisso in cima durante lo scroll.
+   Nota: lo sticky NON va sulla .navbar perché il suo genitore la avvolge
+   esattamente e lo scroll se la porterebbe via. */
+#nav-root {
   position: sticky;
   top: 0;
   z-index: 1000;
+}
+
+/* ── Barra contatti (sopra la navbar) ── */
+.topbar {
+  background: var(--accent);
+  color: #fff;
+  height: var(--topbar-h);
+  font-size: 13px;
+}
+.topbar-inner {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 26px;
+}
+.topbar-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: #fff;
+  font-weight: 500;
+  transition: opacity var(--t);
+}
+.topbar-link:hover { opacity: 0.82; }
+.topbar-link:focus-visible { outline-color: #fff; }
+.topbar-link svg { width: 15px; height: 15px; flex-shrink: 0; }
+
+.navbar {
   height: var(--nav-h);
   background: rgba(255,255,255,0.85);
   backdrop-filter: saturate(180%) blur(20px);
@@ -215,8 +252,8 @@ button { font-family: var(--font); }
 
 /* ── Hero ── */
 .hero {
-  min-height: calc(100vh - var(--nav-h));
-  min-height: calc(100svh - var(--nav-h));
+  min-height: calc(100vh - var(--nav-h) - var(--topbar-h));
+  min-height: calc(100svh - var(--nav-h) - var(--topbar-h));
   display: flex;
   align-items: center;
   justify-content: center;
@@ -653,7 +690,7 @@ footer {
     flex-direction: column;
     align-items: stretch;
     position: fixed;
-    top: var(--nav-h);
+    top: calc(var(--topbar-h) + var(--nav-h));
     left: 0; right: 0; bottom: 0;
     background: rgba(255,255,255,0.98);
     padding: 16px 0;
@@ -718,4 +755,10 @@ footer {
   .form-grid { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; gap: 28px; }
   .footer-bottom { flex-direction: column; gap: 10px; text-align: center; }
+}
+
+@media (max-width: 600px) {
+  .topbar { font-size: 12px; }
+  .topbar-inner { justify-content: center; gap: 18px; padding: 0 16px; }
+  .topbar-link svg { width: 14px; height: 14px; }
 }
