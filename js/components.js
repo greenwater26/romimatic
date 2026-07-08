@@ -69,9 +69,6 @@ const NAV_HTML = `
         </div>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/prodotti-eccellenza.html">Prodotti d'eccellenza</a>
-      </li>
-      <li class="nav-item">
         <a class="nav-link external" href="https://www.greenwateritalia.it" target="_blank" rel="noopener noreferrer">
           Acqua ↗
         </a>
@@ -113,7 +110,7 @@ const FOOTER_HTML = `
         <a href="/" class="nav-logo" style="margin-bottom:0;">
           <img src="/assets/img/logo-s.webp" alt="RoMimatic" style="height:48px; width:auto;">
         </a>
-        <p>Dal 1984 portiamo qualità e gusto nelle aziende e nelle case. Caffè di eccellenza e prodotti artigianali calabresi.</p>
+        <p>Dal 1984 portiamo qualità e gusto nelle aziende e nelle case, con caffè di eccellenza e soluzioni complete per la pausa caffè.</p>
         <div class="footer-zone">
           <strong>Zone servite</strong>
           <ul>
@@ -141,7 +138,6 @@ const FOOTER_HTML = `
         <h4>Azienda</h4>
         <ul>
           <li><a href="/chi-siamo.html">Chi siamo</a></li>
-          <li><a href="/prodotti-eccellenza.html">Prodotti d'eccellenza</a></li>
           <li><a href="/blog.html">Blog</a></li>
           <li><a href="/contatti.html">Contatti</a></li>
         </ul>

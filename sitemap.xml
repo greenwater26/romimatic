@@ -4,7 +4,7 @@
   <!-- Home -->
   <url>
     <loc>https://romimatic.it/</loc>
-    <lastmod>2025-06-21</lastmod>
+    <lastmod>2026-07-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -12,25 +12,19 @@
   <!-- Pagine principali -->
   <url>
     <loc>https://romimatic.it/chi-siamo.html</loc>
-    <lastmod>2025-06-21</lastmod>
+    <lastmod>2026-07-08</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://romimatic.it/contatti.html</loc>
-    <lastmod>2025-06-21</lastmod>
+    <lastmod>2026-07-08</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://romimatic.it/prodotti-eccellenza.html</loc>
-    <lastmod>2025-06-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://romimatic.it/blog.html</loc>
-    <lastmod>2025-06-21</lastmod>
+    <lastmod>2026-07-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -193,49 +187,13 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://romimatic.it/blog/il-bergamotto.html</loc>
-    <lastmod>2025-06-21</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://romimatic.it/blog/agrumi-alleati-salute.html</loc>
-    <lastmod>2025-06-21</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://romimatic.it/blog/caffe-nelle-diverse-zone-ditalia.html</loc>
     <lastmod>2025-06-21</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://romimatic.it/blog/cipolla-rossa-tropea.html</loc>
-    <lastmod>2025-06-21</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://romimatic.it/blog/finocchietto-selvatico-calabria.html</loc>
-    <lastmod>2025-06-21</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://romimatic.it/blog/james-hoffmann-mondo-caffe.html</loc>
-    <lastmod>2025-06-21</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://romimatic.it/blog/marmellata-di-limone.html</loc>
-    <lastmod>2025-06-21</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://romimatic.it/blog/olio-extravergine-artigianale.html</loc>
     <lastmod>2025-06-21</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
