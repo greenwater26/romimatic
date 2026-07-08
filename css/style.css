@@ -364,6 +364,8 @@ section { padding: 96px 24px; }
 /* ── Cards grid ── */
 .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 20px; }
 .cards-4 { grid-template-columns: repeat(4, 1fr); }
+/* Due sole card: colonne a larghezza contenuta e centrate nella riga */
+.cards-2 { grid-template-columns: repeat(2, minmax(280px, 380px)); justify-content: center; }
 .card {
   background: var(--bg-2);
   border-radius: var(--r-lg);
