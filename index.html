@@ -44,6 +44,19 @@
     .bean.b9  { width: 38px;  top: 88%; left:  8%;  opacity:.75; transform: rotate(35deg); }
     .bean.b10 { width: 42px;  top: 86%; right: 6%;  opacity:.75; transform: rotate(-20deg); }
 
+    /* Gocce d'acqua — alla pari dei chicchi: stessa opacità, solo sui bordi */
+    .coffee-deco .drop { position: absolute; height: auto; }
+    .drop.d1  { width: 40px;  top: 15%; left:  6%;  opacity:.75; transform: rotate(-10deg); }
+    .drop.d2  { width: 34px;  top:  6%; right: 8%;  opacity:.75; transform: rotate(12deg); }
+    .drop.d3  { width: 50px;  top: 40%; left:  4%;  opacity:.75; transform: rotate(8deg); }
+    .drop.d4  { width: 36px;  top: 70%; left:  1%;  opacity:.75; transform: rotate(-6deg); }
+    .drop.d5  { width: 44px;  top: 90%; left: 14%;  opacity:.75; transform: rotate(14deg); }
+    .drop.d6  { width: 46px;  top: 24%; right: 4%;  opacity:.75; transform: rotate(-14deg); }
+    .drop.d7  { width: 38px;  top: 54%; right: 6%;  opacity:.75; transform: rotate(10deg); }
+    .drop.d8  { width: 54px;  top: 80%; right: 3%;  opacity:.75; transform: rotate(-8deg); }
+    .drop.d9  { width: 30px;  top: 44%; left:  9%;  opacity:.75; transform: rotate(20deg); }
+    .drop.d10 { width: 32px;  top: 94%; right: 14%; opacity:.75; transform: rotate(-18deg); }
+
     /* Sezione caffè con decoro laterale */
     .section-caffe-wrap { position: relative; overflow: hidden; }
     .section-caffe-wrap .caffe-deco-bg {
@@ -217,6 +230,15 @@
                   stroke="#3d2b1f" stroke-width="3"
                   fill="none" stroke-linecap="round" opacity=".70"/>
           </symbol>
+          <!-- Goccia d'acqua: richiama la divisione Green Water Italia -->
+          <symbol id="goccia" viewBox="0 0 60 100">
+            <path d="M30 6 C30 6 9 42 9 63 a21 21 0 0 0 42 0 C51 42 30 6 30 6 Z"
+                  fill="#4aa8d8"/>
+            <!-- Riflesso di luce sulla goccia -->
+            <path d="M22 58 a10 14 0 0 1 6 -16"
+                  stroke="#eaf7ff" stroke-width="3"
+                  fill="none" stroke-linecap="round" opacity=".65"/>
+          </symbol>
         </defs>
       </svg>
 
@@ -230,12 +252,24 @@
       <svg class="bean b8"><use href="#chicco"/></svg>
       <svg class="bean b9"><use href="#chicco"/></svg>
       <svg class="bean b10"><use href="#chicco"/></svg>
+
+      <!-- Gocce d'acqua decorative, alla pari dei chicchi -->
+      <svg class="drop d1"><use href="#goccia"/></svg>
+      <svg class="drop d2"><use href="#goccia"/></svg>
+      <svg class="drop d3"><use href="#goccia"/></svg>
+      <svg class="drop d4"><use href="#goccia"/></svg>
+      <svg class="drop d5"><use href="#goccia"/></svg>
+      <svg class="drop d6"><use href="#goccia"/></svg>
+      <svg class="drop d7"><use href="#goccia"/></svg>
+      <svg class="drop d8"><use href="#goccia"/></svg>
+      <svg class="drop d9"><use href="#goccia"/></svg>
+      <svg class="drop d10"><use href="#goccia"/></svg>
     </div>
 
     <div class="hero-inner">
       <span class="eyebrow">Dal 1984</span>
       <h1>La qualità<br>che si <em>assapora</em></h1>
-      <p class="hero-sub">Caffè d'eccellenza e macchine professionali per aziende, uffici e casa, direttamente a te.</p>
+      <p class="hero-sub">Caffè d'eccellenza, macchine professionali e soluzioni per il trattamento dell'acqua, per aziende, uffici e casa.</p>
       <div class="hero-actions">
         <a href="/caffe.html" class="btn btn-dark">Scopri il caffè</a>
         <a href="https://wa.me/393489897098?text=Ciao%20RoMimatic%2C%20vorrei%20maggiori%20informazioni" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp" aria-label="Scrivici su WhatsApp">
