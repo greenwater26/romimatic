@@ -20,20 +20,34 @@
     .hero { position: relative; overflow: hidden; }
     .hero-inner { position: relative; z-index: 1; }
 
-    /* Due metà nette a tutta larghezza con foto di sfondo */
+    /* Due metà a tutta larghezza con foto di sfondo, sovrapposte al centro
+       per ottenere una transizione morbida invece di una linea netta */
     .hero-split { position: absolute; inset: 0; z-index: 0; }
     .hero-half {
       position: absolute;
       left: 0;
       width: 100%;
-      height: 50%;
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
     }
     /* background-color = fallback se la foto non è ancora presente */
-    .hero-half-coffee { top: 0;    background-color: #3d2b1f; background-image: url('/assets/hero/hero-chicchi.jpg'); }
-    .hero-half-water  { bottom: 0; background-color: #cfe8f5; background-image: url('/assets/hero/hero-acqua.jpeg'); }
+    .hero-half-coffee {
+      top: 0;
+      height: 60%;
+      z-index: 1;
+      background-color: #3d2b1f;
+      background-image: url('/assets/hero/hero-chicchi.jpg');
+      /* sfuma il bordo inferiore per fondersi con l'acqua sottostante */
+      -webkit-mask-image: linear-gradient(to bottom, #000 62%, transparent 100%);
+              mask-image: linear-gradient(to bottom, #000 62%, transparent 100%);
+    }
+    .hero-half-water {
+      top: 40%;
+      bottom: 0;
+      background-color: #cfe8f5;
+      background-image: url('/assets/hero/hero-acqua.jpeg');
+    }
     /* Velo leggero per uniformare le foto e far risaltare il riquadro */
     .hero-split::after {
       content: "";
