@@ -84,6 +84,13 @@
       text-shadow: 0 2px 4px rgba(0, 0, 0, 1), 0 4px 24px rgba(0, 0, 0, .9), 0 12px 55px rgba(0, 0, 0, .7);
     }
     .hero-card .hero-actions { margin-top: 8px; }
+    /* Contorno chiaro sul bottone scuro: senza, si confonde con lo sfondo scuro della foto
+       (anche su telefoni con tema scuro di sistema, dove il contrasto tende a calare ulteriormente) */
+    .hero-card .btn-dark {
+      border: 1.5px solid rgba(255, 255, 255, .75);
+      box-shadow: 0 6px 22px rgba(0, 0, 0, .5);
+    }
+    .hero-card .btn-dark:hover { border-color: #fff; }
     /* Caffè in accento caldo, acqua in accento blu — richiama i due mondi, toni chiari per leggibilità sullo sfondo scuro */
     .hero-card h1 em { font-style: normal; }
     .hero-card h1 .t-coffee { color: #ffb877; }
