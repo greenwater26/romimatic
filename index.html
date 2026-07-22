@@ -48,28 +48,34 @@
       background-color: #cfe8f5;
       background-image: url('/assets/hero/hero-acqua.jpeg');
     }
-    /* Velo leggero per uniformare le foto e far risaltare il riquadro */
+    /* Vignetta scura concentrata al centro: fa risaltare il testo senza coprire tutta la foto */
     .hero-split::after {
       content: "";
       position: absolute;
       inset: 0;
-      background: rgba(0, 0, 0, 0.10);
+      background: radial-gradient(ellipse 65% 60% at 50% 50%, rgba(0,0,0,.58) 0%, rgba(0,0,0,.34) 45%, rgba(0,0,0,.12) 75%, rgba(0,0,0,.04) 100%);
     }
 
-    /* Riquadro bianco centrale con il testo */
+    /* Testo direttamente sullo sfondo fotografico, senza riquadro */
     .hero-card {
-      background: #fff;
-      border: 1px solid var(--border);
-      border-radius: var(--r);
-      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.22);
-      padding: clamp(38px, 6vw, 68px) clamp(28px, 5vw, 72px);
+      padding: clamp(24px, 5vw, 40px) clamp(12px, 4vw, 32px);
     }
-    .hero-card h1 { font-size: clamp(28px, 4vw, 48px); margin-bottom: 28px; }
+    .hero-card .eyebrow {
+      color: #fff;
+      opacity: .92;
+      text-shadow: 0 2px 14px rgba(0, 0, 0, .55);
+    }
+    .hero-card h1 {
+      font-size: clamp(28px, 4vw, 48px);
+      margin-bottom: 28px;
+      color: #fff;
+      text-shadow: 0 4px 26px rgba(0, 0, 0, .6), 0 2px 8px rgba(0, 0, 0, .7);
+    }
     .hero-card .hero-actions { margin-top: 8px; }
-    /* Caffè in accento caldo, acqua in accento blu — richiama i due mondi */
+    /* Caffè in accento caldo, acqua in accento blu — richiama i due mondi, toni chiari per leggibilità sullo sfondo scuro */
     .hero-card h1 em { font-style: normal; }
-    .hero-card h1 .t-coffee { color: var(--accent); }
-    .hero-card h1 .t-water  { color: #1478b0; }
+    .hero-card h1 .t-coffee { color: #ffb877; }
+    .hero-card h1 .t-water  { color: #7fd0ff; }
 
     /* Sezione caffè con decoro laterale */
     .section-caffe-wrap { position: relative; overflow: hidden; }
