@@ -71,6 +71,16 @@
     .machine-preview-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
     .machine-preview-card img { width: 100%; aspect-ratio: 4/3; object-fit: contain; display: block; background: var(--bg-2); padding: 16px; }
     .machine-preview-card-body { padding: 16px 18px 20px; }
+
+    /* Card larga con foto laterale (Essse Caffè): a tutta larghezza su desktop,
+       torna a impilarsi (foto sopra, testo sotto) sotto i 640px per non schiacciare il testo */
+    .machine-preview-card-split { display: grid; grid-template-columns: 300px 1fr; }
+    .machine-preview-card-split img { aspect-ratio: unset; height: 100%; min-height: 220px; object-fit: cover; }
+    .machine-preview-card-split .machine-preview-card-body { padding: 24px 28px; }
+    @media (max-width: 640px) {
+      .machine-preview-card-split { grid-template-columns: 1fr; }
+      .machine-preview-card-split img { aspect-ratio: 4/3; height: auto; min-height: 0; }
+    }
     .machine-preview-card-body h3 { font-size: 17px; font-weight: 700; margin-bottom: 6px; }
     .machine-preview-card-body p { font-size: 13px; color: var(--text-2); line-height: 1.6; margin-bottom: 12px; }
   </style>
@@ -253,17 +263,17 @@
         <p>Le macchine espresso firmate Italdesign Giugiaro, con beccuccio brevettato per un'estrazione perfetta. Compatibili esclusivamente con le capsule Essse Caffè Sistema Espresso.</p>
       </div>
       <div class="machine-preview-grid" style="grid-template-columns: 1fr; gap: 20px;">
-        <div class="machine-preview-card" style="display: grid; grid-template-columns: 300px 1fr;">
-          <img src="/assets/sermatic/macchine-essse/s12-real.jpg" alt="Essse Caffè S.12 — macchina espresso compatta design Italdesign Giugiaro" loading="lazy" style="aspect-ratio: unset; height: 100%; min-height: 220px; object-fit: cover;">
-          <div class="machine-preview-card-body" style="padding: 24px 28px;">
+        <div class="machine-preview-card machine-preview-card-split">
+          <img src="/assets/sermatic/macchine-essse/s12-real.jpg" alt="Essse Caffè S.12 — macchina espresso compatta design Italdesign Giugiaro" loading="lazy">
+          <div class="machine-preview-card-body">
             <h3>S.12 — Design Italdesign Giugiaro</h3>
             <p>Macchina espresso elegante e compatta, progettata per adattarsi a qualsiasi ambiente — domestico o professionale. Il beccuccio brevettato Essse Caffè garantisce crema densa e uniforme. 7 miscele disponibili: 100% arabica, 100% robusta, blend aromatici, decaffeinato e ginseng.</p>
             <a href="/caffe/macchine-essse-caffe.html" class="card-link">Scopri la S.12 →</a>
           </div>
         </div>
-        <div class="machine-preview-card" style="display: grid; grid-template-columns: 300px 1fr;">
-          <img src="/assets/sermatic/macchine-essse/s20-real.jpg" alt="Essse Caffè S.20 — macchina espresso con tastierino a tasti fisici" loading="lazy" style="aspect-ratio: unset; height: 100%; min-height: 220px; object-fit: cover;">
-          <div class="machine-preview-card-body" style="padding: 24px 28px;">
+        <div class="machine-preview-card machine-preview-card-split">
+          <img src="/assets/sermatic/macchine-essse/s20-real.jpg" alt="Essse Caffè S.20 — macchina espresso con tastierino a tasti fisici" loading="lazy">
+          <div class="machine-preview-card-body">
             <h3>S.20 — Tasti fisici soft touch</h3>
             <p>Tastierino a tasti fisici, senza display: comandi diretti per il volume della bevanda, regolabile anche durante l'erogazione. Stesso beccuccio brevettato Essse Caffè e stesse 7 miscele della S.12.</p>
             <a href="/caffe/macchine-essse-caffe.html" class="card-link">Scopri la S.20 →</a>
