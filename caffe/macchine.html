@@ -14,10 +14,10 @@
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"ItemList","name":"Macchine Caffè RoMimatic","description":"Gamma completa di macchine caffè a capsule e cialde per uffici distribuite da RoMimatic","numberOfItems":5,"itemListElement":[
     {"@type":"ListItem","position":1,"name":"Elle Mokador — macchina a cialde","url":"https://romimatic.it/caffe/cialde.html"},
-    {"@type":"ListItem","position":2,"name":"Dado Optima e Tata Mokador — macchine a capsule","url":"https://romimatic.it/caffe/macchine-mokador.html"},
+    {"@type":"ListItem","position":2,"name":"Dado Optima, Tata ed Eva Mokador — macchine a capsule","url":"https://romimatic.it/caffe/macchine-mokador.html"},
     {"@type":"ListItem","position":3,"name":"Macchine Caffè d'Italia","url":"https://romimatic.it/caffe/macchine-caffe-ditalia.html"},
     {"@type":"ListItem","position":4,"name":"Macchine Lavazza Firma — Gamma Inovy","url":"https://romimatic.it/caffe/macchine-lavazza-firma.html"},
-    {"@type":"ListItem","position":5,"name":"Essse Caffè S.12 — macchina espresso design Italdesign Giugiaro","url":"https://romimatic.it/caffe/macchine-essse-caffe.html"}
+    {"@type":"ListItem","position":5,"name":"Essse Caffè S.12 e S.20 — macchine espresso design Italdesign Giugiaro","url":"https://romimatic.it/caffe/macchine-essse-caffe.html"}
   ]}
   </script>
   <script type="application/ld+json">
@@ -58,6 +58,9 @@
       margin-top: 32px;
     }
     @media (max-width: 640px) { .machine-preview-grid { grid-template-columns: 1fr; } }
+    .machine-preview-grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
+    @media (max-width: 900px) { .machine-preview-grid.cols-3 { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 640px) { .machine-preview-grid.cols-3 { grid-template-columns: 1fr; } }
     .machine-preview-card {
       background: var(--bg);
       border: 1px solid var(--border);
@@ -142,16 +145,16 @@
     <div class="section-inner">
       <div class="section-head">
         <span class="eyebrow">Sistema a capsule · Mokador</span>
-        <h2>Dado Optima e Tata</h2>
-        <p>Due macchine a capsule 100% Made in Italy con 14 varietà di bevande: caffè, infusi, solubili e specialità. Compatte, silenziose e progettate per qualsiasi ambiente di lavoro.</p>
+        <h2>Dado Optima, Tata ed Eva</h2>
+        <p>Tre macchine a capsule 100% Made in Italy con 14 varietà di bevande: caffè, infusi, solubili e specialità. Compatte, silenziose e progettate per qualsiasi ambiente di lavoro.</p>
       </div>
-      <div class="machine-preview-grid">
+      <div class="machine-preview-grid cols-3">
         <div class="machine-preview-card">
           <img src="/assets/sermatic/macchine-mokador/dado-optima.jpg" alt="Mokador Dado Optima — macchina a capsule per ufficio" loading="lazy">
           <div class="machine-preview-card-body">
             <h3>Dado Optima</h3>
             <p>24×29×29 cm, disponibile in bianco e nero. Meccanica perfezionata per erogazioni sempre stabili. Veloce, silenziosa e ottimizzata nei consumi. 14 bevande disponibili.</p>
-            <a href="/caffe/macchine-mokador.html" class="card-link">Scopri Dado e Tata →</a>
+            <a href="/caffe/macchine-mokador.html" class="card-link">Scopri tutti i modelli →</a>
           </div>
         </div>
         <div class="machine-preview-card">
@@ -159,7 +162,15 @@
           <div class="machine-preview-card-body">
             <h3>Tata</h3>
             <p>Solo 10 cm di larghezza, sistema di infusione brevettato Mokador, griglia posatazze regolabile e serbatoio estraibile. Elegante, essenziale e 100% Made in Italy.</p>
-            <a href="/caffe/macchine-mokador.html" class="card-link">Scopri Dado e Tata →</a>
+            <a href="/caffe/macchine-mokador.html" class="card-link">Scopri tutti i modelli →</a>
+          </div>
+        </div>
+        <div class="machine-preview-card">
+          <img src="/assets/sermatic/macchine-mokador/eva.jpg" alt="Mokador Eva — macchina a capsule dalle prestazioni rapide" loading="lazy">
+          <div class="machine-preview-card-body">
+            <h3>Eva</h3>
+            <p>Si riscalda in soli 35 secondi, 2 dosi programmabili e temperatura regolabile. Contenitore da 22 capsule esauste, ideale per i grandi consumi in ufficio.</p>
+            <a href="/caffe/macchine-mokador.html" class="card-link">Scopri tutti i modelli →</a>
           </div>
         </div>
       </div>
@@ -238,10 +249,10 @@
     <div class="section-inner">
       <div class="section-head">
         <span class="eyebrow">Sistema a capsule · Essse Caffè</span>
-        <h2>Essse Caffè S.12</h2>
-        <p>La macchina espresso compatta firmata Italdesign Giugiaro, con beccuccio brevettato per un'estrazione perfetta. Compatibile esclusivamente con le capsule Essse Caffè Sistema Espresso.</p>
+        <h2>Essse Caffè S.12 e S.20</h2>
+        <p>Le macchine espresso firmate Italdesign Giugiaro, con beccuccio brevettato per un'estrazione perfetta. Compatibili esclusivamente con le capsule Essse Caffè Sistema Espresso.</p>
       </div>
-      <div class="machine-preview-grid" style="grid-template-columns: 1fr;">
+      <div class="machine-preview-grid" style="grid-template-columns: 1fr; gap: 20px;">
         <div class="machine-preview-card" style="display: grid; grid-template-columns: 300px 1fr;">
           <img src="/assets/sermatic/macchine-essse/s12-real.jpg" alt="Essse Caffè S.12 — macchina espresso compatta design Italdesign Giugiaro" loading="lazy" style="aspect-ratio: unset; height: 100%; min-height: 220px; object-fit: cover;">
           <div class="machine-preview-card-body" style="padding: 24px 28px;">
@@ -250,9 +261,17 @@
             <a href="/caffe/macchine-essse-caffe.html" class="card-link">Scopri la S.12 →</a>
           </div>
         </div>
+        <div class="machine-preview-card" style="display: grid; grid-template-columns: 300px 1fr;">
+          <img src="/assets/sermatic/macchine-essse/s20-real.jpg" alt="Essse Caffè S.20 — macchina espresso con display touch design Italdesign Giugiaro" loading="lazy" style="aspect-ratio: unset; height: 100%; min-height: 220px; object-fit: cover;">
+          <div class="machine-preview-card-body" style="padding: 24px 28px;">
+            <h3>S.20 — Display touch e sistema latte</h3>
+            <p>Display touch a colori con menu di ricette e sistema per il latte integrato, per cappuccini e macchiati senza accessori aggiuntivi. Stesso beccuccio brevettato Essse Caffè e stesse 7 miscele della S.12.</p>
+            <a href="/caffe/macchine-essse-caffe.html" class="card-link">Scopri la S.20 →</a>
+          </div>
+        </div>
       </div>
       <div style="margin-top: 28px; text-align: center;">
-        <a href="/caffe/macchine-essse-caffe.html" class="btn btn-outline">Scopri la macchina Essse Caffè S.12</a>
+        <a href="/caffe/macchine-essse-caffe.html" class="btn btn-outline">Scopri le macchine Essse Caffè</a>
       </div>
     </div>
   </section>
