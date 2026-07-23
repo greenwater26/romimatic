@@ -20,8 +20,7 @@
     .hero { position: relative; overflow: hidden; }
     .hero-inner { position: relative; z-index: 1; }
 
-    /* Due metà a tutta larghezza con foto di sfondo, sovrapposte al centro
-       per ottenere una transizione morbida invece di una linea netta */
+    /* Due metà a tutta larghezza con foto di sfondo, divisione netta senza sfumatura */
     .hero-split { position: absolute; inset: 0; z-index: 0; }
     .hero-half {
       position: absolute;
@@ -38,12 +37,9 @@
       z-index: 1;
       background-color: #3d2b1f;
       background-image: url('/assets/hero/hero-chicchi.jpg');
-      /* sfuma il bordo inferiore per fondersi con l'acqua sottostante */
-      -webkit-mask-image: linear-gradient(to bottom, #000 62%, transparent 100%);
-              mask-image: linear-gradient(to bottom, #000 62%, transparent 100%);
     }
     .hero-half-water {
-      top: 40%;
+      top: 60%;
       bottom: 0;
       background-color: #cfe8f5;
       background-image: url('/assets/hero/hero-acqua.jpeg');
