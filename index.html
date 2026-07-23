@@ -44,6 +44,11 @@
       background-color: #cfe8f5;
       background-image: url('/assets/hero/hero-acqua.jpeg');
     }
+    /* Da desktop la linea di separazione sale un po', per restare sopra i bottoni */
+    @media (min-width: 641px) {
+      .hero-half-coffee { height: 56%; }
+      .hero-half-water { top: 56%; }
+    }
     /* Vignetta scura concentrata al centro: fa risaltare il testo senza coprire tutta la foto */
     .hero-split::after {
       content: "";
