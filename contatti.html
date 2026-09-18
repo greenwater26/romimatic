@@ -135,58 +135,23 @@
           </div>
         </div>
 
-        <!-- FORM -->
+        <!-- CONTATTO DIRETTO -->
         <div>
           <div style="background: var(--bg-2); border-radius: var(--r-lg); padding: 40px;">
-            <h3 style="font-size: 22px; font-weight: 700; margin-bottom: 8px; letter-spacing: -0.01em;">Inviaci un messaggio</h3>
-            <p style="font-size: 14px; color: var(--text-2); margin-bottom: 28px;">Compila il modulo e ti risponderemo entro 24 ore lavorative.</p>
+            <h3 style="font-size: 22px; font-weight: 700; margin-bottom: 8px; letter-spacing: -0.01em;">Scrivici direttamente</h3>
+            <p style="font-size: 14px; color: var(--text-2); margin-bottom: 28px;">Scegli il canale che preferisci: ti rispondiamo il prima possibile.</p>
 
-            <form id="contact-form">
-              <div class="form-grid">
-                <div class="form-group">
-                  <label for="nome">Nome *</label>
-                  <input type="text" id="nome" name="nome" placeholder="Mario" required>
-                </div>
-                <div class="form-group">
-                  <label for="cognome">Cognome *</label>
-                  <input type="text" id="cognome" name="cognome" placeholder="Rossi" required>
-                </div>
-                <div class="form-group">
-                  <label for="email">Email *</label>
-                  <input type="email" id="email" name="email" placeholder="mario@esempio.it" required>
-                </div>
-                <div class="form-group">
-                  <label for="telefono">Telefono</label>
-                  <input type="tel" id="telefono" name="telefono" placeholder="+39 000 000 0000">
-                </div>
-                <div class="form-group full">
-                  <label for="argomento">Argomento</label>
-                  <select id="argomento" name="argomento">
-                    <option value="">Seleziona un argomento</option>
-                    <option value="capsule">Capsule caffè</option>
-                    <option value="cialde">Cialde</option>
-                    <option value="macchine">Macchine</option>
-                    <option value="horeca">HO.RE.CA</option>
-                    <option value="acqua">Acqua (Green Water Italia)</option>
-                    <option value="preventivo">Preventivo / Consulenza gratuita</option>
-                    <option value="altro">Altro</option>
-                  </select>
-                </div>
-                <div class="form-group full">
-                  <label for="messaggio">Messaggio *</label>
-                  <textarea id="messaggio" name="messaggio" placeholder="Scrivi qui il tuo messaggio..." required></textarea>
-                </div>
-                <div class="form-group full">
-                  <label style="display:flex; align-items:flex-start; gap:10px; cursor:pointer; font-size:13px; color:var(--text-2);">
-                    <input type="checkbox" required style="width:16px; height:16px; flex-shrink:0; margin-top:2px;">
-                    Ho letto e accetto la <a href="/privacy.html" style="color:var(--accent);">Privacy Policy</a>
-                  </label>
-                </div>
-              </div>
-              <button type="submit" class="btn btn-dark" style="width:100%; margin-top:8px; justify-content:center;">
-                Invia messaggio
-              </button>
-            </form>
+            <div style="display:flex; flex-direction:column; gap:14px;">
+              <a href="https://wa.me/393489897098?text=Ciao%20RoMimatic%2C%20vorrei%20maggiori%20informazioni" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp" style="width:100%; justify-content:center; padding:16px 28px; font-size:16px;">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.71.306 1.263.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.885-9.885 9.885M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.359.101 11.945c0 2.096.549 4.14 1.595 5.945L0 24l6.335-1.652a11.882 11.882 0 005.71 1.454h.006c6.585 0 11.946-5.36 11.949-11.945a11.86 11.86 0 00-3.495-8.408z"/></svg>
+                Scrivici su WhatsApp
+              </a>
+              <a href="mailto:info@romimatic.it?subject=Richiesta%20informazioni%20dal%20sito&body=Ciao%20RoMimatic%2C%0A%0Avorrei%20ricevere%20maggiori%20informazioni%20su%3A%0A%0A%5Bdescrivi%20qui%20la%20tua%20richiesta%5D%0A%0AGrazie!" class="btn btn-dark" style="width:100%; justify-content:center; padding:16px 28px; font-size:16px;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="20" height="20"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+                Scrivici una email
+              </a>
+            </div>
+            <p style="font-size:12px; color:var(--text-3); margin-top:20px; text-align:center;">Oppure chiamaci al <a href="tel:+39029957485" style="color:var(--accent);">02 9957485</a> — Lun–Ven 9:00–18:00</p>
           </div>
         </div>
 

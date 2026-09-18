@@ -608,33 +608,6 @@ section { padding: 96px 24px; }
 }
 .product-tag.hot { background: #fff3e0; color: #e65100; }
 
-/* ── Contact form ── */
-.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-.form-group { display: flex; flex-direction: column; gap: 6px; }
-.form-group.full { grid-column: 1 / -1; }
-.form-group label { font-size: 13px; font-weight: 500; color: var(--text-2); }
-.form-group input,
-.form-group textarea,
-.form-group select {
-  font-family: var(--font);
-  font-size: 15px;
-  color: var(--text);
-  background: var(--bg-2);
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  padding: 12px 14px;
-  outline: none;
-  transition: border-color var(--t), box-shadow var(--t);
-  width: 100%;
-}
-.form-group input:focus,
-.form-group textarea:focus,
-.form-group select:focus {
-  border-color: var(--accent);
-  box-shadow: 0 0 0 3px rgba(123,79,46,0.12);
-}
-.form-group textarea { resize: vertical; min-height: 120px; }
-
 /* ── Blog ── */
 .blog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 28px; }
 .blog-card {
@@ -807,7 +780,6 @@ footer {
   .products-5col, .products-3col { grid-template-columns: repeat(2, 1fr); }
   .products.products-flex .product-card { flex: 0 0 calc(50% - 12px); }
   .products.products-3-centered .product-card { flex: 0 0 100%; max-width: 100%; }
-  .form-grid { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; gap: 28px; }
   .footer-bottom { flex-direction: column; gap: 10px; text-align: center; }
 }
