@@ -74,6 +74,9 @@ const NAV_HTML = `
         </a>
       </li>
       <li class="nav-item">
+        <a class="nav-link promo" href="/caffe/offerta-pepita.html">🔥 Offerta Pepita</a>
+      </li>
+      <li class="nav-item">
         <a class="nav-link" href="/blog.html">Blog</a>
       </li>
       <li class="nav-item">
@@ -126,6 +129,7 @@ const FOOTER_HTML = `
       <div class="footer-col">
         <h4>Caffè</h4>
         <ul>
+          <li><a href="/caffe/offerta-pepita.html">Offerta Pepita</a></li>
           <li><a href="/caffe/capsule.html">Capsule</a></li>
           <li><a href="/caffe/cialde.html">Cialde</a></li>
           <li><a href="/caffe/macchine.html">Macchine</a></li>

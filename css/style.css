@@ -167,6 +167,8 @@ button { font-family: var(--font); }
 }
 .nav-item:hover > .nav-link .chev { transform: rotate(180deg); }
 .nav-link.external { color: var(--accent); }
+.nav-link.promo { background: var(--accent); color: #fff; font-weight: 600; }
+.nav-link.promo:hover { background: #7d0900; }
 
 /* Ponte invisibile che colma il gap tra nav-link e dropdown */
 .nav-item > .nav-link::after {
@@ -315,6 +317,8 @@ button { font-family: var(--font); }
 .btn-whatsapp { background: #25D366; color: #fff; }
 .btn-whatsapp:hover { background: #1da851; transform: scale(1.02); }
 .btn-whatsapp svg { width: 20px; height: 20px; }
+.btn-white { background: #fff; color: var(--accent); }
+.btn-white:hover { background: #f2f2f2; transform: scale(1.02); }
 
 /* ── Tasto flottante WhatsApp (tutte le pagine) ── */
 .wa-float {
