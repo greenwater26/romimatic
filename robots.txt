@@ -3,4 +3,4 @@ Allow: /
 Disallow: /privacy.html
 Disallow: /cookie.html
 
-Sitemap: https://romimatic.it/sitemap.xml
+Sitemap: https://www.romimatic.it/sitemap.xml

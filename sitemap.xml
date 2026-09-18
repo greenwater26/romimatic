@@ -3,7 +3,7 @@
 
   <!-- Home -->
   <url>
-    <loc>https://romimatic.it/</loc>
+    <loc>https://www.romimatic.it/</loc>
     <lastmod>2026-07-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
@@ -11,19 +11,19 @@
 
   <!-- Pagine principali -->
   <url>
-    <loc>https://romimatic.it/chi-siamo.html</loc>
+    <loc>https://www.romimatic.it/chi-siamo.html</loc>
     <lastmod>2026-07-08</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://romimatic.it/contatti.html</loc>
+    <loc>https://www.romimatic.it/contatti.html</loc>
     <lastmod>2026-07-08</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://romimatic.it/blog.html</loc>
+    <loc>https://www.romimatic.it/blog.html</loc>
     <lastmod>2026-07-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -31,7 +31,7 @@
 
   <!-- Caffè hub -->
   <url>
-    <loc>https://romimatic.it/caffe.html</loc>
+    <loc>https://www.romimatic.it/caffe.html</loc>
     <lastmod>2025-06-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -39,19 +39,19 @@
 
   <!-- Capsule -->
   <url>
-    <loc>https://romimatic.it/caffe/capsule.html</loc>
+    <loc>https://www.romimatic.it/caffe/capsule.html</loc>
     <lastmod>2025-06-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://romimatic.it/caffe/capsule-caffe-ditalia.html</loc>
+    <loc>https://www.romimatic.it/caffe/capsule-caffe-ditalia.html</loc>
     <lastmod>2025-06-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://romimatic.it/caffe/capsule-lavazza-firma.html</loc>
+    <loc>https://www.romimatic.it/caffe/capsule-lavazza-firma.html</loc>
     <lastmod>2025-06-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -59,7 +59,7 @@
 
   <!-- Cialde -->
   <url>
-    <loc>https://romimatic.it/caffe/cialde.html</loc>
+    <loc>https://www.romimatic.it/caffe/cialde.html</loc>
     <lastmod>2025-06-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -67,49 +67,49 @@
 
   <!-- Macchine -->
   <url>
-    <loc>https://romimatic.it/caffe/macchine.html</loc>
+    <loc>https://www.romimatic.it/caffe/macchine.html</loc>
     <lastmod>2025-06-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://romimatic.it/caffe/macchine-caffe-ditalia.html</loc>
+    <loc>https://www.romimatic.it/caffe/macchine-caffe-ditalia.html</loc>
     <lastmod>2025-06-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://romimatic.it/caffe/offerta-pepita.html</loc>
+    <loc>https://www.romimatic.it/caffe/offerta-pepita.html</loc>
     <lastmod>2026-09-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://romimatic.it/caffe/macchine-lavazza-firma.html</loc>
+    <loc>https://www.romimatic.it/caffe/macchine-lavazza-firma.html</loc>
     <lastmod>2025-06-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://romimatic.it/caffe/capsule-mokador.html</loc>
+    <loc>https://www.romimatic.it/caffe/capsule-mokador.html</loc>
     <lastmod>2026-06-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://romimatic.it/caffe/macchine-mokador.html</loc>
+    <loc>https://www.romimatic.it/caffe/macchine-mokador.html</loc>
     <lastmod>2026-06-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://romimatic.it/caffe/capsule-essse-caffe.html</loc>
+    <loc>https://www.romimatic.it/caffe/capsule-essse-caffe.html</loc>
     <lastmod>2026-06-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://romimatic.it/caffe/macchine-essse-caffe.html</loc>
+    <loc>https://www.romimatic.it/caffe/macchine-essse-caffe.html</loc>
     <lastmod>2026-06-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -117,7 +117,7 @@
 
   <!-- HO.RE.CA -->
   <url>
-    <loc>https://romimatic.it/caffe/horeca.html</loc>
+    <loc>https://www.romimatic.it/caffe/horeca.html</loc>
     <lastmod>2025-06-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -125,7 +125,7 @@
 
   <!-- Risorse / Contenuti evergreen -->
   <url>
-    <loc>https://romimatic.it/glossario-caffe.html</loc>
+    <loc>https://www.romimatic.it/glossario-caffe.html</loc>
     <lastmod>2026-06-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -133,73 +133,73 @@
 
   <!-- Blog articoli -->
   <url>
-    <loc>https://romimatic.it/blog/macchina-caffe-ufficio-come-scegliere.html</loc>
+    <loc>https://www.romimatic.it/blog/macchina-caffe-ufficio-come-scegliere.html</loc>
     <lastmod>2026-06-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://romimatic.it/blog/comodato-uso-macchina-caffe.html</loc>
+    <loc>https://www.romimatic.it/blog/comodato-uso-macchina-caffe.html</loc>
     <lastmod>2026-06-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://romimatic.it/blog/capsule-vs-cialde-caffe.html</loc>
+    <loc>https://www.romimatic.it/blog/capsule-vs-cialde-caffe.html</loc>
     <lastmod>2026-06-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://romimatic.it/blog/arabica-vs-robusta.html</loc>
+    <loc>https://www.romimatic.it/blog/arabica-vs-robusta.html</loc>
     <lastmod>2026-06-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://romimatic.it/blog/caffe-salute-quante-tazzine-al-giorno.html</loc>
+    <loc>https://www.romimatic.it/blog/caffe-salute-quante-tazzine-al-giorno.html</loc>
     <lastmod>2026-06-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://romimatic.it/blog/espresso-ristretto-lungo-americano-differenze.html</loc>
+    <loc>https://www.romimatic.it/blog/espresso-ristretto-lungo-americano-differenze.html</loc>
     <lastmod>2026-06-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://romimatic.it/blog/caffe-ufficio-guida-aziende.html</loc>
+    <loc>https://www.romimatic.it/blog/caffe-ufficio-guida-aziende.html</loc>
     <lastmod>2026-06-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://romimatic.it/blog/caffe-ginseng-proprieta-benefici.html</loc>
+    <loc>https://www.romimatic.it/blog/caffe-ginseng-proprieta-benefici.html</loc>
     <lastmod>2026-06-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://romimatic.it/blog/decaffeinato-fa-bene-o-fa-male.html</loc>
+    <loc>https://www.romimatic.it/blog/decaffeinato-fa-bene-o-fa-male.html</loc>
     <lastmod>2026-06-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://romimatic.it/blog/tostatura-caffe-chiara-media-scura.html</loc>
+    <loc>https://www.romimatic.it/blog/tostatura-caffe-chiara-media-scura.html</loc>
     <lastmod>2026-06-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://romimatic.it/blog/caffe-nelle-diverse-zone-ditalia.html</loc>
+    <loc>https://www.romimatic.it/blog/caffe-nelle-diverse-zone-ditalia.html</loc>
     <lastmod>2025-06-21</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://romimatic.it/blog/james-hoffmann-mondo-caffe.html</loc>
+    <loc>https://www.romimatic.it/blog/james-hoffmann-mondo-caffe.html</loc>
     <lastmod>2025-06-21</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
