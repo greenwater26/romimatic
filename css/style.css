@@ -320,6 +320,26 @@ button { font-family: var(--font); }
 .btn-white { background: #fff; color: var(--accent); }
 .btn-white:hover { background: #f2f2f2; transform: scale(1.02); }
 
+/* ── Testimonianze (riusabile su più pagine) ── */
+.testimonials-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
+.testimonial-card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.testimonial-stars { color: #f5a623; font-size: 15px; letter-spacing: 2px; }
+.testimonial-text { font-size: 15px; color: var(--text-2); line-height: 1.65; flex: 1; }
+.testimonial-author { display: flex; align-items: baseline; gap: 6px; font-size: 13px; }
+.testimonial-author strong { color: var(--text); font-weight: 600; font-size: 14px; }
+.testimonial-author span { color: var(--text-3); }
+@media (max-width: 700px) {
+  .testimonials-grid { grid-template-columns: 1fr; }
+}
+
 /* ── Promo strip: banner offerta in evidenza (riusabile su più pagine) ── */
 .promo-strip { background: linear-gradient(120deg, var(--accent) 0%, #6e0800 100%); }
 .promo-strip .section-inner {
