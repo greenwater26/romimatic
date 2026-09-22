@@ -39,6 +39,9 @@ const NAV_HTML = `
         </a>
         <div class="dropdown">
           <div class="dropdown-item">
+            <a class="dropdown-link" href="/caffe/caffe-ditalia.html">Caffè d'Italia</a>
+          </div>
+          <div class="dropdown-item">
             <a class="dropdown-link" href="/caffe/capsule.html" aria-haspopup="true" aria-expanded="false">
               Capsule <span class="chev-r">›</span>
             </a>
