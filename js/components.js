@@ -42,6 +42,9 @@ const NAV_HTML = `
             <a class="dropdown-link" href="/caffe/caffe-ditalia.html">Caffè d'Italia</a>
           </div>
           <div class="dropdown-item">
+            <a class="dropdown-link" href="/caffe/prova-gratuita.html">Prova gratuita (aziende)</a>
+          </div>
+          <div class="dropdown-item">
             <a class="dropdown-link" href="/caffe/capsule.html" aria-haspopup="true" aria-expanded="false">
               Capsule <span class="chev-r">›</span>
             </a>
