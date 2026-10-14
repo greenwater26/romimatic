@@ -46,7 +46,7 @@
   <!-- Capsule -->
   <url>
     <loc>https://www.romimatic.it/caffe/capsule.html</loc>
-    <lastmod>2025-06-21</lastmod>
+    <lastmod>2026-10-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -58,7 +58,7 @@
   </url>
   <url>
     <loc>https://www.romimatic.it/caffe/capsule-lavazza-firma.html</loc>
-    <lastmod>2025-06-21</lastmod>
+    <lastmod>2026-10-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -98,7 +98,7 @@
   </url>
   <url>
     <loc>https://www.romimatic.it/caffe/macchine-lavazza-firma.html</loc>
-    <lastmod>2025-06-21</lastmod>
+    <lastmod>2026-10-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -243,6 +243,13 @@
   <url>
     <loc>https://www.romimatic.it/blog/caffe-ditalia-vs-supermercato-distributore-ufficiale.html</loc>
     <lastmod>2026-09-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.romimatic.it/blog/lavazza-firma-vs-caffe-ditalia-ufficio.html</loc>
+    <lastmod>2026-10-14</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
